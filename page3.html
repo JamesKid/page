@@ -9,13 +9,50 @@
 				ctx.strokeStyle="rgb(240,0.0)";
 				ctx.arc(200,200,150,0,Math.PI,true);
 				ctx.stroke();
+				var ctx2=document.getElementById("canvas2").getContext('2d');
+				ctx2.beginPath();
+				ctx2.strokeStyle="rgb(240,0.0)";
+				ctx2.arc(10,200,150,0,Math.PI,true);
+				ctx2.stroke();
 			}
 		</script>
 	</head>
+	<style>
+	.wendu {
+		width:100%;
+		float:center;
+	}
+	.temp {
+		background-color:rgb(101,174,222);
+		color:#ffffff;
+		float:left;
+		width:20px;
+		height:20px;
+		border:solid rgb(101,174,222) 1px;
+		border-radius:12px;
+		font-size:0.8em;
+		padding-left:3px;
+		padding-top:3px;
+		left:215px;
+		top:38px;
+		position:relative;
+	}
+		
+	</style>
 	<body>
 	<body onLoad="init();">
-	<canvas id="canvas" width="400" height="100">
-		html5 die
-	</canvas>
+	<div class="wendu">
+		<div class="circle">
+			<canvas id="canvas" width="200" height="100">
+				html5 die
+			</canvas>
+			<div class="temp">
+				27
+			</div>
+			<canvas id="canvas2" width="-200" height="100">
+				html5 die
+			</canvas>
+		</div>
+	</div>
 	</body>
 </html>
