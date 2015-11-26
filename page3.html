@@ -2,18 +2,26 @@
 <html lang="en">
 	<head>
 		<title>test</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		
 		<script>
 			function init(){
 				var ctx=document.getElementById("canvas").getContext('2d');
 				ctx.beginPath();
-				ctx.strokeStyle="rgb(240,0.0)";
+				ctx.strokeStyle="rgb(101,174,222)";
 				ctx.arc(200,200,150,0,Math.PI,true);
+				ctx.lineWidth="3";  // 线条宽度
 				ctx.stroke();
 				var ctx2=document.getElementById("canvas2").getContext('2d');
 				ctx2.beginPath();
-				ctx2.strokeStyle="rgb(240,0.0)";
+				ctx2.fillStyle = 'rgb(101,174,222)';   
+				ctx2.strokeStyle="#aaaaaa";
+				ctx2.lineWidth="3";
 				ctx2.arc(10,200,150,0,Math.PI,true);
+				//ctx2.fill();// 填充颜色
 				ctx2.stroke();
+				//ctx2.fill();
 			}
 		</script>
 	</head>
@@ -23,19 +31,43 @@
 		float:center;
 	}
 	.temp {
-		background-color:rgb(101,174,222);
-		color:#ffffff;
+		background-color:#ffffff;
+		color:rgb(101,174,222);
 		float:left;
-		width:20px;
+		width:25px;
 		height:20px;
 		border:solid rgb(101,174,222) 1px;
-		border-radius:12px;
-		font-size:0.8em;
-		padding-left:3px;
-		padding-top:3px;
+		border-radius:15px;
+		font-size:0.7em;
+		padding-top:5px;
 		left:215px;
 		top:38px;
 		position:relative;
+		text-align:center;
+	}
+	.minus {
+		width:30px;
+		height:30px;
+		left:109px;
+		top:-5px;
+		position:relative;
+		font-size:1.5em;
+		border-radius:18px;
+		border:solid #aaaaaa 1px;
+		text-align:center;
+		color:#aaaaaa;
+	}
+	.plus {
+		width:30px;
+		height:30px;
+		left:329px;
+		top:-39px;
+		position:relative;
+		font-size:1.5em;
+		border-radius:18px;
+		border:solid #aaaaaa 1px;
+		text-align:center;
+		color:#aaaaaa;
 	}
 		
 	</style>
@@ -43,15 +75,21 @@
 	<body onLoad="init();">
 	<div class="wendu">
 		<div class="circle">
-			<canvas id="canvas" width="200" height="100">
+			<canvas class="leftLine" id="canvas" width="200" height="85">
 				html5 die
 			</canvas>
 			<div class="temp">
-				27
+				27°
 			</div>
-			<canvas id="canvas2" width="-200" height="100">
+			<canvas class="rightLine" id="canvas2" width="-200" height="85">
 				html5 die
 			</canvas>
+			<div class="minus">
+				-
+			</div>
+			<div class="plus">
+				+
+			</div>
 		</div>
 	</div>
 	</body>
