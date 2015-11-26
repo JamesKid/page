@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>test</title>
+		<script>
+			function init(){
+				var ctx=document.getElementById("canvas").getContext('2d');
+				ctx.beginPath();
+				ctx.strokeStyle="rgb(240,0.0)";
+				ctx.arc(200,200,150,0,Math.PI,true);
+				ctx.stroke();
+			}
+		</script>
+	</head>
+	<body>
+	<body onLoad="init();">
+	<canvas id="canvas" width="400" height="100">
+		html5 die
+	</canvas>
+	</body>
+</html>
