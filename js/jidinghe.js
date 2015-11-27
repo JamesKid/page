@@ -18,6 +18,10 @@ $(document).ready(function(){
 		$("#up_01").css("display","none");
 		$("#up_01_down").css("display","block");
 	});
+	/* 长按事件 */
+	$(".imgHead").on("taphold",function(){
+		  $('img').css("point-event","none");
+	});
 	$(".imgHead").mousedown(function(){
 		$("#up_01").css("display","none");
 		$("#up_01_down").css("display","block");

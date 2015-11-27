@@ -73,7 +73,7 @@ img {
 	padding:0px;
 	margin:0px;
 	float:left;
-	pointer-events: auto;  //禁止长按弹出查看图片,保存图片
+	//pointer-events: auto;  //禁止长按弹出查看图片,保存图片
 }
 .img3 {
 	top:5px;
