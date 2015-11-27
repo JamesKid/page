@@ -3,6 +3,8 @@
 <head lang="zh-CN">  
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/jidinghe.js"></script>
 <title>智慧家</title>
 </head>
 <style>
@@ -56,7 +58,7 @@
 		float:left;
 	}
 	.menu {
-		width:12%;
+		width:15%;
 		float:right;
 		padding-right:10%;
 	}
@@ -120,7 +122,10 @@
 	</div>
 	<div class="controller">
 		<div class="size">
-			<span class="img"><img src="images/zip2/jdh_up_01.jpg"/></span>
+			<span class="img">
+				<img id="up_01" style="display:block" src="images/zip2/jdh_up_01.jpg"/>
+				<img id="up_01_down" style="display:none" src="images/zip2/jdh_up_01_down.jpg"/>
+			</span>
 			<span class="img">
 				<img src="images/zip2/jdh_up_02.jpg"/>
 				<img src="images/zip2/jdh_up_03.jpg"/>

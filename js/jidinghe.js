@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$("#up_01").mousedown(function(){
+		$("#up_01").css("display","none");
+		$("#up_01_down").css("display","block");
+	});
+	$("#up_01_down").mouseup(function(){
+		$("#up_01").css("display","block");
+		$("#up_01_down").css("display","none");
+	});
+});
