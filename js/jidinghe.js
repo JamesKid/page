@@ -20,7 +20,9 @@ $(document).ready(function(){
 	});
 	/* 长按事件 */
 	$(".imgHead").on("taphold",function(){
+		  alert('acb');
 		  $('img').css("point-event","none");
+		  return false;
 	});
 	$(".imgHead").mousedown(function(){
 		$("#up_01").css("display","none");
