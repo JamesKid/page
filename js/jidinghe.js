@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	window.ontouchstart = function(e){e.preventDefault();};
 	var touchEvents = {
         touchstart: "touchstart",
         touchmove: "touchmove",
@@ -18,12 +19,13 @@ $(document).ready(function(){
 		$("#up_01").css("display","none");
 		$("#up_01_down").css("display","block");
 	});
-	/* 长按事件 */
+	/* 长按事件 
 	$(".imgHead").on("taphold",function(){
 		  alert('acb');
 		  $('img').css("point-event","none");
 		  return false;
 	});
+	*/
 	$(".imgHead").mousedown(function(){
 		$("#up_01").css("display","none");
 		$("#up_01_down").css("display","block");
