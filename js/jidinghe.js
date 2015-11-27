@@ -15,13 +15,11 @@ $(document).ready(function(){
             }
         }
     };
-	$(".imgHead").touchstart(function(){
-		alert('abc');
+	$(".imgHead").touchEvents("touchstart",function(){
 		$("#up_01").css("display","none");
 		$("#up_01_down").css("display","block");
 	});
-	$(".imgHead").touchend(function(){
-		alert('abc');
+	$(".imgHead").touchEvents("touchend",function(){
 		$("#up_01").css("display","block");
 		$("#up_01_down").css("display","none");
 	});
