@@ -15,11 +15,15 @@ $(document).ready(function(){
             }
         }
     };
-	$(".imgHead").touchEvents("touchstart",function(){
+	$(".imgHead").bind(touchEvents.touchstart,function(){
 		$("#up_01").css("display","none");
 		$("#up_01_down").css("display","block");
 	});
-	$(".imgHead").touchEvents("touchend",function(){
+	$(".imgHead").mousedown(function(){
+		$("#up_01").css("display","none");
+		$("#up_01_down").css("display","block");
+	});
+	$(".imgHead").mouseup(function(){
 		$("#up_01").css("display","block");
 		$("#up_01_down").css("display","none");
 	});
