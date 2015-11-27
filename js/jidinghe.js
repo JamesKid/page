@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	//window.ontouchstart = function(e){e.preventDefault();};
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -14,12 +15,10 @@ $(document).ready(function(){
 				}
 			}
 		};
-		window.ontouchstart = function(e){
-			$(".imgHead").bind(touchEvents.touchstart,function(){
-				$("#up_01").css("display","none");
-				$("#up_01_down").css("display","block");
-			});
-		};
+		$(".imgHead").bind(touchEvents.touchstart,function(){
+			$("#up_01").css("display","none");
+			$("#up_01_down").css("display","block");
+		});
 		/* 长按事件 
 		$(".imgHead").on("taphold",function(){
 			  alert('acb');
