@@ -1,9 +1,11 @@
 $(document).ready(function(){
 	$(".imgHead").mousedown(function(){
+		alert('abc');
 		$("#up_01").css("display","none");
 		$("#up_01_down").css("display","block");
 	});
 	$(".imgHead").mouseup(function(){
+		alert('abc');
 		$("#up_01").css("display","block");
 		$("#up_01_down").css("display","none");
 	});
