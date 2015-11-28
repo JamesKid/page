@@ -1,8 +1,18 @@
+* {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
 body {
 	padding:0px;
 	margin:0px;
 	background-color:#f5f5f5;
-	-webkit-tap-highlight-color:rgba(0,0,0,0); /*　禁止某个标签出现蓝色焦点(区块) */
+	// -webkit-tap-highlight-color:rgba(0,0,0,0); /*　禁止某个标签出现蓝色焦点(区块) */
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout:none;  /* 禁止长按 */
 }
 .head {
 	background-color:#00b4e6;
@@ -67,13 +77,16 @@ body {
 	border:0px;
 	padding:0px;
 	margin:0px;
+	-webkit-touch-callout: none;
 }	
 img {
 	border:0px;
 	padding:0px;
 	margin:0px;
 	float:left;
+	-webkit-touch-callout: none;
 	//pointer-events: auto;  //禁止长按弹出查看图片,保存图片
+	-webkit-user-select: none; 
 }
 .img3 {
 	top:5px;
