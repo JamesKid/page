@@ -53,8 +53,8 @@ body {
 	padding-right:2%;
 }
 .white {
-	width:84%;
-	padding:7%;
+	width:90%;
+	padding:5%;
 }	
 .leftWhite {
 	width:78%;
@@ -64,6 +64,7 @@ body {
 	width:15%;
 	float:right;
 	padding-right:10%;
+	padding-bottom:4%;
 }
 .controller {
 	width:76%;
