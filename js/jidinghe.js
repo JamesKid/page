@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	//window.ontouchstart = function(e){e.preventDefault();};
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -15,29 +14,78 @@ $(document).ready(function(){
 				}
 			}
 		};
+		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
+			//alert('abc');
+			/* 解邦多点触摸 */
+			//$(".imgLeft").unbind(touchEvents.touchstart);
+		    //$(".imgLeft").attr(touchEvents.touchstart, "");  
 			$("#up_01").css("display","none");
-			$("#up_01_down").css("display","block");
-			return false;
+			$("#up_01_press").css("display","block");
+			$("#up_left").css("display","none");
+			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
+		    //$(".imgLeft").attr(touchEvents.touchend, "");  
 			$("#up_01").css("display","block");
-			$("#up_01_down").css("display","none");
-			return false;
+			$("#up_01_press").css("display","none");
+			$("#up_left").css("display","none");
+			return false; /* 禁止长按 */
 		});
-		/* 长按事件 
-		$(".imgHead").on("taphold",function(){
-			  alert('acb');
-			  $('img').css("point-event","none");
-			  return false;
-		});
-		*/
 		$(".imgHead").mousedown(function(){
 			$("#up_01").css("display","none");
-			$("#up_01_down").css("display","block");
+			$("#up_01_press").css("display","block");
 		});
 		$(".imgHead").mouseup(function(){
 			$("#up_01").css("display","block");
-			$("#up_01_down").css("display","none");
+			$("#up_01_press").css("display","none");
+		});
+		/* 左方按钮　*/
+		$(".imgLeft").bind(touchEvents.touchstart,function(){
+			$(".imgLeft").bind(touchEvents.touchstart,function(){ return false;});
+			$("#up_02").css("display","none");
+			$("#up_02_press").css("display","block");
+			$("#up_01").css("display","none");
+			$("#up_left").css("display","block");
+			return false; /* 禁止长按 */
+		});
+		$(".imgLeft").bind(touchEvents.touchend,function(){
+			$("#up_02").css("display","block");
+			$("#up_02_press").css("display","none");
+			$("#up_01").css("display","block");
+			$("#up_left").css("display","none");
+			return false; /* 禁止长按 */
+		});
+		$(".imgLeft").mousedown(function(){
+			$("#up_02").css("display","none");
+			$("#up_02_press").css("display","block");
+			$("#up_01").css("display","none");
+			$("#up_left").css("display","block");
+		});
+		$(".imgLeft").mouseup(function(){
+			$("#up_02").css("display","block");
+			$("#up_02_press").css("display","none");
+			$("#up_01").css("display","block");
+			$("#up_left").css("display","none");
+		});
+		/* 右方按钮　*/
+		/* 下方按钮　*/
+		$(".imgFoot").bind(touchEvents.touchstart,function(){
+			$("#up_05").css("display","none");
+			$("#up_05_press").css("display","block");
+			return false; /* 禁止长按 */
+		});
+		$(".imgFoot").bind(touchEvents.touchend,function(){
+			$("#up_05").css("display","block");
+			$("#up_05_press").css("display","none");
+			return false; /* 禁止长按 */
+		});
+		$(".imgFoot").mousedown(function(){
+			$("#up_05").css("display","none");
+			$("#up_05_press").css("display","block");
+		});
+		$(".imgFoot").mouseup(function(){
+			$("#up_05").css("display","block");
+			$("#up_05_press").css("display","none");
 		});
 });

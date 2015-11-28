@@ -12,6 +12,8 @@ function stop(){
 }
 document.oncontextmenu=stop;
 </script>
+<item name="android:windowEnableSplitTouch">false</item>
+<item name="android:splitMotionEvents">false</item>
 </head>
 <body oncontextmenu=self.event.returnValue=false>
 <script   language=javascript>
@@ -53,18 +55,34 @@ window.oncopy=function()   {return   false;}
 	</div>
 	<div class="controller">
 		<div class="size">
+			<!--　上方按钮 -->
 			<span class="imgHead">
 				<img id="up_01" style="display:block" src="images/zip2/jdh_up_01.jpg"/>
-				<img id="up_01_down" style="display:none" src="images/zip2/jdh_up_01_down.jpg"/>
+				<img id="up_01_press" style="display:none" src="images/zip2/jdh_up_01_press.jpg"/>
 				<img id="up_left" style="display:none" src="images/zip2/jdh_up_left.jpg"/>
 			</span>
-			<span class="img">
-				<img src="images/zip2/jdh_up_02.jpg"/>
-				<img src="images/zip2/jdh_up_03.jpg"/>
-				<img src="images/zip2/jdh_up_04.jpg"/>
-			</span>
-			<span class="img">
+			<!--　左方按钮 -->
+			<div class="imgLeft">
+				<span class="img">
+					<img id="up_02" src="images/zip2/jdh_up_02.jpg"/>
+					<img id="up_02_press" style="display:none" src="images/zip2/jdh_up_02_press.jpg"/>
+				</span>
+			</div>
+			<div class="imgCenter">
+				<span>
+					<!-- 中间按钮 -->
+					<img src="images/zip2/jdh_up_03.jpg"/>
+				</span>
+			</div>
+			<div class="imgRight">
+				<span>
+					<!--　右方按钮 -->
+					<img src="images/zip2/jdh_up_04.jpg"/>
+				</span>
+			</div>
+			<span class="imgFoot">
 				<img id="up_05" src="images/zip2/jdh_up_05.jpg"/>
+				<img id="up_05_press" style="display:none" src="images/zip2/jdh_up_05_press.jpg"/>
 				<img id="down_left" style="display:none" src="images/zip2/jdh_down_left.jpg"/>
 			</span>
 		</div>
