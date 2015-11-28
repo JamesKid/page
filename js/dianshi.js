@@ -1,4 +1,4 @@
-/* html5 机顶盒遥控*/
+/* html5 电视遥控*/
 /* add by Jameskid 2015.11.28  email:406358964@qq.com */
 /* 使用说明:　 1. 请将app view关闭多点触控,关闭方法参考以下网址
  *					http://bbs.csdn.net/topics/390374889
