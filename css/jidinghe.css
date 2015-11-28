@@ -2,7 +2,7 @@ body {
 	padding:0px;
 	margin:0px;
 	background-color:#f5f5f5;
-	//background-image:url('images/back.jpg');
+	-webkit-tap-highlight-color:rgba(0,0,0,0); /*　禁止某个标签出现蓝色焦点(区块) */
 }
 .head {
 	background-color:#00b4e6;
