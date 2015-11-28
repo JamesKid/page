@@ -1,3 +1,10 @@
+/* add by 张世杰 2015.11.28  email:406358964@qq.com */
+/* 使用说明:　 1. 请将app view关闭多点触控,关闭方法参考以下网址
+ *					http://bbs.csdn.net/topics/390374889
+ *			   2. 按钮事件请在'点击事件在下面添加'关键字下添加 
+ *			   3. 本代码基于html5,请使用支持html5内核的浏览器
+ *　　
+ */
 $(document).ready(function(){
 		var touchEvents = {
 			touchstart: "touchstart",
@@ -14,6 +21,18 @@ $(document).ready(function(){
 				}
 			}
 		};
+		/* 头部按钮 */
+		$("#back").bind(touchEvents.touchstart,function(){
+			alert('返回事件');  /* 返回事件请在此处添加代码 */
+		});
+		$("#down").bind(touchEvents.touchstart,function(){
+			alert('关闭事件'); /* 关闭事件请在此处添加代码 */
+		});
+		$("#menu").bind(touchEvents.touchstart,function(){
+			alert('菜单事件'); /* 菜单事件请在此处添加代码 */
+		});
+
+
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			$("#up_01").css("display","none");
