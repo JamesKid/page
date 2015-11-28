@@ -18,10 +18,12 @@ $(document).ready(function(){
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			$("#up_01").css("display","none");
 			$("#up_01_down").css("display","block");
+			return false;
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
 			$("#up_01").css("display","block");
 			$("#up_01_down").css("display","none");
+			return false;
 		});
 		/* 长按事件 
 		$(".imgHead").on("taphold",function(){
