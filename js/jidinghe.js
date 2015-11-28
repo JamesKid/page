@@ -19,6 +19,10 @@ $(document).ready(function(){
 			$("#up_01").css("display","none");
 			$("#up_01_down").css("display","block");
 		});
+		$(".imgHead").bind(touchEvents.touchend,function(){
+			$("#up_01").css("display","block");
+			$("#up_01_down").css("display","none");
+		});
 		/* 长按事件 
 		$(".imgHead").on("taphold",function(){
 			  alert('acb');
