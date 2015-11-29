@@ -132,6 +132,63 @@ $(document).ready(function(){
 		$("#coolPress").mouseup(function(){
 			buttonFunction('up','cool');
 		});
+		/* 风速按钮 */
+		var level =0;
+		$("#windLevel").bind(touchEvents.touchstart,function(){
+			if(level%3==0){
+				/* 高风变中风 */
+				$("#height").css("display","none");
+				$("#middle").css("display","block");
+				$("#low").css("display","none");
+			}else if(level%3==1){
+				/* 中风变低风 */
+				$("#height").css("display","none");
+				$("#middle").css("display","none");
+				$("#low").css("display","block");
+			}else if(level%3==2){
+				/* 中风变低风 */
+				$("#height").css("display","block");
+				$("#middle").css("display","none");
+				$("#low").css("display","none");
+			}
+			level++;
+			/* 声音关闭事件请在此处添加代码 */
+		});
+		$("#windLevel").mousedown(function(){
+			if(level%3==0){
+				/* 高风变中风 */
+				$("#height").css("display","none");
+				$("#middle").css("display","block");
+				$("#low").css("display","none");
+			}else if(level%3==1){
+				/* 中风变低风 */
+				$("#height").css("display","none");
+				$("#middle").css("display","none");
+				$("#low").css("display","block");
+			}else if(level%3==2){
+				/* 中风变低风 */
+				$("#height").css("display","block");
+				$("#middle").css("display","none");
+				$("#low").css("display","none");
+			}
+			level++;
+			/* 声音关闭事件请在此处添加代码 */
+		});
+		var autoControl=0;
+		$("#autoControl").mousedown(function(){
+			if(autoControl%2==0){
+				/* 自动变手动 */
+				$("#auto").css("display","none");
+				$("#manual").css("display","block");
+			}else if(autoControl%2==1){
+				/* 手动变自动 */
+				$("#auto").css("display","block");
+				$("#manual").css("display","none");
+			}
+			autoControl++;
+			/* 声音关闭事件请在此处添加代码 */
+		});
+
 });
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
