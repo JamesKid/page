@@ -136,40 +136,40 @@ $(document).ready(function(){
 		var level =0;
 		$("#windLevel").bind(touchEvents.touchstart,function(){
 			if(level%3==0){
-				/* 高风变中风 */
+				/* 小风变中风 */
+				$("#low").css("display","none");
 				$("#height").css("display","none");
 				$("#middle").css("display","block");
-				$("#low").css("display","none");
 			}else if(level%3==1){
-				/* 中风变低风 */
-				$("#height").css("display","none");
-				$("#middle").css("display","none");
-				$("#low").css("display","block");
-			}else if(level%3==2){
-				/* 中风变低风 */
-				$("#height").css("display","block");
-				$("#middle").css("display","none");
+				/* 中风变高风 */
 				$("#low").css("display","none");
+				$("#middle").css("display","none");
+				$("#height").css("display","block");
+			}else if(level%3==2){
+				/* 高风变低风 */
+				$("#middle").css("display","none");
+				$("#height").css("display","none");
+				$("#low").css("display","block");
 			}
 			level++;
 			/* 声音关闭事件请在此处添加代码 */
 		});
 		$("#windLevel").mousedown(function(){
 			if(level%3==0){
-				/* 高风变中风 */
+				/* 小风变中风 */
+				$("#low").css("display","none");
 				$("#height").css("display","none");
 				$("#middle").css("display","block");
-				$("#low").css("display","none");
 			}else if(level%3==1){
-				/* 中风变低风 */
-				$("#height").css("display","none");
-				$("#middle").css("display","none");
-				$("#low").css("display","block");
-			}else if(level%3==2){
-				/* 中风变低风 */
-				$("#height").css("display","block");
-				$("#middle").css("display","none");
+				/* 中风变高风 */
 				$("#low").css("display","none");
+				$("#middle").css("display","none");
+				$("#height").css("display","block");
+			}else if(level%3==2){
+				/* 高风变低风 */
+				$("#middle").css("display","none");
+				$("#height").css("display","none");
+				$("#low").css("display","block");
 			}
 			level++;
 			/* 声音关闭事件请在此处添加代码 */
