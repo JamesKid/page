@@ -1,0 +1,90 @@
+<!doctype html>  
+<html>  
+<head lang="zh-CN">  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<!-- jquery本地最新版jquery　-->
+<!-- <script src="js/jquery-2.1.4.min.js"></script> -->  
+<!-- jquery网络引用地址 -->
+<!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> --> 
+<script src="js/jquery.js"></script>
+<script src="js/kongtiao.js"></script>
+<link rel="stylesheet" href="css/kongtiao.css" type="text/css" media="all"/>
+<script>
+function stop(){
+	return false;
+}
+document.oncontextmenu=stop;
+</script>
+</head>
+<body oncontextmenu=self.event.returnValue=false>
+<script   language=javascript>
+window.onselectstart=function()   {return   false;}       
+window.oncopy=function()   {return   false;}       
+</script> 
+<title>智慧家</title>
+</head>
+<body>
+<!-- add by Jameskid 2015.11.28  email:406358964@qq.com -->
+<!-- 头部 -->
+<div class="head">
+	<!-- 头部标题 -->
+	<div class="top">
+		<div id="back" class="back">
+			<img width="100%" src="images/back.jpg"/>
+		</div>
+		<div class="title">
+			27°<span id="mark" >c</span>
+		</div>
+		<div id="down" class="down">
+			<img width="100%" src="images/down.jpg"/>
+		</div>
+	</div>
+	<!-- 当前状态 -->
+	<div class="status">
+		客厅空调 : <span id="nowStatus" >关闭</span>
+	</div>
+</div>
+<!-- 主要内容 -->
+<div class="content">
+	<!-- 空白 -->
+	<div class="white">
+	</div>
+	<!-- 菜单按钮 -->
+	<div class="control">
+			<div class="button" id="hot">
+				<img  id="hotUp" style="display:none" width="100%" src="images/kongtiao/hot.jpg"/>
+				<img  id="hotPress"id=style="display:block" width="100%"  src="images/kongtiao/hot_press.jpg"/>
+			</div>
+			<div class="button" id="wet">
+				<img  id="wetUp" width="100%" src="images/kongtiao/wet.jpg"/>
+				<img  id="wetPress" width="100%" style="display:none" src="images/kongtiao/wet_press.jpg"/>
+			</div>
+			<div class="button" id="wind">
+				<img  id="windUp" width="100%" src="images/kongtiao/wind.jpg"/>
+				<img  id="windPress" width="100%" style="display:none" src="images/kongtiao/wind_press.jpg"/>
+			</div>
+			<br />
+			<div class="button" id="cool">
+				<img  id="coolUp" width="100%" src="images/kongtiao/cool.jpg"/>
+				<img  id="coolPress" width="100%" style="display:none" src="images/kongtiao/cool_press.jpg"/>
+			</div>
+			<div class="button" id="windLevel">
+				<img  id="height" width="100%" src="images/kongtiao/height.jpg"/>
+				<img  id="middle" width="100%" style="display:none" src="images/kongtiao/middle.jpg"/>
+				<img  id="low" width="100%" style="display:none" src="images/kongtiao/low.jpg"/>
+			</div>
+			<div class="button" id="autoControl">
+				<img  id="auto"  width="100%" src="images/kongtiao/auto.jpg"/>
+				<img  id="manual" width="100%" style="display:none" src="images/kongtiao/manual.jpg"/>
+			</div>
+	</div>
+	<!-- 温度调节按钮 -->
+	<div class="tempControl">
+	</div>
+	
+</div>
+<div class="foot">
+</div>
+</body>  
+</html>

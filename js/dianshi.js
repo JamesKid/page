@@ -4,7 +4,6 @@
  *					http://bbs.csdn.net/topics/390374889
  *			   2. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   3. 本代码基于html5,请使用支持html5内核的浏览器
- *　　
  */
 $(document).ready(function(){
 		var touchEvents = {
@@ -27,7 +26,22 @@ $(document).ready(function(){
 			alert('返回事件');  /* 返回事件请在此处添加代码 */
 		});
 		$("#down").bind(touchEvents.touchstart,function(){
-			alert('关闭事件'); /* 关闭事件请在此处添加代码 */
+			var nowStatus = $("#nowStatus").text();
+			if(nowStatus == '开启'){
+				$('#nowStatus').text('关闭');
+				/* 关闭事件请在此处添加代码 */
+			}else if(nowStatus== '关闭'){
+				$('#nowStatus').text('开启');
+				/* 开启事件请在此处添加代码 */
+			}
+		});
+		$("#down").mousedown(function(){
+			var nowStatus = $("#nowStatus").text();
+			if(nowStatus == '开启'){
+				$('#nowStatus').text('关闭');
+			}else if(nowStatus== '关闭'){
+				$('#nowStatus').text('开启');
+			}
 		});
 		$("#sond_on").bind(touchEvents.touchstart,function(){
 			$("#sound_on").css("display","block");
@@ -42,11 +56,12 @@ $(document).ready(function(){
 			}
 			sound++;
 			*/
-			/* 菜单事件请在此处添加代码 */
+			/* 声音关闭事件请在此处添加代码 */
 		});
 		$("#sond_off").bind(touchEvents.touchstart,function(){
 			$("#sound_on").css("display","none");
 			$("#sound_off").css("display","block");
+			/* 声音开启事件请在此处添加代码 */
 		});
 		$("#sound_on").mousedown(function(){
 			$("#sound_on").css("display","none");
