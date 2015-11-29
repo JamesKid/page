@@ -42,26 +42,33 @@ $(document).ready(function(){
 				$('#nowStatus').text('开启');
 			}
 		});
+		*/
 		/*  制热按钮 */
 		$("#hotUp").bind(touchEvents.touchstart,function(){
+			alert('mobileUp');
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
 		});
+		/*
 		$("#hotPress").bind(touchEvents.touchstart,function(){
+			alert('mobilePress');
 			buttonFunction('press','hot');
 		});
 		$("#hotUp").mousedown(function(){
+			alert('up');
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
 		});
 		$("#hotPress").mousedown(function(){
+			alert('press');
 			buttonFunction('press','hot');
 		});
 		/*  抽湿按钮 */
+		/*
 		$("#wetUp").bind(touchEvents.touchstart,function(){
 			buttonFunction('up','wet');
 			buttonFunction('press','hot');
@@ -80,7 +87,9 @@ $(document).ready(function(){
 		$("#wetPress").mousedown(function(){
 			buttonFunction('press','wet');
 		});
+		*/
 		/*  送风按钮 */
+		/*
 		$("#windUp").bind(touchEvents.touchstart,function(){
 			buttonFunction('up','wind');
 			buttonFunction('press','hot');
@@ -99,7 +108,9 @@ $(document).ready(function(){
 		$("#windPress").mousedown(function(){
 			buttonFunction('press','wind');
 		});
+		*/
 		/*  制冷按钮 */
+		/*
 		$("#coolUp").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','cool');
 			buttonFunction('press','hot');
@@ -118,7 +129,10 @@ $(document).ready(function(){
 		$("#coolPress").mousedown(function(){
 			buttonFunction('press','cool');
 		});
+		*/
+		/* 风速按钮 */
 		/* 单一按钮点击函数 */
+		/*
 		function buttonFunction(param,type){
 			if(param=='press'){
 				$("#"+type+"Up").css("display","block");
@@ -129,9 +143,6 @@ $(document).ready(function(){
 				$("#"+type+"Press").css("display","block");
 			}
 		}
-		/* 控制按钮点击函数 */
-		function buttonFunction(param,type){
-		}
-
+		*/
 		
 });
