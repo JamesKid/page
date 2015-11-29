@@ -4,6 +4,7 @@
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
+alert('bc');
 $(document).ready(function(){
 		var touchEvents = {
 			touchstart: "touchstart",
@@ -20,7 +21,6 @@ $(document).ready(function(){
 				}
 			}
 		};
-		alert('bc');
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			alert('返回事件');  /* 返回事件请在此处添加代码 */
@@ -45,6 +45,7 @@ $(document).ready(function(){
 				$('#nowStatus').text('开启');
 			}
 		});
+		*/
 		/*  制热按钮 */
 		$("#hotUp").bind(touchEvents.touchstart,function(){
 			alert('mobileUp');
@@ -53,6 +54,7 @@ $(document).ready(function(){
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
 		});
+		/*
 		$("#hotPress").bind(touchEvents.touchstart,function(){
 			alert('mobilePress');
 			buttonFunction('press','hot');
@@ -68,6 +70,70 @@ $(document).ready(function(){
 			alert('press');
 			buttonFunction('press','hot');
 		});
+		/*  抽湿按钮 */
+		/*
+		$("#wetUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('up','wet');
+			buttonFunction('press','hot');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
+		});
+		$("#wetPress").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','wet');
+		});
+		$("#wetUp").mousedown(function(){
+			buttonFunction('up','wet');
+			buttonFunction('press','hot');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
+		});
+		$("#wetPress").mousedown(function(){
+			buttonFunction('press','wet');
+		});
+		*/
+		/*  送风按钮 */
+		/*
+		$("#windUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('up','wind');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','cool');
+		});
+		$("#windPress").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','wind');
+		});
+		$("#windUp").mousedown(function(){
+			buttonFunction('up','wind');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','cool');
+		});
+		$("#windPress").mousedown(function(){
+			buttonFunction('press','wind');
+		});
+		*/
+		/*  制冷按钮 */
+		/*
+		$("#coolUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','cool');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+		});
+		$("#coolPress").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','cool');
+		});
+		$("#coolUp").mousedown(function(){
+			buttonFunction('up','cool');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+		});
+		$("#coolPress").mousedown(function(){
+			buttonFunction('press','cool');
+		});
+		*/
+		/* 风速按钮 */
 });
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){

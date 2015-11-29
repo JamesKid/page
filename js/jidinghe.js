@@ -24,6 +24,7 @@ $(document).ready(function(){
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			alert('返回事件');  /* 返回事件请在此处添加代码 */
+			return false; /* 禁止长按 */
 		});
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
@@ -34,6 +35,7 @@ $(document).ready(function(){
 				$('#nowStatus').text('开启');
 				/* 开启事件请在此处添加代码 */
 			}
+			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
