@@ -44,67 +44,94 @@ $(document).ready(function(){
 		});
 		/*  制热按钮 */
 		$("#hotUp").bind(touchEvents.touchstart,function(){
-			$("#hotUp").css("display","none");
-			$("#hotPress").css("display","block");
+			buttonFunction('up','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
 		});
 		$("#hotPress").bind(touchEvents.touchstart,function(){
-			$("#hotUp").css("display","block");
-			$("#hotPress").css("display","none");
+			buttonFunction('press','hot');
 		});
 		$("#hotUp").mousedown(function(){
-			$("#hotUp").css("display","none");
-			$("#hotPress").css("display","block");
+			buttonFunction('up','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
 		});
 		$("#hotPress").mousedown(function(){
-			$("#hotUp").css("display","block");
-			$("#hotPress").css("display","none");
+			buttonFunction('press','hot');
 		});
 		/*  抽湿按钮 */
-		$("#wetUp").mousedown(function(){
-			$("#wetUp").css("display","none");
-			$("#wetPress").css("display","block");
-			/* 声音关闭事件请在此处添加代码 */
+		$("#wetUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('up','wet');
+			buttonFunction('press','hot');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
 		});
 		$("#wetPress").bind(touchEvents.touchstart,function(){
-			$("#wetUp").css("display","block");
-			$("#wetPress").css("display","none");
-			/* 声音关闭事件请在此处添加代码 */
+			buttonFunction('press','wet');
+		});
+		$("#wetUp").mousedown(function(){
+			buttonFunction('up','wet');
+			buttonFunction('press','hot');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
 		});
 		$("#wetPress").mousedown(function(){
-			$("#wetUp").css("display","block");
-			$("#wetPress").css("display","none");
-			/* 声音关闭事件请在此处添加代码 */
+			buttonFunction('press','wet');
 		});
 		/*  送风按钮 */
-		$("#windUp").mousedown(function(){
-			$("#windUp").css("display","none");
-			$("#windPress").css("display","block");
-			/* 声音关闭事件请在此处添加代码 */
+		$("#windUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('up','wind');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','cool');
 		});
 		$("#windPress").bind(touchEvents.touchstart,function(){
-			$("#windUp").css("display","block");
-			$("#windPress").css("display","none");
-			/* 声音关闭事件请在此处添加代码 */
+			buttonFunction('press','wind');
+		});
+		$("#windUp").mousedown(function(){
+			buttonFunction('up','wind');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','cool');
 		});
 		$("#windPress").mousedown(function(){
-			$("#windUp").css("display","block");
-			$("#windPress").css("display","none");
-			/* 声音关闭事件请在此处添加代码 */
+			buttonFunction('press','wind');
 		});
 		/*  制冷按钮 */
-		$("#coolUp").mousedown(function(){
-			$("#coolUp").css("display","none");
-			$("#coolPress").css("display","block");
-			/* 声音关闭事件请在此处添加代码 */
+		$("#coolUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','cool');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
 		});
 		$("#coolPress").bind(touchEvents.touchstart,function(){
-			$("#coolUp").css("display","block");
-			$("#coolPress").css("display","none");
-			/* 声音关闭事件请在此处添加代码 */
+			buttonFunction('press','cool');
+		});
+		$("#coolUp").mousedown(function(){
+			buttonFunction('up','cool');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
 		});
 		$("#coolPress").mousedown(function(){
-			$("#coolUp").css("display","block");
-			$("#coolPress").css("display","none");
-			/* 声音关闭事件请在此处添加代码 */
+			buttonFunction('press','cool');
 		});
+		/* 单一按钮点击函数 */
+		function buttonFunction(param,type){
+			if(param=='press'){
+				$("#"+type+"Up").css("display","block");
+				$("#"+type+"Press").css("display","none");
+			}
+			if(param=='up'){
+				$("#"+type+"Up").css("display","none");
+				$("#"+type+"Press").css("display","block");
+			}
+		}
+		/* 控制按钮点击函数 */
+		function buttonFunction(param,type){
+		}
+
+		
 });
