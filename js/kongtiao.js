@@ -152,7 +152,7 @@ $(document).ready(function(){
 				$("#low").css("display","block");
 			}
 			level++;
-			/* 声音关闭事件请在此处添加代码 */
+			return false;
 		});
 		$("#windLevel").mousedown(function(){
 			if(level%3==0){
@@ -172,7 +172,6 @@ $(document).ready(function(){
 				$("#low").css("display","block");
 			}
 			level++;
-			/* 声音关闭事件请在此处添加代码 */
 		});
 		var autoControl=0;
 		$("#autoControl").mousedown(function(){
