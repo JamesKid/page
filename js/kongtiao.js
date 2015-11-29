@@ -63,6 +63,9 @@ $(document).ready(function(){
 		$("#hotPress").mousedown(function(){
 			buttonFunction('up','hot');
 		});
+		$("#hotPress").mouseup(function(){
+			buttonFunction('up','hot');
+		});
 		/*  抽湿按钮 */
 		$("#wetUp").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','wet');
@@ -80,7 +83,10 @@ $(document).ready(function(){
 			buttonFunction('press','cool');
 		});
 		$("#wetPress").mousedown(function(){
-			buttonFunction('press','wet');
+			buttonFunction('up','wet');
+		});
+		$("#wetPress").mouseup(function(){
+			buttonFunction('up','wet');
 		});
 		/*  送风按钮 */
 		$("#windUp").bind(touchEvents.touchstart,function(){
@@ -99,7 +105,10 @@ $(document).ready(function(){
 			buttonFunction('press','cool');
 		});
 		$("#windPress").mousedown(function(){
-			buttonFunction('press','wind');
+			buttonFunction('up','wind');
+		});
+		$("#windPress").mouseup(function(){
+			buttonFunction('up','wind');
 		});
 		/*  制冷按钮 */
 		$("#coolUp").bind(touchEvents.touchstart,function(){
@@ -118,7 +127,10 @@ $(document).ready(function(){
 			buttonFunction('press','wind');
 		});
 		$("#coolPress").mousedown(function(){
-			buttonFunction('press','cool');
+			buttonFunction('up','cool');
+		});
+		$("#coolPress").mouseup(function(){
+			buttonFunction('up','cool');
 		});
 });
 /* 单一按钮点击函数 */
