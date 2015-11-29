@@ -34,6 +34,7 @@ $(document).ready(function(){
 				$('#nowStatus').text('开启');
 				/* 开启事件请在此处添加代码 */
 			}
+			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
