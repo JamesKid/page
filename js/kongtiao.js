@@ -20,7 +20,6 @@ $(document).ready(function(){
 				}
 			}
 		};
-		alert('bc');
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			alert('返回事件');  /* 返回事件请在此处添加代码 */
@@ -47,26 +46,79 @@ $(document).ready(function(){
 		});
 		/*  制热按钮 */
 		$("#hotUp").bind(touchEvents.touchstart,function(){
-			alert('mobileUp');
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
 		});
 		$("#hotPress").bind(touchEvents.touchstart,function(){
-			alert('mobilePress');
 			buttonFunction('press','hot');
 		});
 		$("#hotUp").mousedown(function(){
-			alert('up');
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
 		});
 		$("#hotPress").mousedown(function(){
-			alert('press');
 			buttonFunction('press','hot');
+		});
+		/*  抽湿按钮 */
+		$("#wetUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('up','wet');
+			buttonFunction('press','hot');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
+		});
+		$("#wetPress").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','wet');
+		});
+		$("#wetUp").mousedown(function(){
+			buttonFunction('up','wet');
+			buttonFunction('press','hot');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
+		});
+		$("#wetPress").mousedown(function(){
+			buttonFunction('press','wet');
+		});
+		/*  送风按钮 */
+		$("#windUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('up','wind');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','cool');
+		});
+		$("#windPress").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','wind');
+		});
+		$("#windUp").mousedown(function(){
+			buttonFunction('up','wind');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','cool');
+		});
+		$("#windPress").mousedown(function(){
+			buttonFunction('press','wind');
+		});
+		/*  制冷按钮 */
+		$("#coolUp").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','cool');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+		});
+		$("#coolPress").bind(touchEvents.touchstart,function(){
+			buttonFunction('press','cool');
+		});
+		$("#coolUp").mousedown(function(){
+			buttonFunction('up','cool');
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+		});
+		$("#coolPress").mousedown(function(){
+			buttonFunction('press','cool');
 		});
 });
 /* 单一按钮点击函数 */
