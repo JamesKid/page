@@ -29,8 +29,32 @@ $(document).ready(function(){
 		$("#down").bind(touchEvents.touchstart,function(){
 			alert('关闭事件'); /* 关闭事件请在此处添加代码 */
 		});
-		$("#menu").bind(touchEvents.touchstart,function(){
-			alert('菜单事件'); /* 菜单事件请在此处添加代码 */
+		$("#sond_on").bind(touchEvents.touchstart,function(){
+			$("#sound_on").css("display","block");
+			$("#sound_off").css("display","none");
+			/*
+			if(sound%2==0){
+				$("#sound_on").css("display","none");
+				$("#sound_off").css("display","block");
+			}else if(sound%2==1){
+				$("#sound_on").css("display","block");
+				$("#sound_off").css("display","none");
+			}
+			sound++;
+			*/
+			/* 菜单事件请在此处添加代码 */
+		});
+		$("#sond_off").bind(touchEvents.touchstart,function(){
+			$("#sound_on").css("display","none");
+			$("#sound_off").css("display","block");
+		});
+		$("#sound_on").mousedown(function(){
+			$("#sound_on").css("display","none");
+			$("#sound_off").css("display","block");
+		});
+		$("#sound_off").mousedown(function(){
+			$("#sound_on").css("display","block");
+			$("#sound_off").css("display","none");
 		});
 
 
@@ -94,24 +118,30 @@ $(document).ready(function(){
 			$("#down_left").css("display","none");
 		});
 		/* 中间按钮　*/
+		var i = 0; /* 定义循环点击事件初始状态 */
 		$(".imgCenter").bind(touchEvents.touchstart,function(){
-			$("#up_03").css("display","none");
-			$("#up_03_press").css("display","block");
+			if(i%2==0){
+				$("#up_03").css("display","none");
+				$("#up_03_press").css("display","block");
+			}else if(i%2==1){
+				$("#up_03").css("display","block");
+				$("#up_03_press").css("display","none");
+			}
+			i++;
 			/* 点击事件在下面添加 */
 			return false; /* 禁止长按 */
 		});
-		$(".imgCenter").bind(touchEvents.touchend,function(){
-			$("#up_03").css("display","block");
-			$("#up_03_press").css("display","none");
-			return false; /* 禁止长按 */
-		});
+		var i = 0; /* 定义循环点击事件初始状态 */
 		$(".imgCenter").mousedown(function(){
-			$("#up_03").css("display","none");
+			if(i%2==0){
+				$("#up_03").css("display","none");
 			$("#up_03_press").css("display","block");
-		});
-		$(".imgCenter").mouseup(function(){
-			$("#up_03").css("display","block");
-			$("#up_03_press").css("display","none");
+				$("#up_03_press").css("display","block");
+			}else if(i%2==1){
+				$("#up_03").css("display","block");
+				$("#up_03_press").css("display","none");
+			}
+			i++;
 		});
 		/* 右方按钮　*/
 		$(".imgRight").bind(touchEvents.touchstart,function(){
