@@ -134,8 +134,8 @@ img {
 	float:left;
 	width:14%;
 	border-radius:50px;
-	padding-top:4%;
-	padding-bottom:4%;
+	padding-top:3.5%;
+	padding-bottom:3.5%;
 	border:solid #00b4e6 1px;
 	font-size:1em;
 	position:relative;
@@ -163,8 +163,6 @@ img {
 		padding-bottom:1.5%;
 	}
 	.tempNumber {
-		padding-top:4%;
-		padding-bottom:4%;
 		font-size:1.2em;
 	}
 	.line {
@@ -181,9 +179,9 @@ img {
 		padding-bottom:2%;
 	}
 	.tempNumber {
-		padding-top:4%;
-		padding-bottom:4%;
 		font-size:1.3em;
+		padding-top:3.8%;
+		padding-bottom:3.8%;
 	}
 	.line {
 		margin-top:-23%;
@@ -198,10 +196,10 @@ img {
 		padding-top:2.5%;
 		padding-bottom:2.5%;
 	}
-	.tempNumber {
-		padding-top:4%;
-		padding-bottom:4%;
-		font-size:1.3em;
+	.tempnumber {
+		font-size:1.4em;
+		padding-top:4.5%;
+		padding-bottom:4.5%;
 	}
 	.line {
 		margin-top:-23%;
@@ -217,8 +215,6 @@ img {
 		padding-bottom:3%;
 	}
 	.tempNumber {
-		padding-top:4%;
-		padding-bottom:4%;
 		font-size:1.5em;
 	}
 	.line {
