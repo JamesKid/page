@@ -80,7 +80,7 @@ body {
 	width:20%;
 	margin-left:6.6%;
 	margin-right:6.6%;
-	padding-bottom:2%;
+	padding-bottom:4%;
 }
 img {
 	border:0px;
@@ -107,7 +107,7 @@ img {
 	border:solid #aaaaaa 1px;
 	text-align:center;
 	color:#aaaaaa;
-	margin-top:30%;
+	margin-top:25%;
 	margin-left:10%;
 	z-index:999;
 	position:relative;
@@ -123,7 +123,7 @@ img {
 	border:solid #00b4e6 1px;
 	text-align:center;
 	color:#00b4e6;
-	margin-top:30%;
+	margin-top:25%;
 	margin-left:38%;
 	z-index:999;
 	position:relative;
@@ -141,7 +141,7 @@ img {
 	position:relative;
 	text-align:center;
 	z-index:1;
-	margin-top:20%;
+	margin-top:15%;
 	margin-left:-1%;
 }
 .line {
@@ -152,9 +152,12 @@ img {
 	float:left;
 	z-index:1;
 }
-
-
-
+/* 响应式布局 */
+@media (min-width: 500px) {
+	.plus {
+		padding-top:3%;
+	}
+}
 
 
 
