@@ -108,7 +108,7 @@ img {
 	text-align:center;
 	color:#aaaaaa;
 	margin-top:25%;
-	margin-left:12%;
+	margin-left:8%;
 	z-index:999;
 	position:relative;
 }
@@ -124,7 +124,7 @@ img {
 	text-align:center;
 	color:#00b4e6;
 	margin-top:24%;
-	margin-left:38%;
+	margin-left:57%;
 	z-index:999;
 	position:relative;
 }
@@ -145,10 +145,10 @@ img {
 	margin-left:-1%;
 }
 .line {
-	width:62%;
-	margin-left:19%;
-	margin-right:19%;
-	margin-top:-25%;
+	width:70%;
+	margin-left:15%;
+	margin-right:15%;
+	margin-top:-32%;
 	float:left;
 	z-index:1;
 }
@@ -162,12 +162,6 @@ img {
 		padding-top:1.5%;
 		padding-bottom:1.5%;
 	}
-	.tempNumber {
-		font-size:1.2em;
-	}
-	.line {
-		margin-top:-23%;
-	}
 }
 @media (min-width: 400px) {
 	.plus {
@@ -177,14 +171,6 @@ img {
 	.minus {
 		padding-top:2%;
 		padding-bottom:2%;
-	}
-	.tempNumber {
-		font-size:1.3em;
-		padding-top:3.8%;
-		padding-bottom:3.8%;
-	}
-	.line {
-		margin-top:-23%;
 	}
 }
 @media (min-width: 450px) {
@@ -196,14 +182,6 @@ img {
 		padding-top:2.5%;
 		padding-bottom:2.5%;
 	}
-	.tempnumber {
-		font-size:1.4em;
-		padding-top:4.5%;
-		padding-bottom:4.5%;
-	}
-	.line {
-		margin-top:-23%;
-	}
 }
 @media (min-width: 500px) {
 	.plus {
@@ -213,12 +191,6 @@ img {
 	.minus {
 		padding-top:3%;
 		padding-bottom:3%;
-	}
-	.tempNumber {
-		font-size:1.5em;
-	}
-	.line {
-		margin-top:-23%;
 	}
 }
 
