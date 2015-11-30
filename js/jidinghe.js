@@ -175,11 +175,11 @@ function clickButton(buttonName,number,upDown){
 		}
 	}else if(buttonName =="head"){
 		if(upDown == 'up'){
-			$("#up_01").css("display","none");
-			$("#up_01_press").css("display","block");
-		}else if(upDwon == 'down'){
 			$("#up_01").css("display","block");
 			$("#up_01_press").css("display","none");
+		}else if(upDwon == 'down'){
+			$("#up_01").css("display","none");
+			$("#up_01_press").css("display","block");
 		}
 		
 	}
