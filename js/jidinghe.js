@@ -49,7 +49,6 @@ $(document).ready(function(){
 			alert('菜单事件'); /* 菜单事件请在此处添加代码 */
 		});
 
-
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			clickButton('head',0,'up');
@@ -175,11 +174,11 @@ function clickButton(buttonName,number,upDown){
 		}
 	}else if(buttonName =="head"){
 		if(upDown == 'up'){
-			$("#up_01").css("display","block");
-			$("#up_01_press").css("display","none");
-		}else if(upDwon == 'down'){
 			$("#up_01").css("display","none");
 			$("#up_01_press").css("display","block");
+		}else if(upDown == 'down'){
+			$("#up_01").css("display","block");
+			$("#up_01_press").css("display","none");
 		}
 		
 	}
