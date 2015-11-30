@@ -77,8 +77,10 @@ body {
 }
 .button {
 	float:left;
-	width:22%;
-	margin:5.6%;
+	width:20%;
+	margin-left:6.6%;
+	margin-right:6.6%;
+	padding-bottom:2%;
 }
 img {
 	border:0px;
@@ -88,3 +90,60 @@ img {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
 }
+.tempControl {
+	float:left;
+	width:100%;	
+}
+.minus {
+	width:15%;
+	float:left;
+	//position:relative;
+	font-size:1.5em;
+	border-radius:50px;
+	padding-top:5%;
+	padding-bottom:5%;
+	border:solid #aaaaaa 1px;
+	text-align:center;
+	color:#aaaaaa;
+}
+.line {
+	width:70%;
+	margin-left:15%;
+	margin-right:15%;
+	float:left;
+}
+.plus {
+	width:15%;
+	float:left;
+	font-size:1.5em;
+	border-radius:50px;
+	padding-top:5%;
+	padding-bottom:5%;
+	border:solid #aaaaaa 1px;
+	text-align:center;
+	color:#aaaaaa;
+}
+.tempNumber {
+	background-color:#ffffff;
+	color:rgb(101,174,222);
+	float:left;
+	width:15%;
+	border-radius:50px;
+	padding-top:5%;
+	padding-bottom:5%;
+	border:solid rgb(101,174,222) 1px;
+	font-size:1.5em;
+	left:215px;
+	top:38px;
+	position:relative;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
