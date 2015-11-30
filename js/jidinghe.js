@@ -156,7 +156,7 @@ $(document).ready(function(){
 		});
 });
 function clickButton(buttonName,number,upDown){
-	var list = TouchEvent.touchList;
+	event.originalEvent.changedTouches[0].clientX;
 	alert(list);
 	if(buttonName =='left'){
 		if(upDown == 'up'){
