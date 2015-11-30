@@ -155,8 +155,9 @@ $(document).ready(function(){
 			$("#up_05_press").css("display","none");
 		});
 });
+var list='';
 function clickButton(buttonName,number,upDown){
-	event.originalEvent.changedTouches[0].clientX;
+	list = event.originalEvent.changedTouches[0].clientX;
 	alert(list);
 	if(buttonName =='left'){
 		if(upDown == 'up'){
