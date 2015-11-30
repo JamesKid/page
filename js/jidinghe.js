@@ -51,7 +51,7 @@ $(document).ready(function(){
 
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
-			clickButton('head',0,'up');
+			clickButton('head',1,'up');
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
@@ -59,7 +59,7 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
-			clickButton('head',0,'up');
+			clickButton('head',1,'up');
 		});
 		$(".imgHead").mouseup(function(){
 			clickButton('head',0,'down');
@@ -156,6 +156,8 @@ $(document).ready(function(){
 		});
 });
 function clickButton(buttonName,number,upDown){
+	var list = TouchEvent.touchList;
+	alert(list);
 	if(buttonName =='left'){
 		if(upDown == 'up'){
 			$("#up_02").css("display","none");
