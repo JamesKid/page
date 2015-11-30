@@ -157,8 +157,8 @@ $(document).ready(function(){
 });
 var list='';
 function clickButton(buttonName,number,upDown){
-	list = event.originalEvent.changedTouches[0].clientX;
-	alert(list);
+    var touch = e.originalEvent.targetTouches[0];  
+	alert(touch);
 	if(buttonName =='left'){
 		if(upDown == 'up'){
 			$("#up_02").css("display","none");
