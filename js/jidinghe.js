@@ -177,11 +177,9 @@ function clickButton(buttonName,number,upDown){
 		if(upDown == 'up'){
 			$("#up_01").css("display","none");
 			$("#up_01_press").css("display","block");
-			$("#up_left").css("display","none");
 		}else if(upDwon == 'down'){
 			$("#up_01").css("display","block");
 			$("#up_01_press").css("display","none");
-			$("#up_left").css("display","none");
 		}
 		
 	}
