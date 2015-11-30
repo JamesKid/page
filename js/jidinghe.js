@@ -52,26 +52,18 @@ $(document).ready(function(){
 
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
-			$("#up_01").css("display","none");
-			$("#up_01_press").css("display","block");
-			$("#up_left").css("display","none");
-			/* 点击事件在下面添加 */
-
+			clickButton('head',0,'up');
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
-			$("#up_01").css("display","block");
-			$("#up_01_press").css("display","none");
-			$("#up_left").css("display","none");
+			clickButton('head',0,'down');
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
-			$("#up_01").css("display","none");
-			$("#up_01_press").css("display","block");
+			clickButton('head',0,'down');
 		});
 		$(".imgHead").mouseup(function(){
-			$("#up_01").css("display","block");
-			$("#up_01_press").css("display","none");
+			clickButton('head',0,'up');
 		});
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
@@ -181,9 +173,15 @@ function clickButton(buttonName,number,upDown){
 			$("#up_05").css("display","block");
 			$("#down_left").css("display","none");
 		}
-	}else if(buttonName =="center"){
+	}else if(buttonName =="head"){
 		if(upDown == 'up'){
+			$("#up_01").css("display","none");
+			$("#up_01_press").css("display","block");
+			$("#up_left").css("display","none");
 		}else if(upDwon == 'down'){
+			$("#up_01").css("display","block");
+			$("#up_01_press").css("display","none");
+			$("#up_left").css("display","none");
 		}
 		
 	}
