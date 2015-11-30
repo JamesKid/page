@@ -59,10 +59,10 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
-			clickButton('head',0,'down');
+			clickButton('head',0,'up');
 		});
 		$(".imgHead").mouseup(function(){
-			clickButton('head',0,'up');
+			clickButton('head',0,'down');
 		});
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
