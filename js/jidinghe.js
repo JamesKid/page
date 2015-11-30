@@ -53,10 +53,14 @@ $(document).ready(function(){
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			clickButton('head',1,'up');
 			var touch = e.originalEvent.targetTouches[0];  
-			alert(touch);
+			var y = touch.pageY;
+			alert(y);
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
+			var touch = e.originalEvent.targetTouches[0];  
+			var y = touch.pageY;
+			alert(y);
 			clickButton('head',0,'down');
 			return false; /* 禁止长按 */
 		});
