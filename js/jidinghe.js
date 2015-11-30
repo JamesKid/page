@@ -173,7 +173,7 @@ function clickButton(buttonName,number,upDown){
 			$("#up_left").css("display","block");
 			$("#up_05").css("display","none");
 			$("#down_left").css("display","block");
-		}else if(upDwon == 'down'){
+		}else if(upDown == 'down'){
 			$("#up_02").css("display","block");
 			$("#up_02_press").css("display","none");
 			$("#up_01").css("display","block");
