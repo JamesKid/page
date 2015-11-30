@@ -52,6 +52,8 @@ $(document).ready(function(){
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			clickButton('head',1,'up');
+			var touch = e.originalEvent.targetTouches[0];  
+			alert(touch);
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
@@ -157,8 +159,6 @@ $(document).ready(function(){
 });
 var list='';
 function clickButton(buttonName,number,upDown){
-    var touch = e.originalEvent.targetTouches[0];  
-	alert(touch);
 	if(buttonName =='left'){
 		if(upDown == 'up'){
 			$("#up_02").css("display","none");
