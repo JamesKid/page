@@ -75,23 +75,45 @@ $(document).ready(function(){
 		});
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
-			clickButton('left',0,'up');
+			$("#up_02").css("display","none");
+			$("#up_02_press").css("display","block");
+			$("#up_01").css("display","none");
+			$("#up_left").css("display","block");
+			$("#up_05").css("display","none");
+			$("#down_left").css("display","block");
+			/* 点击事件在下面添加 */
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
-			clickButton('left',0,'down');
+			$("#up_02").css("display","block");
+			$("#up_02_press").css("display","none");
+			$("#up_01").css("display","block");
+			$("#up_left").css("display","none");
+			$("#up_05").css("display","block");
+			$("#down_left").css("display","none");
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
-			clickButton('left',0,'up');
+			$("#up_02").css("display","none");
+			$("#up_02_press").css("display","block");
+			$("#up_01").css("display","none");
+			$("#up_left").css("display","block");
+			$("#up_05").css("display","none");
+			$("#down_left").css("display","block");
 		});
 		$(".imgLeft").mouseup(function(){
-			clickButton('left',0,'down');
+			$("#up_02").css("display","block");
+			$("#up_02_press").css("display","none");
+			$("#up_01").css("display","block");
+			$("#up_left").css("display","none");
+			$("#up_05").css("display","block");
+			$("#down_left").css("display","none");
 		});
 		/* 中间按钮　*/
 		$(".imgCenter").bind(touchEvents.touchstart,function(){
 			$("#up_03").css("display","none");
 			$("#up_03_press").css("display","block");
+			/* 点击事件在下面添加 */
 			return false; /* 禁止长按 */
 		});
 		$(".imgCenter").bind(touchEvents.touchend,function(){
@@ -164,28 +186,3 @@ $(document).ready(function(){
 			$("#up_05_press").css("display","none");
 		});
 });
-function clickButton(buttonName,number,upDown){
-	if(buttonName =='left'){
-		if(upDown == 'up'){
-			$("#up_02").css("display","none");
-			$("#up_02_press").css("display","block");
-			$("#up_01").css("display","none");
-			$("#up_left").css("display","block");
-			$("#up_05").css("display","none");
-			$("#down_left").css("display","block");
-		}else if(upDwon == 'down'){
-			$("#up_02").css("display","block");
-			$("#up_02_press").css("display","none");
-			$("#up_01").css("display","block");
-			$("#up_left").css("display","none");
-			$("#up_05").css("display","block");
-			$("#down_left").css("display","none");
-		}
-	}else if(buttonName =="center"){
-		if(upDown == 'up'){
-		}else if(upDwon == 'down'){
-		}
-		
-	}
-
-}
