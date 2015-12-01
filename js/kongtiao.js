@@ -192,8 +192,7 @@ $(document).ready(function(){
 		$(".puls").bind(touchEvents.touchstart,function(){
 		   $(".line").each(function(){
 			   if($(this).css("display")=="block"){
-				   var value = $(this).val();
-				   alert(value);
+				   alert('use');
 			   }
 		   });
 		});
