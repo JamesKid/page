@@ -9,6 +9,7 @@ $(document).ready(function(){
 			touchstart: "touchstart",
 			touchmove: "touchmove",
 			touchend: "touchend",
+			touchleave: "touchleave",
 			/**
 			 * @desc:判断是否pc设备，若是pc，需要更改touch事件为鼠标事件，否则默认触摸事件
 			 */
@@ -79,9 +80,6 @@ $(document).ready(function(){
 		$("#wetPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','wet');
 		});
-		$("#wetPress").bind(touchEvents.touchleave,function(){
-			buttonFunction('press','wet');
-		});
 		$("#wetUp").mousedown(function(){
 			buttonFunction('up','wet');
 			buttonFunction('press','hot');
@@ -104,9 +102,6 @@ $(document).ready(function(){
 		$("#windPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','wind');
 		});
-		$("#windPress").bind(touchEvents.touchleave,function(){
-			buttonFunction('press','wind');
-		});
 		$("#windUp").mousedown(function(){
 			buttonFunction('up','wind');
 			buttonFunction('press','hot');
@@ -127,9 +122,6 @@ $(document).ready(function(){
 			buttonFunction('press','wind');
 		});
 		$("#coolPress").bind(touchEvents.touchstart,function(){
-			buttonFunction('press','cool');
-		});
-		$("#coolPress").bind(touchEvents.touchleave,function(){
 			buttonFunction('press','cool');
 		});
 		$("#coolUp").mousedown(function(){
