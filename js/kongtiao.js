@@ -190,13 +190,50 @@ $(document).ready(function(){
 		/* 温度加减 */
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
-		   $(".line img").each(function(){
-			   alert('use');
-		   });
+			var tempNumber = $(".on").attr("value");
+			if(tempNumber ==30){
+				return false;
+			}
+			var tempNumberup = parseInt(tempNumber)+1;
+			$("#temp"+tempNumber).removeClass("on");
+			$("#temp"+tempNumberup).addClass("on");
+			$("#temp"+tempNumber).css("display","none");
+			$("#temp"+tempNumberup).css("display","block");
 		});
 		$(".plus").mousedown(function(){
+			var tempNumber = $(".on").attr("value");
+			if(tempNumber ==30){
+				return false;
+			}
+			var tempNumberup = parseInt(tempNumber)+1;
+			$("#temp"+tempNumber).removeClass("on");
+			$("#temp"+tempNumberup).addClass("on");
+			$("#temp"+tempNumber).css("display","none");
+			$("#temp"+tempNumberup).css("display","block");
 		});
 		/* 减小温度 */
+		$(".puls").bind(touchEvents.touchstart,function(){
+			var tempNumber = $(".on").attr("value");
+			if(tempNumber ==16){
+				return false;
+			}
+			var tempNumberup = parseInt(tempNumber)-1;
+			$("#temp"+tempNumber).removeClass("on");
+			$("#temp"+tempNumberup).addClass("on");
+			$("#temp"+tempNumber).css("display","none");
+			$("#temp"+tempNumberup).css("display","block");
+		});
+		$(".minus").mousedown(function(){
+			var tempNumber = $(".on").attr("value");
+			if(tempNumber ==16){
+				return false;
+			}
+			var tempNumberup = parseInt(tempNumber)-1;
+			$("#temp"+tempNumber).removeClass("on");
+			$("#temp"+tempNumberup).addClass("on");
+			$("#temp"+tempNumber).css("display","none");
+			$("#temp"+tempNumberup).css("display","block");
+		});
 
 });
 /* 单一按钮点击函数 */
