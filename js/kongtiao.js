@@ -21,6 +21,9 @@ $(document).ready(function(){
 				}
 			}
 		};
+		/* 头部温度 */
+		var tempNumber = $(".on").attr("value");
+		$('#topTemp').text(tempNumber);
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			alert('返回事件');  /* 返回事件请在此处添加代码 */
@@ -199,6 +202,7 @@ $(document).ready(function(){
 				return false;
 			}
 			var tempNumberup = parseInt(tempNumber)+1;
+			$('#topTemp').text(tempNumberup); /* 头部温度变更 */
 			$("#temp"+tempNumber).removeClass("on");
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
@@ -210,18 +214,20 @@ $(document).ready(function(){
 				return false;
 			}
 			var tempNumberup = parseInt(tempNumber)+1;
+			$('#topTemp').text(tempNumberup); /* 头部温度变更 */
 			$("#temp"+tempNumber).removeClass("on");
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
 		});
 		/* 减小温度 */
-		$(".puls").bind(touchEvents.touchstart,function(){
+		$(".minus").bind(touchEvents.touchstart,function(){
 			var tempNumber = $(".on").attr("value");
 			if(tempNumber ==16){
 				return false;
 			}
 			var tempNumberup = parseInt(tempNumber)-1;
+			$('#topTemp').text(tempNumberup); /* 头部温度变更 */
 			$("#temp"+tempNumber).removeClass("on");
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
@@ -233,6 +239,7 @@ $(document).ready(function(){
 				return false;
 			}
 			var tempNumberup = parseInt(tempNumber)-1;
+			$('#topTemp').text(tempNumberup); /* 头部温度变更 */
 			$("#temp"+tempNumber).removeClass("on");
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
