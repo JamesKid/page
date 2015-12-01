@@ -190,18 +190,12 @@ $(document).ready(function(){
 		/* 温度加减 */
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
-			$(".line").each(){
-				if($(this).css("display")=="block"){
-					alert('您想要的元素');
-				}
-			};
+			var tempNumber = $(".line img").css("display","block").val();
+			alert(tempNumber);
 		});
 		$(".plus").mousedown(function(){
-			$(".line").each(){
-				if($(this).css("display")=="block"){
-					alert('您想要的元素');
-				}
-			};
+			var tempNumber = $(".line img").css("display","block").val();
+			alert(tempNumber);
 		});
 		/* 减小温度 */
 
