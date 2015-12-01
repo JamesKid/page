@@ -187,6 +187,17 @@ $(document).ready(function(){
 			autoControl++;
 			/* 声音关闭事件请在此处添加代码 */
 		});
+		/* 温度加减 */
+		/* 增大温度 */
+		$("#puls").bind(touchEvents.touchstart,function(){
+			var nowTemp = $('#plus').val();
+			alert(nowTemp);
+		});
+		$("#plus").mousedown(function(){
+			var nowTemp = $('#plus').val();
+			alert(nowTemp);
+		});
+		/* 减小温度 */
 
 });
 /* 单一按钮点击函数 */
