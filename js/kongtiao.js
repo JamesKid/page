@@ -196,8 +196,6 @@ $(document).ready(function(){
 			alert(value);
 		});
 		$(".plus").mousedown(function(){
-			var tempNumber = $(".line img").css("display","block").val();
-			alert(tempNumber);
 		});
 		/* 减小温度 */
 
