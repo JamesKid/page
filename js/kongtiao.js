@@ -51,10 +51,10 @@ $(document).ready(function(){
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
+			return false;
 		});
 		$("#hotPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','hot');
-			return false;
 		});
 		$("#hotUp").mousedown(function(){
 			buttonFunction('up','hot');
