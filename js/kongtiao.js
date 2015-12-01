@@ -190,7 +190,7 @@ $(document).ready(function(){
 		/* 温度加减 */
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
-		   $(".line").each(function(){
+		   $(".line img").each(function(){
 			   if($(this).css("display")=="block"){
 				   alert('use');
 			   }
