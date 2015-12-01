@@ -191,9 +191,7 @@ $(document).ready(function(){
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
 		   $(".line img").each(function(){
-			   if($(this).css("display")=="block"){
-				   alert('use');
-			   }
+			   alert('use');
 		   });
 		});
 		$(".plus").mousedown(function(){
