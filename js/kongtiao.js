@@ -191,18 +191,12 @@ $(document).ready(function(){
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
 			$(".line").each(){
-				if($(this).css("display")=="block"){
-					var nowTemp = $(this).val();
-					alert(nowTemp);
-				}
+				alert('a');
 			};
 		});
 		$(".plus").mousedown(function(){
 			$(".line").each(){
-				if($(this).css("display")=="block"){
-					var nowTemp = $(this).val();
-					alert(nowTemp);
-				}
+				alert('b');
 			};
 		});
 		/* 减小温度 */
