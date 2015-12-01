@@ -235,9 +235,8 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).css("display","block");
 		});
 		$(".line").bind(touchEvents.touchstart,function(){
-			return false;
+			return false; /* 禁止图片长按 */
 		});
-
 });
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
