@@ -55,13 +55,13 @@ $(document).ready(function(){
 		$("#hotPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','hot');
 		});
-		$("#hotPress").bind(touchEvents.touchleave,function(){
-			alert('abc');
-			buttonFunction('press','hot');
+		$("#hotPress").bind(touchEvents.touchend,function(){
+			alert('pressend');
+			buttonFunction('up','hot');
 		});
-		$("#hotUp").bind(touchEvents.touchleave,function(){
-			alert('abc');
-			buttonFunction('press','hot');
+		$("#hotUp").bind(touchEvents.touchlend,function(){
+			alert('upend');
+			buttonFunction('up','hot');
 		});
 		$("#hotUp").mousedown(function(){
 			buttonFunction('up','hot');
