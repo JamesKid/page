@@ -56,12 +56,11 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 		});
 		$("#hotPress").bind(touchEvents.touchmove,function(){
-			alert('pressmove');
-			buttonFunction('up','hot');
+			buttonFunction('press','hot');
 		});
 		$("#hotUp").bind(touchEvents.touchlmove,function(){
 			alert('upmove');
-			buttonFunction('up','hot');
+			buttonFunction('press','hot');
 		});
 		$("#hotUp").mousedown(function(){
 			buttonFunction('up','hot');
