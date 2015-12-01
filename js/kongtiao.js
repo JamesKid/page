@@ -55,7 +55,7 @@ $(document).ready(function(){
 		$("#hotPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','hot');
 		});
-		$("#hotPress").bind(touchEvents.touchend,function(){
+		$("#hotPress").bind(touchEvents.touchleave,function(){
 			buttonFunction('up','hot');
 		});
 		$("#hotUp").mousedown(function(){
