@@ -58,10 +58,6 @@ $(document).ready(function(){
 		$("#hotPress").bind(touchEvents.touchmove,function(){
 			buttonFunction('press','hot');
 		});
-		$("#hotUp").bind(touchEvents.touchlmove,function(){
-			alert('upmove');
-			buttonFunction('press','hot');
-		});
 		$("#hotUp").mousedown(function(){
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
