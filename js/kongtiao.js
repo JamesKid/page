@@ -59,6 +59,10 @@ $(document).ready(function(){
 			alert('abc');
 			buttonFunction('press','hot');
 		});
+		$("#hotUp").bind(touchEvents.touchleave,function(){
+			alert('abc');
+			buttonFunction('press','hot');
+		});
 		$("#hotUp").mousedown(function(){
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
