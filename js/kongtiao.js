@@ -219,6 +219,7 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
+			return false;
 		});
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
@@ -232,6 +233,7 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
+			return false;
 		});
 		$(".minus").mousedown(function(){
 			var tempNumber = $(".on").attr("value");
