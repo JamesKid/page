@@ -234,6 +234,9 @@ $(document).ready(function(){
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
 		});
+		$(".line").bind(touchEvents.touchstart,function(){
+			return false;
+		});
 
 });
 /* 单一按钮点击函数 */
