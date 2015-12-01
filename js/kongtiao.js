@@ -189,15 +189,11 @@ $(document).ready(function(){
 		});
 		/* 温度加减 */
 		/* 增大温度 */
-		$(".puls").bind(touchEvents.touchstart,function(){
-			$(".line").each(){
-				alert('a');
-			};
+		$("#puls").bind(touchEvents.touchstart,function(){
+			alert('a');
 		});
-		$(".plus").mousedown(function(){
-			$(".line").each(){
-				alert('b');
-			};
+		$("#plus").mousedown(function(){
+			alert('b');
 		});
 		/* 减小温度 */
 
