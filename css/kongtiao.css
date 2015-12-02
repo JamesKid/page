@@ -50,10 +50,14 @@ body {
 	text-align:center;
 	padding-top:4%;
 	font-family: HelveticaNeue-UltraLight;
+	font-weight:300;
+}
+.mark {
+	font-size:0.5em;
 	font-weight:100;
 }
-#mark {
-	font-size:0.5em;
+.degree {
+	font-size:1em;
 	font-weight:100;
 }
 
