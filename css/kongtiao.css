@@ -1,9 +1,10 @@
 /* add by 张世杰 2015.11.28  email:406358964@qq.com */
 /* 字体引用 */
 @font-face { 
-	font-family: SketchRockwell; /*这里是说明调用来的字体名字*/ 
-	src: url(‘SketchRockwell.ttf’); /*这里是字体文件路径*/ 
+	font-family: HelveticaNeue-UltraLight; /*这里是说明调用来的字体名字*/ 
+	src: url('HelveticaNeue-UltraLight.otf'); /*这里是字体文件路径*/ 
 } 
+/* 正文内容 */
 * {
 	-webkit-touch-callout:none;
 	-khtml-touch-callout:none;
@@ -48,7 +49,7 @@ body {
 	font-size:3.5em;
 	text-align:center;
 	padding-top:4%;
-	font-family: arial;
+	font-family: HelveticaNeue-UltraLight;
 	font-weight:100;
 }
 #mark {
