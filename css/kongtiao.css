@@ -44,17 +44,20 @@ body {
 }
 .title {
 	float:left;
-	width:76%;
+	width:66%;
 	color:#feffff;
 	font-size:3.5em;
 	text-align:center;
 	padding-top:4%;
+	padding-left:10%;
 	font-family: HelveticaNeue-UltraLight;
 	font-weight:300;
 }
 .mark {
-	font-size:0.5em;
+	font-size:0.6em;
 	font-weight:100;
+	left:-35px;
+	position:relative;
 }
 .degree {
 	font-size:0.6em;
@@ -72,11 +75,10 @@ body {
 	padding-top:3%;
 }
 .status {
-	width:98%;
+	width:100%;
 	text-align:center;
 	color:#bfedf9;
 	padding-bottom:3%;
-	padding-right:2%;
 }
 .content {
 	width:90%;
