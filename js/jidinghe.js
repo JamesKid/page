@@ -69,15 +69,14 @@ $(document).ready(function(){
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			clickButton('head',1,'up');
-			var touch = e.originalEvent.targetTouches[0];  
-			var y = touch.pageY;
-			alert(y);
+			//var y = touch.pageY;
+			//alert(y);
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
-			var touch = e.originalEvent.targetTouches[0];  
-			var y = touch.pageY;
-			alert(y);
+			//var touch = e.originalEvent.targetTouches[0];  
+			//var y = touch.pageY;
+			//alert(y);
 			clickButton('head',0,'down');
 			return false; /* 禁止长按 */
 		});
