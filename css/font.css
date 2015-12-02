@@ -1,0 +1,42 @@
+span {
+	font-size:1.5em;
+	width:100%;
+	padding:3%;
+}
+.font1 {
+	font-style:宋体;
+}
+.font2 {
+	font-style:黑体;
+}
+.font3 {
+	font-style:微软雅黑;
+}
+.font4 {
+	font-style:微软正黑体;
+}
+/*
+黑体* SimHei
+微软雅黑* Microsoft YaHei
+微软正黑体 Microsoft JhengHei
+新宋体 NSimSun
+新细明体 PMingLiU
+细明体 MingLiU
+标楷体 DFKai-SB
+仿宋 FangSong
+楷体 KaiTi
+仿宋_GB2312 FangSong_GB2312
+楷体_GB2312 KaiTi_GB2312
+
+中文名 英文名
+华文细黑* STHeiti Light [STXihei]
+华文黑体* STHeiti
+华文楷体 STKaiti
+华文宋体 STSong
+华文仿宋 STFangsong
+丽黑 Pro LiHei Pro Medium
+丽宋 Pro LiSong Pro Light
+标楷体 BiauKai
+苹果丽中黑 Apple LiGothic Medium
+苹果丽细宋 Apple LiSung Light
+*/
