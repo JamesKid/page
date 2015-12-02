@@ -49,11 +49,13 @@ $(document).ready(function(){
 			//alert('菜单事件'); /* 菜单事件请在此处添加代码 */
 			$("#menu").css("display","none");
 			$("#menuPress").css("display","block");
+			return false;
 		});
 		$("#menuPress").bind(touchEvents.touchstart,function(){
 			//alert('菜单事件'); /* 菜单事件请在此处添加代码 */
 			$("#menu").css("display","block");
 			$("#menuPress").css("display","none");
+			return false;
 		});
 		$("#menu").mousedown(function(){
 			$("#menu").css("display","none");
