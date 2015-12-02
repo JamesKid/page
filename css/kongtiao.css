@@ -44,12 +44,12 @@ body {
 }
 .title {
 	float:left;
-	width:65%;
+	width:60%;
 	color:#feffff;
 	font-size:3.5em;
 	text-align:center;
 	padding-top:4%;
-	padding-left:11%;
+	padding-left:16%;
 	font-family: HelveticaNeue-UltraLight;
 	font-weight:bold;
 }
@@ -172,6 +172,16 @@ img {
 	z-index:1;
 }
 /* 响应式布局 */
+@media (max-width: 300px) {
+	.plus {
+		padding-top:0.8%;
+		padding-bottom:0.8%;
+	}
+	.minus {
+		padding-top:0.8%;
+		padding-bottom:0.8%;
+	}
+}
 @media (min-width: 350px) {
 	.plus {
 		padding-top:1.5%;
@@ -180,6 +190,16 @@ img {
 	.minus {
 		padding-top:1.5%;
 		padding-bottom:1.5%;
+	}
+}
+@media (min-width: 375px) {
+	.plus {
+		padding-top:1.8%;
+		padding-bottom:1.8%;
+	}
+	.minus {
+		padding-top:1.8%;
+		padding-bottom:1.8%;
 	}
 }
 @media (min-width: 400px) {
