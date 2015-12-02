@@ -46,7 +46,22 @@ $(document).ready(function(){
 			}
 		});
 		$("#menu").bind(touchEvents.touchstart,function(){
-			alert('菜单事件'); /* 菜单事件请在此处添加代码 */
+			//alert('菜单事件'); /* 菜单事件请在此处添加代码 */
+			$("#menu").css("display","none");
+			$("#menuPress").css("display","block");
+		});
+		$("#menuPress").bind(touchEvents.touchstart,function(){
+			//alert('菜单事件'); /* 菜单事件请在此处添加代码 */
+			$("#menu").css("display","block");
+			$("#menuPress").css("display","none");
+		});
+		$("#menu").mousedown(function(){
+			$("#menu").css("display","none");
+			$("#menuPress").css("display","block");
+		});
+		$("#menuPress").mousedown(function(){
+			$("#menu").css("display","block");
+			$("#menuPress").css("display","none");
 		});
 
 		/* 上方按钮　*/
