@@ -57,9 +57,11 @@ body {
 	font-weight:100;
 }
 .degree {
-	font-size:0.3em;
+	font-size:0.6em;
 	font-weight:100;
-	margin-left:-5%;
+	position:relative;
+	top:-16px;
+	left:-15px;
 }
 
 .down {
