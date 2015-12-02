@@ -83,7 +83,9 @@ body {
 .content {
 	width:90%;
 	float:left;
-	padding:5%;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:10%;
 
 }
 .control {
@@ -95,7 +97,7 @@ body {
 	width:20%;
 	margin-left:6.6%;
 	margin-right:6.6%;
-	padding-bottom:4%;
+	padding-bottom:8%;
 }
 img {
 	border:0px;
