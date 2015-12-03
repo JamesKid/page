@@ -216,7 +216,7 @@ var SingletonTester = (function () {
 					$("#up_left").css("display","block");
 					$("#up_05").css("display","none");
 					$("#down_left").css("display","block");
-				}else if(upDown == 'down' && this.name="left"){
+				}else if(upDown == 'down' && this.name=="left"){
 					$("#up_02").css("display","block");
 					$("#up_02_press").css("display","none");
 					$("#up_01").css("display","block");
