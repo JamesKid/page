@@ -158,10 +158,12 @@ $(document).ready(function(){
 		$(".imgLeft").mousedown(function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
+			console.log(SingletonTester.name);
 		});
 		$(".imgLeft").mouseup(function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
+			console.log(SingletonTester.name);
 		});
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
