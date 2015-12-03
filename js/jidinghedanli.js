@@ -157,7 +157,7 @@ $(document).ready(function(){
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
-			alert('clickName');
+			alert(clickName);
 			/*
 			if(clickName == 'left'){
 				SingletonTester.setName('left'); 
