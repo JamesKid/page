@@ -135,23 +135,13 @@ $(document).ready(function(){
 		});
 		/*  中间按钮　*/
 		$("#up_03").bind(touchEvents.touchstart,function(){
-			clickName = SingletonTester.getName(); 
-			if(clickName == 'noClick'){
-				SingletonTester.setName('center'); 
-				SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
-			}else {
-				return false;
-			}
+			SingletonTester.setName('center'); 
+			SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
 			return false; /* 禁止长按 */
 		});
 		$("#up_03_press").bind(touchEvents.touchstart,function(){
-			clickName = SingletonTester.getName(); 
-			if(clickName == 'onClick'){
-				SingletonTester.setName('center'); 
-				SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
-			}else {
-				return false;
-			}
+			SingletonTester.setName('center'); 
+			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 			return false; /* 禁止长按 */
 		});
 		$("#up_03").mousedown(function(){
