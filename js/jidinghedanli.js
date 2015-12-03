@@ -206,7 +206,6 @@ var SingletonTester = (function () {
 			this.name = args;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
-			alert(name);
 			if(buttonName =='left' && name=='left'){
 				if(upDown == 'up'){
 					$("#up_02").css("display","none");
