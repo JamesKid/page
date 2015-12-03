@@ -134,7 +134,7 @@ $(document).ready(function(){
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
 		});
 		/*  中间按钮　*/
-		$(".imgCenter").bind(touchEvents.touchstart,function(){
+		$("#up_03").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'noClick'){
 				SingletonTester.setName('center'); 
@@ -144,7 +144,7 @@ $(document).ready(function(){
 			}
 			return false; /* 禁止长按 */
 		});
-		$(".imgCenter").bind(touchEvents.touchend,function(){
+		$("#up_03_press").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'center'){
 				SingletonTester.setName('center'); 
