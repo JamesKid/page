@@ -135,26 +135,35 @@ $(document).ready(function(){
 		});
 		/*  中间按钮　*/
 		$("#up_03").bind(touchEvents.touchstart,function(){
+			/*
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'noClick'){
 				SingletonTester.setName('center'); 
 				SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
 				SingletonTester.setName('noClick'); 
-				return false; /* 禁止长按 */
+				return false; 
 			}else {
 				return false;
 			}
+			*/
+			$("#up_03").css("display","none");
+			$("#up_03_press").css("display","block");
 			return false;
 		});
 		$("#up_03_press").bind(touchEvents.touchstart,function(){
+			$("#up_03").css("display","block");
+			$("#up_03_press").css("display","none");
+			/*
 			if(clickName == 'noClick'){
 				SingletonTester.setName('center'); 
 				SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 				SingletonTester.setName('noClick'); 
-				return false; /* 禁止长按 */
+				return false;
 			}else {
 				return false;
 			}
+			*/
+
 			return false;
 		});
 		$("#up_03").mousedown(function(){
