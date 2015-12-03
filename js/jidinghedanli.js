@@ -166,27 +166,27 @@ $(document).ready(function(){
 		console.log(singletonTest2); // 输出 5  
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
-			var name = SingletonTester.setName('left'); 
-			var test2 = SingletonTester.setClickButton(name,'left',0,'up'); 
+			SingletonTester.setName('left'); 
+			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
 			//clickButton('left',0,'up');
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
-			var name  = SingletonTester.setName('left'); 
-			var test2 = SingletonTester.setClickButton(name,'left',0,'down'); 
+			SingletonTester.setName('left'); 
+			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
 			//clickButton('left',0,'down');
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
-			var name  = SingletonTester.setName('left'); 
-			var test2 = SingletonTester.setClickButton(name,'left',0,'up'); 
-			alert('test1'+name);
+			SingletonTester.setName('left'); 
+			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
+			alert(SingletonTester.name+'down');
 			//clickButton('left',0,'up');
 		});
 		$(".imgLeft").mouseup(function(){
-			var name  = SingletonTester.setName('left'); 
-			var test2 = SingletonTester.setClickButton(name,'left',0,'down'); 
-			alert('test2'+name);
+			SingletonTester.setName('left'); 
+			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
+			alert(SingletonTester.name+'up');
 			//clickButton('left',0,'down');
 		});
 });
@@ -211,7 +211,6 @@ var SingletonTester = (function () {
 			this.name = args;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
-			alert(name);
 			if(buttonName =='left'){
 				if(upDown == 'up'){
 					$("#up_02").css("display","none");
