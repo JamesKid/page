@@ -156,7 +156,8 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
-			SingletonTester.setClickButton('left','left',0,'down'); 
+			name = SingletonTester.getName(); 
+			SingletonTester.setClickButton(name,'left',0,'down'); 
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
@@ -181,7 +182,8 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
-			SingletonTester.setClickButton('head','head',0,'down'); 
+			name = SingletonTester.getName(); 
+			SingletonTester.setClickButton(name,'head',0,'down'); 
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
