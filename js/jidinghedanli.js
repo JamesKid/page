@@ -76,25 +76,6 @@ $(document).ready(function(){
 			$("#menuPress").css("display","none");
 		});
 
-		/* 中间按钮　*/
-		$(".imgCenter").bind(touchEvents.touchstart,function(){
-			$("#up_03").css("display","none");
-			$("#up_03_press").css("display","block");
-			return false; /* 禁止长按 */
-		});
-		$(".imgCenter").bind(touchEvents.touchend,function(){
-			$("#up_03").css("display","block");
-			$("#up_03_press").css("display","none");
-			return false; /* 禁止长按 */
-		});
-		$(".imgCenter").mousedown(function(){
-			$("#up_03").css("display","none");
-			$("#up_03_press").css("display","block");
-		});
-		$(".imgCenter").mouseup(function(){
-			$("#up_03").css("display","block");
-			$("#up_03_press").css("display","none");
-		});
 		/* 右方按钮　*/
 		$(".imgRight").bind(touchEvents.touchstart,function(){
 			$("#up_04").css("display","none");
@@ -173,14 +154,11 @@ $(document).ready(function(){
 			return false;  /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
-			SingletonTester.setName('left'); 
-			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
-			console.log(SingletonTester.name);
+			SingletonTester.setClickButton('left','left',0,'up'); 
 		});
 		$(".imgLeft").mouseup(function(){
-			SingletonTester.setName('left'); 
-			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
-			console.log(SingletonTester.name);
+			//SingletonTester.setName('left'); 
+			SingletonTester.setClickButton('left','left',0,'down'); 
 		});
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
@@ -204,14 +182,27 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
-			SingletonTester.setName('head'); 
-			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
-			console.log(SingletonTester.name);
+			SingletonTester.setClickButton('head','head',0,'up'); 
 		});
 		$(".imgHead").mouseup(function(){
-			SingletonTester.setName('head'); 
-			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
-			console.log(SingletonTester.name);
+			SingletonTester.setClickButton('head','head',0,'down'); 
+		});
+		/*  中间按钮　*/
+		$(".imgCenter").bind(touchEvents.touchstart,function(){
+			return false; /* 禁止长按 */
+		});
+		$(".imgCenter").bind(touchEvents.touchend,function(){
+			$("#up_03").css("display","block");
+			$("#up_03_press").css("display","none");
+			return false; /* 禁止长按 */
+		});
+		$(".imgCenter").mousedown(function(){
+			$("#up_03").css("display","none");
+			$("#up_03_press").css("display","block");
+		});
+		$(".imgCenter").mouseup(function(){
+			$("#up_03").css("display","block");
+			$("#up_03_press").css("display","none");
 		});
 });
 var SingletonTester = (function () { 
@@ -262,6 +253,15 @@ var SingletonTester = (function () {
 				}else if(upDown == 'down' && this.name=="head"){
 					$("#up_01").css("display","block");
 					$("#up_01_press").css("display","none");
+					this.name = 'noClick';
+				}
+			}else if(buttonName =="center" && this.name=='center'){
+				if(upDown == 'up' && this.name=="center"){
+					$("#up_03").css("display","none");
+					$("#up_03_press").css("display","block");
+				}else if(upDown == 'down' && this.name=="center"){
+					$("#up_03").css("display","none");
+					$("#up_03_press").css("display","block");
 					this.name = 'noClick';
 				}
 			}
