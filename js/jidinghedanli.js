@@ -183,7 +183,7 @@ $(document).ready(function(){
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
-			if(clickName == 'noClick'){
+			if(clickName == 'head'){
 				SingletonTester.setName('head'); 
 				SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
 			}else {
