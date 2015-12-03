@@ -176,8 +176,10 @@ $(document).ready(function(){
 			$("#up_05").css("display","block");
 			$("#up_05_press").css("display","none");
 		});
+		var test = SingletonTester.setName('abc'); 
+		var singletonTest2 = SingletonTester.name; 
+		console.log(singletonTest2); // 输出 5  
 });
-var list='';
 function clickButton(buttonName,number,upDown){
 	if(buttonName =='left'){
 		if(upDown == 'up'){
@@ -203,7 +205,30 @@ function clickButton(buttonName,number,upDown){
 			$("#up_01").css("display","block");
 			$("#up_01_press").css("display","none");
 		}
-		
 	}
-
 }
+var SingletonTester = (function () { 
+		//参数：传递给单例的一个参数集合 
+		function Singleton(args) { 
+		console.log('mainfunc');
+				this.name = 'SingletonTester'; 
+				this.pointX = 6; 
+				this.pointY = 7; 
+		} 
+		//实例容器 
+		var instance; 
+		var _static = { 
+				name: 'SingletonTester', 
+				//返回Singleton的实例 
+				getInstance: function (args) { 
+						if (instance === undefined) { 
+								instance = new Singleton(args); 
+						} 
+						return instance; 
+				} ,
+				setName: function (args) { 
+			this.name = args;
+				} ,
+		}; 
+		return _static; 
+})(); 
