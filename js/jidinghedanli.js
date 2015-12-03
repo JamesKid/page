@@ -192,20 +192,32 @@ $(document).ready(function(){
 		});
 		/*  中间按钮　*/
 		$(".imgCenter").bind(touchEvents.touchstart,function(){
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'noClick'){
+				SingletonTester.setName('center'); 
+				SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
+			}else {
+				return false;
+			}
 			return false; /* 禁止长按 */
 		});
 		$(".imgCenter").bind(touchEvents.touchend,function(){
-			$("#up_03").css("display","block");
-			$("#up_03_press").css("display","none");
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'center'){
+				SingletonTester.setName('center'); 
+				SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
+			}else {
+				return false;
+			}
 			return false; /* 禁止长按 */
 		});
 		$(".imgCenter").mousedown(function(){
-			$("#up_03").css("display","none");
-			$("#up_03_press").css("display","block");
+			SingletonTester.setName('center'); 
+			SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
 		});
 		$(".imgCenter").mouseup(function(){
-			$("#up_03").css("display","block");
-			$("#up_03_press").css("display","none");
+			SingletonTester.setName('center'); 
+			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 		});
 });
 var SingletonTester = (function () { 
