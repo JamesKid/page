@@ -235,6 +235,9 @@ img {
 	}
 }
 @media (min-width: 550px) {
+	.title {
+		padding-left:12%;
+	}
 	.plus {
 		padding-top:3.1%;
 		padding-bottom:3.1%;
@@ -287,6 +290,12 @@ img {
 		padding-top:2%;
 		padding-bottom:2%;
 	}
+	.back {
+		width:4.5%;
+	}
+	.down {
+		width:6.5%;
+	}
 }
 @media (min-width: 800px) {
 	.plus {
@@ -297,15 +306,11 @@ img {
 		padding-top:2.5%;
 		padding-bottom:2.5%;
 	}
-}
-@media (min-width: 900px) {
-	.plus {
-		padding-top:3%;
-		padding-bottom:3%;
+	.back {
+		width:4%;
 	}
-	.minus {
-		padding-top:3%;
-		padding-bottom:3%;
+	.down {
+		width:6%;
 	}
 }
 @media (min-width: 900px) {
@@ -316,13 +321,39 @@ img {
 	.minus {
 		padding-top:3%;
 		padding-bottom:3%;
+	}
+	.back {
+		width:3.5%;
+	}
+	.down {
+		width:5.5%;
+	}
+}
+@media (min-width: 1000px) {
+	.title {
+		padding-left:13%;
+	}
+	.plus {
+		padding-top:3%;
+		padding-bottom:3%;
+	}
+	.minus {
+		padding-top:3%;
+		padding-bottom:3%;
+	}
+	.back {
+		width:3%;
+	}
+	.down {
+		width:5%;
 	}
 }
 @media (min-width: 1100px) {
 	.button {
-		margin-left:12.5%;
-		margin-right:12.5%;
-		width:8%;
+		margin-left:11.5%;
+		margin-right:11.5%;
+		width:10%;
+		padding-bottom:5%;
 	}
 	.tempControl {
 		width:50%;
@@ -337,12 +368,22 @@ img {
 		padding-top:2.8%;
 		padding-bottom:2.8%;
 	}
+	.back {
+		width:2.5%;
+	}
+	.down {
+		width:4.5%;
+	}
+	.content {
+		padding-top:5%;
+	}
 }
 @media (min-width: 1300px) {
 	.button {
-		margin-left:13.5%;
-		margin-right:13.5%;
-		width:6%;
+		margin-left:12.5%;
+		margin-right:12.5%;
+		width:8%;
+		padding-bottom:4%;
 	}
 	.tempControl {
 		width:30%;
@@ -356,14 +397,17 @@ img {
 	.minus {
 		padding-top:1.7%;
 		padding-bottom:1.7%;
+	}
+	.content {
+		padding-top:4%;
 	}
 }
 @media (min-width: 1600px) {
 	.button {
-		margin-left:13.5%;
-		margin-right:13.5%;
+		margin-left:12.5%;
+		margin-right:12.5%;
 		padding-bottom:2%;
-		width:6%;
+		width:8%;
 	}
 	.tempControl {
 		width:30%;
@@ -377,6 +421,9 @@ img {
 	.minus {
 		padding-top:2%;
 		padding-bottom:2%;
+	}
+	.content {
+		padding-top:3%;
 	}
 }
 

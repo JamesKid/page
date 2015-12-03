@@ -143,15 +143,60 @@ img {
 	@media (min-width: 600px) {
 		.controller {
 			padding:29%;
-			width:70%;
+			width:42%;
 		}
 	}
 	@media (min-width: 650px) {
 		.controller {
 			padding:32%;
-			width:70%;
+			width:36%;
 		}
 		.menu {
 			width:9%;
+		}
+	}
+	@media (min-width: 700px) {
+		.controller {
+			padding:35%;
+			width:30%;
+			margin-top:-20%;
+		}
+		.menu {
+			width:7%;
+		}
+		.back {
+			width:3%;
+		}
+		.down {
+			width:4.5%;
+		}
+		.menu {
+			width:5%;
+		}
+		.title {
+			width:80%;
+		}
+	}
+	@media (min-width: 1000px) {
+		.controller {
+			padding:38%;
+			width:24%;
+			margin-top:-25%;
+		}
+	}
+	@media (min-width: 1500px) {
+		.controller {
+			padding:45%;
+			width:10%;
+			margin-top:-35%;
+		}
+		.back {
+			width:2%;
+		}
+		.down {
+			width:3%;
+		}
+		.title {
+			width:81.5%;
 		}
 	}
