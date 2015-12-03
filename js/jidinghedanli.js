@@ -156,6 +156,7 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
+			/*
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'left'){
 				SingletonTester.setName('left'); 
@@ -163,10 +164,12 @@ $(document).ready(function(){
 			}else {
 				return false;
 			}
+			return false; 
+			*/
+			/* 禁止长按 */
+			SingletonTester.setName('left'); 
+			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
 			return false; /* 禁止长按 */
-			//SingletonTester.setName('left'); 
-			//SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
-			//return false; /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
 			SingletonTester.setName('left'); 
