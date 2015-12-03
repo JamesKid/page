@@ -205,7 +205,7 @@ $(document).ready(function(){
 		});
 		$(".imgFoot").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
-			if(clickName == 'noClick'){
+			if(clickName == 'foot'){
 				SingletonTester.setName('foot'); 
 				SingletonTester.setClickButton(SingletonTester.name,'foot',0,'down'); 
 			}else {
