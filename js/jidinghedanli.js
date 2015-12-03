@@ -147,7 +147,7 @@ $(document).ready(function(){
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
-			if(clickName = 'noClick'){
+			if(clickName == 'noClick'){
 				SingletonTester.setName('left'); 
 				SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
 			}else {
@@ -173,7 +173,7 @@ $(document).ready(function(){
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
-			if(clickName = 'noClick'){
+			if(clickName == 'noClick'){
 				SingletonTester.setName('head'); 
 				SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
 			}else {
