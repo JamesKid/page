@@ -154,11 +154,11 @@ $(document).ready(function(){
 			}
 			return false; /* 禁止长按 */
 		});
-		$(".imgCenter").mousedown(function(){
+		$("#up_03").mousedown(function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
 		});
-		$(".imgCenter").mouseup(function(){
+		$("#up_03_press").mouseup(function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 		});
