@@ -175,7 +175,7 @@ $(document).ready(function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName = 'noClick'){
 				SingletonTester.setName('head'); 
-				SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
+				SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
 			}else {
 				return false;
 			}
