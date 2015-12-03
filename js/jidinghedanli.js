@@ -76,42 +76,6 @@ $(document).ready(function(){
 			$("#menuPress").css("display","none");
 		});
 
-		/* 右方按钮　*/
-		$(".imgRight").bind(touchEvents.touchstart,function(){
-			$("#up_04").css("display","none");
-			$("#up_04_press").css("display","block");
-			$("#up_01").css("display","none");
-			$("#up_right").css("display","block");
-			$("#up_05").css("display","none");
-			$("#down_right").css("display","block");
-			/* 点击事件在下面添加 */
-			return false; /* 禁止长按 */
-		});
-		$(".imgRight").bind(touchEvents.touchend,function(){
-			$("#up_04").css("display","block");
-			$("#up_04_press").css("display","none");
-			$("#up_01").css("display","block");
-			$("#up_right").css("display","none");
-			$("#up_05").css("display","block");
-			$("#down_right").css("display","none");
-			return false; /* 禁止长按 */
-		});
-		$(".imgRight").mousedown(function(){
-			$("#up_04").css("display","none");
-			$("#up_04_press").css("display","block");
-			$("#up_01").css("display","none");
-			$("#up_right").css("display","block");
-			$("#up_05").css("display","none");
-			$("#down_right").css("display","block");
-		});
-		$(".imgRight").mouseup(function(){
-			$("#up_04").css("display","block");
-			$("#up_04_press").css("display","none");
-			$("#up_01").css("display","block");
-			$("#up_right").css("display","none");
-			$("#up_05").css("display","block");
-			$("#down_right").css("display","none");
-		});
 		/* 下方按钮　*/
 		$(".imgFoot").bind(touchEvents.touchstart,function(){
 			$("#up_05").css("display","none");
@@ -219,6 +183,35 @@ $(document).ready(function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 		});
+		/* 右方按钮　*/
+		$(".imgRight").bind(touchEvents.touchstart,function(){
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'noClick'){
+				SingletonTester.setName('right'); 
+				SingletonTester.setClickButton(SingletonTester.name,'right',0,'up'); 
+			}else {
+				return false;
+			}
+			return false; /* 禁止长按 */
+		});
+		$(".imgRight").bind(touchEvents.touchend,function(){
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'right'){
+				SingletonTester.setName('right'); 
+				SingletonTester.setClickButton(SingletonTester.name,'right',0,'down'); 
+			}else {
+				return false;
+			}
+			return false; /* 禁止长按 */
+		});
+		$(".imgRight").mousedown(function(){
+			SingletonTester.setName('right'); 
+			SingletonTester.setClickButton(SingletonTester.name,'right',0,'up'); 
+		});
+		$(".imgRight").mouseup(function(){
+			SingletonTester.setName('right'); 
+			SingletonTester.setClickButton(SingletonTester.name,'right',0,'down'); 
+		});
 });
 var SingletonTester = (function () { 
 	//参数：传递给单例的一个参数集合 
@@ -276,6 +269,23 @@ var SingletonTester = (function () {
 				}else if(upDown == 'down' && this.name=="center"){
 					$("#up_03").css("display","block");
 					$("#up_03_press").css("display","none");
+					this.name = 'noClick';
+				}
+			}else if(buttonName =="right" && this.name=='right'){
+				if(upDown == 'up' && this.name=="right"){
+					$("#up_04").css("display","none");
+					$("#up_04_press").css("display","block");
+					$("#up_01").css("display","none");
+					$("#up_right").css("display","block");
+					$("#up_05").css("display","none");
+					$("#down_right").css("display","block");
+				}else if(upDown == 'down' && this.name=="right"){
+					$("#up_04").css("display","block");
+					$("#up_04_press").css("display","none");
+					$("#up_01").css("display","block");
+					$("#up_right").css("display","none");
+					$("#up_05").css("display","block");
+					$("#down_right").css("display","none");
 					this.name = 'noClick';
 				}
 			}
