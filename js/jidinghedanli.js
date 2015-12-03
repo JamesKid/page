@@ -220,7 +220,7 @@ var SingletonTester = (function () {
 					$("#up_05").css("display","block");
 					$("#down_left").css("display","none");
 				}
-			}else if(buttonName =="head"){
+			}else if(buttonName =="head" && name = "head"){
 				if(upDown == 'up'){
 					$("#up_01").css("display","none");
 					$("#up_01_press").css("display","block");
