@@ -306,6 +306,7 @@ var SingletonTester = (function () {
 					$("#up_05_press").css("display","none");
 					this.name = 'noClick';
 				}
+			}
 		} ,
 	}; 
 	return _static; 
