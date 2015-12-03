@@ -236,7 +236,6 @@ var SingletonTester = (function () {
 					$("#up_left").css("display","none");
 					$("#up_05").css("display","block");
 					$("#down_left").css("display","none");
-					this.name = 'noClick';
 				}
 			}else if(buttonName =="head" && this.name=='head'){
 				if(upDown == 'up' && this.name=="head"){
@@ -245,7 +244,6 @@ var SingletonTester = (function () {
 				}else if(upDown == 'down' && this.name=="head"){
 					$("#up_01").css("display","block");
 					$("#up_01_press").css("display","none");
-					this.name = 'noClick';
 				}
 			}
 		} ,
