@@ -147,7 +147,12 @@ $(document).ready(function(){
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
 			SingletonTester.setName('left'); 
-			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'noClick'){
+				SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
+			}else {
+				return false;
+			}
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
@@ -168,7 +173,12 @@ $(document).ready(function(){
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			SingletonTester.setName('head'); 
-			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'noClick'){
+				SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
+			}else {
+				return false;
+			}
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
@@ -191,12 +201,12 @@ var SingletonTester = (function () {
 	//参数：传递给单例的一个参数集合 
 	function Singleton(args) { 
 		console.log('mainfunc');
-		this.name = 'SingletonTester'; 
+		this.name = 'noClick'; 
 	} 
 	//实例容器 
 	var instance; 
 	var _static = { 
-		name: 'SingletonTester', 
+		name: 'noClick', 
 		//返回Singleton的实例 
 		getInstance: function (args) { 
 			if (instance === undefined) { 
@@ -206,6 +216,9 @@ var SingletonTester = (function () {
 		} ,
 		setName: function (args) { 
 			this.name = args;
+		} ,
+		getName: function (args) { 
+			return this.name;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
 			if(buttonName =='left' && this.name=='left'){
@@ -223,6 +236,7 @@ var SingletonTester = (function () {
 					$("#up_left").css("display","none");
 					$("#up_05").css("display","block");
 					$("#down_left").css("display","none");
+					this.name = 'noClick';
 				}
 			}else if(buttonName =="head" && this.name=='head'){
 				if(upDown == 'up' && this.name=="head"){
@@ -231,6 +245,7 @@ var SingletonTester = (function () {
 				}else if(upDown == 'down' && this.name=="head"){
 					$("#up_01").css("display","block");
 					$("#up_01_press").css("display","none");
+					this.name = 'noClick';
 				}
 			}
 		} ,
