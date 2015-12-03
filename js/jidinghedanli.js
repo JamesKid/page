@@ -1,4 +1,5 @@
-/* html5 机顶盒遥控*/
+/* =========================================================================
+ * html5 机顶盒遥控*/
 /* add by Jameskid 2015.11.28  email:406358964@qq.com */
 /* 注意事项:　 
  *			   1. 按钮事件请在行后封装好的方法下添加 
@@ -12,6 +13,7 @@
  *
  * 禁止修改本文件，点击事件请在 '*click.js' 文件添加
  *
+ * =========================================================================
  */
 $(document).ready(function(){
 		var touchEvents = {
@@ -267,30 +269,3 @@ var SingletonTester = (function () {
 	}; 
 	return _static; 
 })(); 
-function clickButton(buttonName,number,upDown){
-	if(buttonName =='left'){
-		if(upDown == 'up'){
-			$("#up_02").css("display","none");
-			$("#up_02_press").css("display","block");
-			$("#up_01").css("display","none");
-			$("#up_left").css("display","block");
-			$("#up_05").css("display","none");
-			$("#down_left").css("display","block");
-		}else if(upDown == 'down'){
-			$("#up_02").css("display","block");
-			$("#up_02_press").css("display","none");
-			$("#up_01").css("display","block");
-			$("#up_left").css("display","none");
-			$("#up_05").css("display","block");
-			$("#down_left").css("display","none");
-		}
-	}else if(buttonName =="head"){
-		if(upDown == 'up'){
-			$("#up_01").css("display","none");
-			$("#up_01_press").css("display","block");
-		}else if(upDown == 'down'){
-			$("#up_01").css("display","block");
-			$("#up_01_press").css("display","none");
-		}
-	}
-}
