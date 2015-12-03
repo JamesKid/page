@@ -180,13 +180,11 @@ $(document).ready(function(){
 		$(".imgLeft").mousedown(function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
-			alert(SingletonTester.name+'down');
 			//clickButton('left',0,'up');
 		});
 		$(".imgLeft").mouseup(function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
-			alert(SingletonTester.name+'up');
 			//clickButton('left',0,'down');
 		});
 });
