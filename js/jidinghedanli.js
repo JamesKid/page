@@ -206,7 +206,7 @@ var SingletonTester = (function () {
 			this.name = args;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
-			if(buttonName =='left' && name=='left'){
+			if(buttonName =='left' && name!='head'){
 				if(upDown == 'up'){
 					$("#up_02").css("display","none");
 					$("#up_02_press").css("display","block");
@@ -222,7 +222,7 @@ var SingletonTester = (function () {
 					$("#up_05").css("display","block");
 					$("#down_left").css("display","none");
 				}
-			}else if(buttonName =="head" && name=="head"){
+			}else if(buttonName =="head" && name!="left"){
 				if(upDown == 'up'){
 					$("#up_01").css("display","none");
 					$("#up_01_press").css("display","block");
