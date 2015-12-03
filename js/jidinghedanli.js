@@ -146,9 +146,9 @@ $(document).ready(function(){
 		console.log(singletonTest2); // 输出 5  
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
-			SingletonTester.setName('left'); 
 			clickName = SingletonTester.getName(); 
 			if(clickName = 'noClick'){
+				SingletonTester.setName('left'); 
 				SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
 			}else {
 				return false;
@@ -172,9 +172,9 @@ $(document).ready(function(){
 		});
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
-			SingletonTester.setName('head'); 
 			clickName = SingletonTester.getName(); 
 			if(clickName = 'noClick'){
+				SingletonTester.setName('head'); 
 				SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
 			}else {
 				return false;
