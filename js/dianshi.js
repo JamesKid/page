@@ -146,7 +146,7 @@ $(document).ready(function(){
 		});
 		$("#up_03_press").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
-			if(clickName == 'center'){
+			if(clickName == 'onClick'){
 				SingletonTester.setName('center'); 
 				SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 			}else {
