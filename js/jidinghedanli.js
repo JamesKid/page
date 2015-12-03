@@ -179,14 +179,15 @@ $(document).ready(function(){
 		$(".imgHead").mousedown(function(){
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
-			console.log(SingletonTester.name);
+			console.log(nowClick);
 		});
 		$(".imgHead").mouseup(function(){
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
-			console.log(SingletonTester.name);
+			console.log(nowClick);
 		});
 });
+var nowClick = '';
 var SingletonTester = (function () { 
 	//参数：传递给单例的一个参数集合 
 	function Singleton(args) { 
@@ -205,10 +206,11 @@ var SingletonTester = (function () {
 			return instance; 
 		} ,
 		setName: function (args) { 
-			this.name = args;
+			//this.name = args;
+			nowClick = args;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
-			if(buttonName =='left' && this.name=='left'){
+			if(buttonName =='left' && nowClick=='left'){
 				if(upDown == 'up'){
 					$("#up_02").css("display","none");
 					$("#up_02_press").css("display","block");
@@ -224,7 +226,7 @@ var SingletonTester = (function () {
 					$("#up_05").css("display","block");
 					$("#down_left").css("display","none");
 				}
-			}else if(buttonName =="head" && this.name=='head'){
+			}else if(buttonName =="head" && nowClick=='head'){
 				if(upDown == 'up'){
 					$("#up_01").css("display","none");
 					$("#up_01_press").css("display","block");
