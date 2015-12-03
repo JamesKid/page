@@ -179,15 +179,14 @@ $(document).ready(function(){
 		$(".imgHead").mousedown(function(){
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
-			console.log(nowClick);
+			console.log(SingletonTester.name);
 		});
 		$(".imgHead").mouseup(function(){
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
-			console.log(nowClick);
+			console.log(SingletonTester.name);
 		});
 });
-var nowClick = '';
 var SingletonTester = (function () { 
 	//参数：传递给单例的一个参数集合 
 	function Singleton(args) { 
@@ -206,19 +205,18 @@ var SingletonTester = (function () {
 			return instance; 
 		} ,
 		setName: function (args) { 
-			//this.name = args;
-			nowClick = args;
+			this.name = args;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
-			if(buttonName =='left' && nowClick=='left'){
-				if(upDown == 'up'){
+			if(buttonName =='left' && this.name=='left'){
+				if(upDown == 'up' && this.name=='left'){
 					$("#up_02").css("display","none");
 					$("#up_02_press").css("display","block");
 					$("#up_01").css("display","none");
 					$("#up_left").css("display","block");
 					$("#up_05").css("display","none");
 					$("#down_left").css("display","block");
-				}else if(upDown == 'down'){
+				}else if(upDown == 'down' && this.name="left"){
 					$("#up_02").css("display","block");
 					$("#up_02_press").css("display","none");
 					$("#up_01").css("display","block");
@@ -226,11 +224,11 @@ var SingletonTester = (function () {
 					$("#up_05").css("display","block");
 					$("#down_left").css("display","none");
 				}
-			}else if(buttonName =="head" && nowClick=='head'){
-				if(upDown == 'up'){
+			}else if(buttonName =="head" && this.name=='head'){
+				if(upDown == 'up' && this.name=="head"){
 					$("#up_01").css("display","none");
 					$("#up_01_press").css("display","block");
-				}else if(upDown == 'down'){
+				}else if(upDown == 'down' && this.name=="head"){
 					$("#up_01").css("display","block");
 					$("#up_01_press").css("display","none");
 				}
