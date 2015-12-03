@@ -76,26 +76,6 @@ $(document).ready(function(){
 			$("#menuPress").css("display","none");
 		});
 
-		/* 下方按钮　*/
-		$(".imgFoot").bind(touchEvents.touchstart,function(){
-			$("#up_05").css("display","none");
-			$("#up_05_press").css("display","block");
-			/* 点击事件在下面添加 */
-			return false; /* 禁止长按 */
-		});
-		$(".imgFoot").bind(touchEvents.touchend,function(){
-			$("#up_05").css("display","block");
-			$("#up_05_press").css("display","none");
-			return false; /* 禁止长按 */
-		});
-		$(".imgFoot").mousedown(function(){
-			$("#up_05").css("display","none");
-			$("#up_05_press").css("display","block");
-		});
-		$(".imgFoot").mouseup(function(){
-			$("#up_05").css("display","block");
-			$("#up_05_press").css("display","none");
-		});
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
@@ -212,6 +192,35 @@ $(document).ready(function(){
 			SingletonTester.setName('right'); 
 			SingletonTester.setClickButton(SingletonTester.name,'right',0,'down'); 
 		});
+		/* 下方按钮　*/
+		$(".imgFoot").bind(touchEvents.touchstart,function(){
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'noClick'){
+				SingletonTester.setName('foot'); 
+				SingletonTester.setClickButton(SingletonTester.name,'foot',0,'up'); 
+			}else {
+				return false;
+			}
+			return false; /* 禁止长按 */
+		});
+		$(".imgFoot").bind(touchEvents.touchend,function(){
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'noClick'){
+				SingletonTester.setName('foot'); 
+				SingletonTester.setClickButton(SingletonTester.name,'foot',0,'down'); 
+			}else {
+				return false;
+			}
+			return false; /* 禁止长按 */
+		});
+		$(".imgFoot").mousedown(function(){
+			SingletonTester.setName('foot'); 
+			SingletonTester.setClickButton(SingletonTester.name,'foot',0,'up'); 
+		});
+		$(".imgFoot").mouseup(function(){
+			SingletonTester.setName('foot'); 
+			SingletonTester.setClickButton(SingletonTester.name,'foot',0,'up'); 
+		});
 });
 var SingletonTester = (function () { 
 	//参数：传递给单例的一个参数集合 
@@ -288,7 +297,15 @@ var SingletonTester = (function () {
 					$("#down_right").css("display","none");
 					this.name = 'noClick';
 				}
-			}
+			}else if(buttonName =="foot" && this.name=='foot'){
+				if(upDown == 'up' && this.name=="foot"){
+					$("#up_05").css("display","none");
+					$("#up_05_press").css("display","block");
+				}else if(upDown == 'down' && this.name=="foot"){
+					$("#up_05").css("display","block");
+					$("#up_05_press").css("display","none");
+					this.name = 'noClick';
+				}
 		} ,
 	}; 
 	return _static; 
