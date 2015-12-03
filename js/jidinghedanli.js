@@ -177,10 +177,12 @@ $(document).ready(function(){
 		$(".imgHead").mousedown(function(){
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
+			console.log(SingletonTester.name);
 		});
 		$(".imgHead").mouseup(function(){
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
+			console.log(SingletonTester.name);
 		});
 });
 var SingletonTester = (function () { 
@@ -204,6 +206,7 @@ var SingletonTester = (function () {
 			this.name = args;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
+			alert(name);
 			if(buttonName =='left' && name=='left'){
 				if(upDown == 'up'){
 					$("#up_02").css("display","none");
