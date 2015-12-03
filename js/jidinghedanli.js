@@ -141,9 +141,6 @@ $(document).ready(function(){
 			$("#up_05").css("display","block");
 			$("#up_05_press").css("display","none");
 		});
-		var test = SingletonTester.setName('abc'); 
-		var singletonTest2 = SingletonTester.name; 
-		console.log(singletonTest2); // 输出 5  
 		/* 左方按钮　*/
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
