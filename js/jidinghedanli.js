@@ -156,14 +156,18 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
-			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
+			SingletonTester.setClickButton('left','left',0,'down'); 
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
+			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
+			console.log(SingletonTester.name);
 		});
 		$(".imgLeft").mouseup(function(){
+			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
+			console.log(SingletonTester.name);
 		});
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
@@ -177,14 +181,16 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
-			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
+			SingletonTester.setClickButton('head','head',0,'down'); 
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
+			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
 			console.log(SingletonTester.name);
 		});
 		$(".imgHead").mouseup(function(){
+			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
 			console.log(SingletonTester.name);
 		});
