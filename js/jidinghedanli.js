@@ -154,11 +154,12 @@ $(document).ready(function(){
 			return false;  /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
-			SingletonTester.setClickButton('left','left',0,'up'); 
+			SingletonTester.setName('left'); 
+			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
 		});
 		$(".imgLeft").mouseup(function(){
-			//SingletonTester.setName('left'); 
-			SingletonTester.setClickButton('left','left',0,'down'); 
+			SingletonTester.setName('left'); 
+			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
 		});
 		/* 上方按钮　*/
 		$(".imgHead").bind(touchEvents.touchstart,function(){
@@ -182,10 +183,12 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
-			SingletonTester.setClickButton('head','head',0,'up'); 
+			SingletonTester.setName('head'); 
+			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
 		});
 		$(".imgHead").mouseup(function(){
-			SingletonTester.setClickButton('head','head',0,'down'); 
+			SingletonTester.setName('head'); 
+			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
 		});
 		/*  中间按钮　*/
 		$(".imgCenter").bind(touchEvents.touchstart,function(){
@@ -208,7 +211,6 @@ $(document).ready(function(){
 var SingletonTester = (function () { 
 	//参数：传递给单例的一个参数集合 
 	function Singleton(args) { 
-		console.log('mainfunc');
 		this.name = 'noClick'; 
 	} 
 	//实例容器 
