@@ -156,9 +156,17 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
-			SingletonTester.setName('left'); 
-			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'left'){
+				SingletonTester.setName('left'); 
+				SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
+			}else {
+				return false;
+			}
 			return false; /* 禁止长按 */
+			//SingletonTester.setName('left'); 
+			//SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
+			//return false; /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
 			SingletonTester.setName('left'); 
