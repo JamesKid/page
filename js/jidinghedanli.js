@@ -182,9 +182,17 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").bind(touchEvents.touchend,function(){
-			SingletonTester.setName('head'); 
-			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
+			clickName = SingletonTester.getName(); 
+			if(clickName == 'noClick'){
+				SingletonTester.setName('head'); 
+				SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
+			}else {
+				return false;
+			}
 			return false; /* 禁止长按 */
+			// SingletonTester.setName('head'); 
+			// SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
+			// return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
 			SingletonTester.setName('head'); 
