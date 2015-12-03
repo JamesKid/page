@@ -66,26 +66,6 @@ $(document).ready(function(){
 			$("#menuPress").css("display","none");
 		});
 
-		/* 上方按钮　*/
-		$(".imgHead").bind(touchEvents.touchstart,function(){
-			clickButton('head',1,'up');
-			//var y = touch.pageY;
-			//alert(y);
-			return false; /* 禁止长按 */
-		});
-		$(".imgHead").bind(touchEvents.touchend,function(){
-			//var touch = e.originalEvent.targetTouches[0];  
-			//var y = touch.pageY;
-			//alert(y);
-			clickButton('head',0,'down');
-			return false; /* 禁止长按 */
-		});
-		$(".imgHead").mousedown(function(){
-			clickButton('head',1,'up');
-		});
-		$(".imgHead").mouseup(function(){
-			clickButton('head',0,'down');
-		});
 		/* 中间按钮　*/
 		$(".imgCenter").bind(touchEvents.touchstart,function(){
 			$("#up_03").css("display","none");
@@ -168,24 +148,39 @@ $(document).ready(function(){
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
-			//clickButton('left',0,'up');
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").bind(touchEvents.touchend,function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
-			//clickButton('left',0,'down');
 			return false; /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
-			//clickButton('left',0,'up');
 		});
 		$(".imgLeft").mouseup(function(){
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
-			//clickButton('left',0,'down');
+		});
+		/* 上方按钮　*/
+		$(".imgHead").bind(touchEvents.touchstart,function(){
+			SingletonTester.setName('head'); 
+			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
+			return false; /* 禁止长按 */
+		});
+		$(".imgHead").bind(touchEvents.touchend,function(){
+			SingletonTester.setName('head'); 
+			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
+			return false; /* 禁止长按 */
+		});
+		$(".imgHead").mousedown(function(){
+			SingletonTester.setName('head'); 
+			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
+		});
+		$(".imgHead").mouseup(function(){
+			SingletonTester.setName('head'); 
+			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
 		});
 });
 var SingletonTester = (function () { 
@@ -209,7 +204,7 @@ var SingletonTester = (function () {
 			this.name = args;
 		} ,
 		setClickButton: function (name,buttonName,number,upDown) { 
-			if(buttonName =='left'){
+			if(buttonName =='left' && name=='left'){
 				if(upDown == 'up'){
 					$("#up_02").css("display","none");
 					$("#up_02_press").css("display","block");
