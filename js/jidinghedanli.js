@@ -219,7 +219,7 @@ $(document).ready(function(){
 		});
 		$(".imgFoot").mouseup(function(){
 			SingletonTester.setName('foot'); 
-			SingletonTester.setClickButton(SingletonTester.name,'foot',0,'up'); 
+			SingletonTester.setClickButton(SingletonTester.name,'foot',0,'down'); 
 		});
 });
 var SingletonTester = (function () { 
