@@ -86,21 +86,6 @@ $(document).ready(function(){
 		$(".imgHead").mouseup(function(){
 			clickButton('head',0,'down');
 		});
-		/* 左方按钮　*/
-		$(".imgLeft").bind(touchEvents.touchstart,function(){
-			clickButton('left',0,'up');
-			return false; /* 禁止长按 */
-		});
-		$(".imgLeft").bind(touchEvents.touchend,function(){
-			clickButton('left',0,'down');
-			return false; /* 禁止长按 */
-		});
-		$(".imgLeft").mousedown(function(){
-			clickButton('left',0,'up');
-		});
-		$(".imgLeft").mouseup(function(){
-			clickButton('left',0,'down');
-		});
 		/* 中间按钮　*/
 		$(".imgCenter").bind(touchEvents.touchstart,function(){
 			$("#up_03").css("display","none");
@@ -179,7 +164,80 @@ $(document).ready(function(){
 		var test = SingletonTester.setName('abc'); 
 		var singletonTest2 = SingletonTester.name; 
 		console.log(singletonTest2); // 输出 5  
+		/* 左方按钮　*/
+		$(".imgLeft").bind(touchEvents.touchstart,function(){
+			var test = SingletonTester.setName('left'); 
+			var test2 = SingletonTester.setClickButton('left',0,'up'); 
+			//clickButton('left',0,'up');
+			return false; /* 禁止长按 */
+		});
+		$(".imgLeft").bind(touchEvents.touchend,function(){
+			var test = SingletonTester.setName('left'); 
+			var test2 = SingletonTester.setClickButton('left',0,'down'); 
+			//clickButton('left',0,'down');
+			return false; /* 禁止长按 */
+		});
+		$(".imgLeft").mousedown(function(){
+			var test = SingletonTester.setName('left'); 
+			var test2 = SingletonTester.setClickButton('left',0,'up'); 
+			//clickButton('left',0,'up');
+		});
+		$(".imgLeft").mouseup(function(){
+			var test = SingletonTester.setName('left'); 
+			var test2 = SingletonTester.setClickButton('left',0,'down'); 
+			//clickButton('left',0,'down');
+		});
 });
+var SingletonTester = (function () { 
+	//参数：传递给单例的一个参数集合 
+	function Singleton(args) { 
+		console.log('mainfunc');
+		this.name = 'SingletonTester'; 
+	} 
+	//实例容器 
+	var instance; 
+	var _static = { 
+		name: 'SingletonTester', 
+		//返回Singleton的实例 
+		getInstance: function (args) { 
+			if (instance === undefined) { 
+				instance = new Singleton(args); 
+			} 
+			return instance; 
+		} ,
+		setName: function (args) { 
+			this.name = args;
+		} ,
+		setClickButton: function (buttonName,number,upDown) { 
+			if(buttonName =='left'){
+				if(upDown == 'up'){
+					$("#up_02").css("display","none");
+					$("#up_02_press").css("display","block");
+					$("#up_01").css("display","none");
+					$("#up_left").css("display","block");
+					$("#up_05").css("display","none");
+					$("#down_left").css("display","block");
+				}else if(upDown == 'down'){
+					$("#up_02").css("display","block");
+					$("#up_02_press").css("display","none");
+					$("#up_01").css("display","block");
+					$("#up_left").css("display","none");
+					$("#up_05").css("display","block");
+					$("#down_left").css("display","none");
+				}
+			}else if(buttonName =="head"){
+				if(upDown == 'up'){
+					$("#up_01").css("display","none");
+					$("#up_01_press").css("display","block");
+				}else if(upDown == 'down'){
+					$("#up_01").css("display","block");
+					$("#up_01_press").css("display","none");
+				}
+			}
+		} ,
+	}; 
+	return _static; 
+})(); 
 function clickButton(buttonName,number,upDown){
 	if(buttonName =='left'){
 		if(upDown == 'up'){
@@ -207,28 +265,3 @@ function clickButton(buttonName,number,upDown){
 		}
 	}
 }
-var SingletonTester = (function () { 
-		//参数：传递给单例的一个参数集合 
-		function Singleton(args) { 
-		console.log('mainfunc');
-				this.name = 'SingletonTester'; 
-				this.pointX = 6; 
-				this.pointY = 7; 
-		} 
-		//实例容器 
-		var instance; 
-		var _static = { 
-				name: 'SingletonTester', 
-				//返回Singleton的实例 
-				getInstance: function (args) { 
-						if (instance === undefined) { 
-								instance = new Singleton(args); 
-						} 
-						return instance; 
-				} ,
-				setName: function (args) { 
-			this.name = args;
-				} ,
-		}; 
-		return _static; 
-})(); 
