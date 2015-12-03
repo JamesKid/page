@@ -181,16 +181,12 @@ $(document).ready(function(){
 			var name  = SingletonTester.setName('left'); 
 			var test2 = SingletonTester.setClickButton(name,'left',0,'up'); 
 			alert('test1'+name);
-			console.log(test); 
-			console.log(test2); 
 			//clickButton('left',0,'up');
 		});
 		$(".imgLeft").mouseup(function(){
 			var name  = SingletonTester.setName('left'); 
 			var test2 = SingletonTester.setClickButton(name,'left',0,'down'); 
 			alert('test2'+name);
-			console.log(test); 
-			console.log(test2); 
 			//clickButton('left',0,'down');
 		});
 });
