@@ -158,7 +158,7 @@ $(document).ready(function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
 		});
-		$("#up_03_press").mouseup(function(){
+		$("#up_03_press").mousedown(function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 		});
