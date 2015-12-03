@@ -137,20 +137,24 @@ $(document).ready(function(){
 		$("#up_03").bind(touchEvents.touchstart,function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
+			this.name = 'noClick';
 			return false; /* 禁止长按 */
 		});
 		$("#up_03_press").bind(touchEvents.touchstart,function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
+			this.name = 'noClick';
 			return false; /* 禁止长按 */
 		});
 		$("#up_03").mousedown(function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
+			this.name = 'noClick';
 		});
 		$("#up_03_press").mousedown(function(){
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
+			this.name = 'noClick';
 		});
 		/* 右方按钮　*/
 		$(".imgRight").bind(touchEvents.touchstart,function(){
