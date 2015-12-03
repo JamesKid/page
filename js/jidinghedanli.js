@@ -274,8 +274,8 @@ var SingletonTester = (function () {
 					$("#up_03").css("display","none");
 					$("#up_03_press").css("display","block");
 				}else if(upDown == 'down' && this.name=="center"){
-					$("#up_03").css("display","none");
-					$("#up_03_press").css("display","block");
+					$("#up_03").css("display","block");
+					$("#up_03_press").css("display","none");
 					this.name = 'noClick';
 				}
 			}
