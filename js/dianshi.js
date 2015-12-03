@@ -277,7 +277,6 @@ var SingletonTester = (function () {
 				}else if(upDown == 'down' && this.name=="center"){
 					$("#up_03").css("display","block");
 					$("#up_03_press").css("display","none");
-					this.name = 'noClick';
 				}
 			}else if(buttonName =="right" && this.name=='right'){
 				if(upDown == 'up' && this.name=="right"){
