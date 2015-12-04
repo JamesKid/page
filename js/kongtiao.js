@@ -111,6 +111,7 @@ $(document).ready(function(){
 			buttonFunction('up','wet');
 		});
 		/*  送风按钮 */
+		/*
 		$("#windUp").bind(touchEvents.touchstart,function(){
 			windButton();
 			buttonFunction('press','wind');
@@ -122,6 +123,7 @@ $(document).ready(function(){
 			windButton();
 			buttonFunction('press','wind');
 		});
+		*/
 		$("#windUp").mousedown(function(){
 			windButton();
 			buttonFunction('up','wind');
@@ -138,6 +140,7 @@ $(document).ready(function(){
 			buttonFunction('up','wind');
 		});
 		/*  制冷按钮 */
+		/*
 		$("#coolUp").bind(touchEvents.touchstart,function(){
 			coolButton();
 			buttonFunction('press','cool');
@@ -150,6 +153,7 @@ $(document).ready(function(){
 			buttonFunction('press','cool');
 			return false;
 		});
+		*/
 		$("#coolUp").mousedown(function(){
 			coolButton();
 			buttonFunction('up','cool');
