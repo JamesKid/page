@@ -73,10 +73,12 @@ $(document).ready(function(){
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
+			return false;
 		});
 		$("#hotPress").mousedown(function(){
 			hotButton();
 			buttonFunction('up','hot');
+			return false;
 		});
 		$("#hotPress").mouseup(function(){
 			buttonFunction('up','hot');
@@ -101,10 +103,12 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
+			return false;
 		});
 		$("#wetPress").mousedown(function(){
 			wetButton();
 			buttonFunction('up','wet');
+			return false;
 		});
 		$("#wetPress").mouseup(function(){
 			buttonFunction('up','wet');
@@ -129,10 +133,12 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','cool');
+			return false;
 		});
 		$("#windPress").mousedown(function(){
 			windButton();
 			buttonFunction('up','wind');
+			return false;
 		});
 		$("#windPress").mouseup(function(){
 			buttonFunction('up','wind');
@@ -158,10 +164,12 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
+			return false;
 		});
 		$("#coolPress").mousedown(function(){
 			coolButton();
 			buttonFunction('up','cool');
+			return false;
 		});
 		$("#coolPress").mouseup(function(){
 			buttonFunction('up','cool');
