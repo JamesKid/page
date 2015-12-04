@@ -64,8 +64,8 @@
 			alert('rightDownButton');
 		}
 	    /* 提起 */
-		function rightDownButton(){
-			alert('rightDownButton');
+		function rightUpButton(){
+			alert('rightUpButton');
 		}
 	/* 中间 */
 	    /* 按下 */
