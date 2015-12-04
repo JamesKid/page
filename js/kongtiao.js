@@ -107,7 +107,6 @@ $(document).ready(function(){
 			buttonFunction('up','wet');
 		});
 		$("#wetPress").mouseup(function(){
-			wetButton();
 			buttonFunction('up','wet');
 		});
 		/*  送风按钮 */
@@ -136,7 +135,6 @@ $(document).ready(function(){
 			buttonFunction('up','wind');
 		});
 		$("#windPress").mouseup(function(){
-			windButton();
 			buttonFunction('up','wind');
 		});
 		/*  制冷按钮 */
@@ -166,7 +164,6 @@ $(document).ready(function(){
 			buttonFunction('up','cool');
 		});
 		$("#coolPress").mouseup(function(){
-			coolButton();
 			buttonFunction('up','cool');
 		});
 		/* 风速按钮 */
