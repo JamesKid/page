@@ -29,6 +29,9 @@ $(document).ready(function(){
 			backButton();
 			return false; /* 禁止长按 */
 		});
+		$("#back").mousedown(function(){
+			backButton();
+		});
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
 			if(nowStatus == '开启'){
