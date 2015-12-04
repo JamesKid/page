@@ -35,19 +35,21 @@ $(document).ready(function(){
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
 			if(nowStatus == '开启'){
+				closeButton();
 				$('#nowStatus').text('关闭');
-				/* 关闭事件请在此处添加代码 */
 			}else if(nowStatus== '关闭'){
+				openButton();
 				$('#nowStatus').text('开启');
-				/* 开启事件请在此处添加代码 */
 			}
 			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
 			if(nowStatus == '开启'){
+				closeButton();
 				$('#nowStatus').text('关闭');
 			}else if(nowStatus== '关闭'){
+				openButton();
 				$('#nowStatus').text('开启');
 			}
 		});
