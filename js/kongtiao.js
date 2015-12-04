@@ -54,11 +54,9 @@ $(document).ready(function(){
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
-			return false;
 		});
 		$("#hotPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','hot');
-			return false;
 		});
 		$("#hotUp").mousedown(function(){
 			buttonFunction('up','hot');
@@ -78,11 +76,9 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
-			return false;
 		});
 		$("#wetPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','wet');
-			return false;
 		});
 		$("#wetUp").mousedown(function(){
 			buttonFunction('up','wet');
@@ -102,11 +98,9 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','cool');
-			return false;
 		});
 		$("#windPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','wind');
-			return false;
 		});
 		$("#windUp").mousedown(function(){
 			buttonFunction('up','wind');
@@ -126,7 +120,6 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
-			return false;
 		});
 		$("#coolPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','cool');
@@ -238,7 +231,6 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
-			return false;
 		});
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
