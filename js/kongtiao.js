@@ -26,7 +26,7 @@ $(document).ready(function(){
 		$('#topTemp').text(tempNumber);
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
-			alert('返回事件');  /* 返回事件请在此处添加代码 */
+			backButton();
 			return false; /* 禁止长按 */
 		});
 		$("#down").bind(touchEvents.touchstart,function(){
