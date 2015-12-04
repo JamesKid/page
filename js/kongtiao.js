@@ -180,7 +180,21 @@ $(document).ready(function(){
 			}
 			level++;
 		});
+		/* 自动手动 */
 		var autoControl=0;
+		$("#autoControl").bind(touchEvents.touchstart,function(){
+			if(autoControl%2==0){
+				/* 自动变手动 */
+				$("#auto").css("display","none");
+				$("#manual").css("display","block");
+			}else if(autoControl%2==1){
+				/* 手动变自动 */
+				$("#auto").css("display","block");
+				$("#manual").css("display","none");
+			}
+			autoControl++;
+			return false;
+		});
 		$("#autoControl").mousedown(function(){
 			if(autoControl%2==0){
 				/* 自动变手动 */
@@ -192,7 +206,6 @@ $(document).ready(function(){
 				$("#manual").css("display","none");
 			}
 			autoControl++;
-			/* 声音关闭事件请在此处添加代码 */
 		});
 		/* 温度加减 */
 		/* 增大温度 */
@@ -207,6 +220,7 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
+			return false;
 		});
 		$(".plus").mousedown(function(){
 			var tempNumber = $(".on").attr("value");
