@@ -54,6 +54,7 @@ $(document).ready(function(){
 			}
 		});
 		/*  制热按钮 */
+		/*
 		$("#hotUp").bind(touchEvents.touchstart,function(){
 			hotButton();
 			buttonFunction('press','hot');
@@ -65,6 +66,7 @@ $(document).ready(function(){
 			hotButton();
 			buttonFunction('press','hot');
 		});
+		*/
 		$("#hotUp").mousedown(function(){
 			hotButton();
 			buttonFunction('up','hot');
@@ -80,6 +82,7 @@ $(document).ready(function(){
 			buttonFunction('up','hot');
 		});
 		/*  抽湿按钮 */
+		/*
 		$("#wetUp").bind(touchEvents.touchstart,function(){
 			wetButton();
 			buttonFunction('press','wet');
@@ -91,6 +94,7 @@ $(document).ready(function(){
 			wetButton();
 			buttonFunction('press','wet');
 		});
+		*/
 		$("#wetUp").mousedown(function(){
 			wetButton();
 			buttonFunction('up','wet');
