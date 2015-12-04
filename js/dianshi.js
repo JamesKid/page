@@ -65,22 +65,22 @@ $(document).ready(function(){
 		});
 		/* 声音按钮 */
 		$("#sond_on").bind(touchEvents.touchstart,function(){
-			openSoundMenu();
+			openSoundButton();
 			$("#sound_on").css("display","block");
 			$("#sound_off").css("display","none");
 		});
 		$("#sond_off").bind(touchEvents.touchstart,function(){
-			closeSoundMenu();
+			closeSoundButton();
 			$("#sound_on").css("display","none");
 			$("#sound_off").css("display","block");
 		});
 		$("#sound_on").mousedown(function(){
-			closeSoundMenu();
+			closeSoundButton();
 			$("#sound_on").css("display","none");
 			$("#sound_off").css("display","block");
 		});
 		$("#sound_off").mousedown(function(){
-			openSoundMenu();
+			openSoundButton();
 			$("#sound_on").css("display","block");
 			$("#sound_off").css("display","none");
 		});
