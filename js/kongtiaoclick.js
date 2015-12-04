@@ -6,68 +6,68 @@
 
 	/* 返回*/
 	function backButton(){
-		alert('backbutton');
+		//alert('backbutton');
 	}
 
 	/* 关闭 */
 	function closeButton(){
-		alert('closeButton');
+		//alert('closeButton');
 	}
 
 	/* 打开 */
 	function openButton(){
-		alert('openButton');
+		//alert('openButton');
 	}
 
 /* 制冷制热送风抽湿点击事件组*/	
 
 	/* 制热 */
 	function hotButton(){
-		alert('hotButton');
+		//alert('hotButton');
 	}
 	/* 制冷 */
 	function coolButton(){
-		alert('coolButton');
+		//alert('coolButton');
 	}
 	/* 送风 */
 	function windButton(){
-		alert('windButton');
+		//alert('windButton');
 	}
 	/* 抽湿 */
 	function wetButton(){
-		alert('wetButton');
+		//alert('wetButton');
 	}
 	
 /* 风速自动手动点击事件组*/	
 	/* 风速 */
 		/* 高风 */
 		function heightButton(){
-			alert('heightButton');
+			//alert('heightButton');
 		}
 		/* 中风 */
 		function middleButton(){
-			alert('middleButton');
+			//alert('middleButton');
 		}
 		/* 低风 */
 		function lowButton(){
-			alert('lowButton');
+			//alert('lowButton');
 		}
 		/* 自动 */
 		function autoButton(){
-			alert('autoButton');
+			//alert('autoButton');
 		}
 		/* 手动 */
 		function manualButton(){
-			alert('manualButton');
+			//alert('manualButton');
 		}
 /* 温度增减击事件组*/	
 		/* 增加1度 传入参数 temp 为变更后的温度 */
 		function plusButton(temp){
-			alert('plusButton'+temp);
+			//alert('plusButton'+temp);
 		}
 		/* 减小1度 传入参数 nowTemp 为变更后的温度 */
 		function minusButton(temp){
-			alert('minusButton'+temp);
+			//alert('minusButton'+temp);
 		}
 
 
