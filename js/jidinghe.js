@@ -33,15 +33,21 @@ $(document).ready(function(){
 		};
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
-			alert('返回事件');  /* 返回事件请在此处添加代码 */
+			backButton();
+			return false; /* 禁止长按 */
+		});
+		$("#back").mousedown(function(){
+			backButton();
 			return false; /* 禁止长按 */
 		});
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
 			if(nowStatus == '开启'){
+				closeButton();
 				$('#nowStatus').text('关闭');
 				/* 关闭事件请在此处添加代码 */
 			}else if(nowStatus== '关闭'){
+				openButton();
 				$('#nowStatus').text('开启');
 				/* 开启事件请在此处添加代码 */
 			}
@@ -50,28 +56,32 @@ $(document).ready(function(){
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
 			if(nowStatus == '开启'){
+				closeButton();
 				$('#nowStatus').text('关闭');
 			}else if(nowStatus== '关闭'){
+				openButton();
 				$('#nowStatus').text('开启');
 			}
 		});
 		$("#menu").bind(touchEvents.touchstart,function(){
-			//alert('菜单事件'); /* 菜单事件请在此处添加代码 */
+			openMenuButton();
 			$("#menu").css("display","none");
 			$("#menuPress").css("display","block");
 			return false;
 		});
 		$("#menuPress").bind(touchEvents.touchstart,function(){
-			//alert('菜单事件'); /* 菜单事件请在此处添加代码 */
+			closeMenuButton();
 			$("#menu").css("display","block");
 			$("#menuPress").css("display","none");
 			return false;
 		});
 		$("#menu").mousedown(function(){
+			openMenuButton();
 			$("#menu").css("display","none");
 			$("#menuPress").css("display","block");
 		});
 		$("#menuPress").mousedown(function(){
+			closeMenuButton();
 			$("#menu").css("display","block");
 			$("#menuPress").css("display","none");
 		});
@@ -80,6 +90,7 @@ $(document).ready(function(){
 		$(".imgLeft").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'noClick'){
+				leftDownButton();
 				SingletonTester.setName('left'); 
 				SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
 			}else {
@@ -90,6 +101,7 @@ $(document).ready(function(){
 		$(".imgLeft").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'left'){
+				leftUpButton();
 				SingletonTester.setName('left'); 
 				SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
 			}else {
@@ -98,10 +110,12 @@ $(document).ready(function(){
 			return false;  /* 禁止长按 */
 		});
 		$(".imgLeft").mousedown(function(){
+			leftDownButton();
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'up'); 
 		});
 		$(".imgLeft").mouseup(function(){
+			leftUpButton();
 			SingletonTester.setName('left'); 
 			SingletonTester.setClickButton(SingletonTester.name,'left',0,'down'); 
 		});
@@ -109,6 +123,7 @@ $(document).ready(function(){
 		$(".imgHead").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'noClick'){
+				headDownButton();
 				SingletonTester.setName('head'); 
 				SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
 			}else {
@@ -119,6 +134,7 @@ $(document).ready(function(){
 		$(".imgHead").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'head'){
+				headUpButton();
 				SingletonTester.setName('head'); 
 				SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
 			}else {
@@ -127,10 +143,12 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgHead").mousedown(function(){
+			headDownButton();
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'up'); 
 		});
 		$(".imgHead").mouseup(function(){
+			headUpButton();
 			SingletonTester.setName('head'); 
 			SingletonTester.setClickButton(SingletonTester.name,'head',0,'down'); 
 		});
@@ -138,6 +156,7 @@ $(document).ready(function(){
 		$(".imgCenter").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'noClick'){
+				centerDownButton();
 				SingletonTester.setName('center'); 
 				SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
 			}else {
@@ -148,6 +167,7 @@ $(document).ready(function(){
 		$(".imgCenter").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'center'){
+				centerUpButton();
 				SingletonTester.setName('center'); 
 				SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 			}else {
@@ -156,10 +176,12 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgCenter").mousedown(function(){
+			centerDownButton();
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'up'); 
 		});
 		$(".imgCenter").mouseup(function(){
+			centerUpButton();
 			SingletonTester.setName('center'); 
 			SingletonTester.setClickButton(SingletonTester.name,'center',0,'down'); 
 		});
@@ -167,6 +189,7 @@ $(document).ready(function(){
 		$(".imgRight").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'noClick'){
+				rightDownButton();
 				SingletonTester.setName('right'); 
 				SingletonTester.setClickButton(SingletonTester.name,'right',0,'up'); 
 			}else {
@@ -177,6 +200,7 @@ $(document).ready(function(){
 		$(".imgRight").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'right'){
+				rightUpButton();
 				SingletonTester.setName('right'); 
 				SingletonTester.setClickButton(SingletonTester.name,'right',0,'down'); 
 			}else {
@@ -185,10 +209,12 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgRight").mousedown(function(){
+			rightDownButton();
 			SingletonTester.setName('right'); 
 			SingletonTester.setClickButton(SingletonTester.name,'right',0,'up'); 
 		});
 		$(".imgRight").mouseup(function(){
+			rightUpButton();
 			SingletonTester.setName('right'); 
 			SingletonTester.setClickButton(SingletonTester.name,'right',0,'down'); 
 		});
@@ -196,6 +222,7 @@ $(document).ready(function(){
 		$(".imgFoot").bind(touchEvents.touchstart,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'noClick'){
+				footDownButton();
 				SingletonTester.setName('foot'); 
 				SingletonTester.setClickButton(SingletonTester.name,'foot',0,'up'); 
 			}else {
@@ -206,6 +233,7 @@ $(document).ready(function(){
 		$(".imgFoot").bind(touchEvents.touchend,function(){
 			clickName = SingletonTester.getName(); 
 			if(clickName == 'foot'){
+				footUpButton();
 				SingletonTester.setName('foot'); 
 				SingletonTester.setClickButton(SingletonTester.name,'foot',0,'down'); 
 			}else {
@@ -214,10 +242,12 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$(".imgFoot").mousedown(function(){
+			footDownButton();
 			SingletonTester.setName('foot'); 
 			SingletonTester.setClickButton(SingletonTester.name,'foot',0,'up'); 
 		});
 		$(".imgFoot").mouseup(function(){
+			footUpButton();
 			SingletonTester.setName('foot'); 
 			SingletonTester.setClickButton(SingletonTester.name,'foot',0,'down'); 
 		});
