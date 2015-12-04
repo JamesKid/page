@@ -1,0 +1,50 @@
+1.  机顶盒代码使用说明
+
+		代码路径:
+				jidinghe.html        # 页面路径
+				js/jidinghe.js			 # js逻辑代码路径
+				js/jidingheclick.js  # js点击事件代码路径
+				css/control.css      # css布局代码
+
+		点击事件添加方法:
+				在 'jidingheclick.js' 文件添加,文件中有添加的添加方法注释
+
+		注意事项:
+				请保留文件原始备份
+				请勿修改除jidingheclick.js文件以外的文件，以免引起错误.
+
+2.  电视代码使用说明
+
+		代码路径:
+				dianshi.html        # 页面路径
+				js/dianshi.js       # js逻辑代码路径
+				js/dianshiclick.js  # js点击事件代码路径
+				css/control.css     # css布局代码
+
+		点击事件添加方法:
+				在 'dianshiclick.js' 文件添加,文件中有详细的添加方法注释
+
+		注意事项:
+				请保留文件原始备份
+				请勿修改除dianshiclick.js文件以外的文件，以免引起错误.
+
+3.  空调代码使用说明
+
+		代码路径:
+				kongtiao.html       # 页面路径
+				js/kongtiao.js      # js逻辑代码路径
+				js/kongtiaoclick.js # js点击事件代码路径
+				css/kongtiao.css    # css布局代码
+				css/HelveticaNeue-UltraLight.otf     # 字体文件
+
+		默认温度修改方法:
+				kongtiao.html 文件 97行后
+					<img  id="temp16" class="on"  value="16" width="100%" style="display:block" src="images/kongtiao/temp/16.jpg"/>
+					将需要默认的温度属性设定为 class="on" style="display:block"
+
+		点击事件添加方法:
+				在 'kongtiaoclick.js' 文件添加,文件中有添加的添加方法注释
+
+		注意事项:
+				请保留文件原始备份
+				请勿修改除kongtiaoclick.js文件,kongtiao.html默认温度以外的文件及代码，以免引起错误.
