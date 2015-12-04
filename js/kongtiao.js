@@ -57,9 +57,7 @@ $(document).ready(function(){
 		});
 		$("#hotPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','hot');
-		});
-		$("#hotPress").bind(touchEvents.touchmove,function(){
-			buttonFunction('up','hot');
+			return false;
 		});
 		$("#hotUp").mousedown(function(){
 			buttonFunction('up','hot');
@@ -82,6 +80,7 @@ $(document).ready(function(){
 		});
 		$("#wetPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','wet');
+			return false;
 		});
 		$("#wetUp").mousedown(function(){
 			buttonFunction('up','wet');
@@ -104,6 +103,7 @@ $(document).ready(function(){
 		});
 		$("#windPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','wind');
+			return false;
 		});
 		$("#windUp").mousedown(function(){
 			buttonFunction('up','wind');
@@ -126,6 +126,7 @@ $(document).ready(function(){
 		});
 		$("#coolPress").bind(touchEvents.touchstart,function(){
 			buttonFunction('press','cool');
+			return false;
 		});
 		$("#coolUp").mousedown(function(){
 			buttonFunction('up','cool');
