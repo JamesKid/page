@@ -22,6 +22,8 @@ $(document).ready(function(){
 		}
 	};
 	/* 当前温度 */
+	nowTemp = nowTemp();
+	$("#nowTemp").text(nowTemp);
 
 	/* 空调事件 */
 	$("#kongTiaoOn").mousedown(function(){
