@@ -7,6 +7,7 @@
 	/* 返回*/
 	function backButton(){
 		//alert('backbutton');
+		javascript:history.go(-1);
 	}
 
 	/* 关闭 */
