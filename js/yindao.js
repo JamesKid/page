@@ -5,7 +5,6 @@
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
 $(document).ready(function(){
-	javascript:location.reload(); /* 刷新页面 */
 	var touchEvents = {
 		touchstart: "touchstart",
 		touchmove: "touchmove",
