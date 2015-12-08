@@ -31,6 +31,26 @@ $(document).ready(function(){
 				}
 			}
 		};
+		/* 当前播放暂停 */
+		var playStopTips = playStop();
+		if(playStopTips=='play'){
+			$("#up_03").css("display","none");
+			$("#up_03_press").css("display","block");
+		}else if(playStopTips=='stop'){
+			$("#up_03").css("display","block");
+			$("#up_03_press").css("display","none");
+		}
+
+		/* 当前声音 */
+		var soundStatusTips = soundStatus();
+		if(soundStatusTips=='on'){
+			$("#sound_off").css("display","none");
+			$("#sond_on").css("display","block");
+		}else if(soundStatusTips=='off'){
+			$("#sound_off").css("display","block");
+			$("#sound_on").css("display","none");
+		}
+
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			backButton();

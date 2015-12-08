@@ -2,6 +2,19 @@
 
 /*********** 使用说明 : 在function内添加代码 ****************/
 
+/* 当前状态组 */
+	/* 播放暂停 */
+	function playStop(){
+		playStop = 'play'; // play播放,stop暂停
+		return playStop;
+	}
+	/* 静音,有声 */
+	function soundStatus(){
+		sound = 'off'; // on有声,off静音
+		return sound;
+	}
+
+
 /* 开关点击返回事件组*/
 
 	/* 返回*/
