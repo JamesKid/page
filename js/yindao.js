@@ -5,6 +5,7 @@
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
 $(document).ready(function(){
+	javascript:location.reload(); /* 刷新页面 */
 	var touchEvents = {
 		touchstart: "touchstart",
 		touchmove: "touchmove",
@@ -24,50 +25,65 @@ $(document).ready(function(){
 	/* 当前温度 */
 	nowTemp = nowTemp();
 	$("#nowTemp").text(nowTemp);
+	/* 空调当前开关 */
+	kongTiaoOnOff = kongTiaoOnOff();
+	statusRender('kongTiao',kongTiaoOnOff);
+	dianShiOnOff = dianShiOnOff();
+	statusRender('dianShi',dianShiOnOff);
+	jiDingHeOnOff = jiDingHeOnOff();
+	statusRender('jiDingHe',jiDingHeOnOff);
 
 	/* 空调事件 */
 	$("#kongTiaoOn").mousedown(function(){
-		$("#kongTiaoOn").css("display","none");
-		$("#kongTiaoOff").css("display","block");
-		$("#kongTiaoStatus").text('关闭');
+		statusTurn('kongTiao','off');
 		kongTiaoOffButton();
 		return false;
 	});
 	$("#kongTiaoOff").mousedown(function(){
-		$("#kongTiaoOn").css("display","block");
-		$("#kongTiaoOff").css("display","none");
-		$("#kongTiaoStatus").text('开启');
+		statusTurn('kongTiao','on');
 		kongTiaoOnButton();
 		return false;
 	});
 	/* 电视事件 */
 	$("#dianShiOn").mousedown(function(){
-		$("#dianShiOn").css("display","none");
-		$("#dianShiOff").css("display","block");
-		$("#dianShiStatus").text('关闭');
+		statusTurn('dianShi','off');
 		dianShiOffButton();
 		return false;
 	});
 	$("#dianShiOff").mousedown(function(){
-		$("#dianShiOn").css("display","block");
-		$("#dianShiOff").css("display","none");
-		$("#dianShiStatus").text('开启');
+		statusTurn('dianShi','on');
 		dianShiOnButton();
 		return false;
 	});
 	/* 机顶盒事件 */
 	$("#jiDingHeOn").mousedown(function(){
-		$("#jiDingHeOn").css("display","none");
-		$("#jiDingHeOff").css("display","block");
-		$("#jiDingHeStatus").text('关闭');
+		statusTurn('jiDingHe','off');
 		jiDingHeOffButton();
 		return false;
 	});
 	$("#jiDingHeOff").mousedown(function(){
-		$("#jiDingHeOn").css("display","block");
-		$("#jiDingHeOff").css("display","none");
-		$("#jiDingHeStatus").text('开启');
+		statusTurn('jiDingHe','on');
 		jiDingHeOnButton();
 		return false;
 	});
 });
+function statusTurn(name,onOff){
+	if(onOff=='on'){
+		$("#"+name+"On").css("display","block");
+		$("#"+name+"Off").css("display","none");
+		$("#"+name+"Status").text('开启');
+	}else if(onOff=='off'){
+		$("#"+name+"On").css("display","none");
+		$("#"+name+"Off").css("display","block");
+		$("#"+name+"Status").text('关闭');
+	}
+}
+/* 当前状态 */
+function statusRender(name,onOff){
+	if(onOff=='on'){
+		statusTurn(name,'on');
+	}else if(onOff=='off'){
+		statusTurn(name,'off');
+	}
+}
+

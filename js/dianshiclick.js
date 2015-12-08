@@ -7,7 +7,8 @@
 	/* 返回*/
 	function backButton(){
 		//alert('backbutton');
-		javascript:history.go(-1);
+		//javascript:history.go(-1);
+	    window.location.href="yindao.html";
 	}
 
 	/* 关闭 */
