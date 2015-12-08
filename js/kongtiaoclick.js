@@ -2,8 +2,30 @@
 
 /*********** 使用说明 : 在function内添加代码 ****************/
 
-/* 开关点击返回事件组*/
+/* 当前状态组 */
+	/* 空调当前温度 */
+	function nowTemp(){
+		temp = 22;  // 此处可以查询自定义页面温度
+		return temp;
+	}
+	/* 当前模式 制热hot  制冷cool 送风wind 抽湿wet */
+	function nowMode(){
+		mode = "cool";  // hot 制热  cool制冷 wind送风 wet抽湿
+		return mode;
+	}
+	/* 当前风速 */
+	function nowWind(){
+		mode = "middle";  // low低风  middle中风 height高风
+		return mode;
+	}
+	/* 当前手动自动 */
+	function nowControl(){
+		mode = "manual";  // auto自动 manual手动
+		return mode;
+	}
 
+
+/* 开关点击返回事件组*/
 	/* 返回*/
 	function backButton(){
 		//alert('backbutton');
@@ -68,7 +90,7 @@
 		function plusButton(temp){
 			//alert('plusButton'+temp);
 		}
-		/* 减小1度 传入参数 nowTemp 为变更后的温度 */
+		/* 减小1度 传入参数 temp 为变更后的温度 */
 		function minusButton(temp){
 			//alert('minusButton'+temp);
 		}

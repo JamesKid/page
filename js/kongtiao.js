@@ -21,9 +21,60 @@ $(document).ready(function(){
 				}
 			}
 		};
-		/* 头部温度 */
-		var tempNumber = $(".on").attr("value");
+		/* 当前温度 */
+		var tempNumber = nowTemp();
 		$('#topTemp').text(tempNumber);
+		$('#temp'+tempNumber).css('display','block');
+		/* 当前模式 */
+		var nowModeTips = nowMode();
+		if(nowModeTips=='hot'){
+			buttonFunction('up','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
+		}else if(nowModeTips=='cool'){
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('press','wind');
+			buttonFunction('up','cool');
+		}else if(nowModeTips=='wind'){
+			buttonFunction('press','hot');
+			buttonFunction('press','wet');
+			buttonFunction('up','wind');
+			buttonFunction('press','cool');
+		}else if(nowModeTips=='wet'){
+			buttonFunction('press','hot');
+			buttonFunction('up','wet');
+			buttonFunction('press','wind');
+			buttonFunction('press','cool');
+		}
+		/* 当前风速 */
+		var nowWindTips = nowWind();
+		if(nowWindTips=='low'){
+			$("#middle").css("display","none");
+			$("#height").css("display","none");
+			$("#low").css("display","block");
+		}else if(nowWindTips=='middle'){
+			$("#middle").css("display","block");
+			$("#height").css("display","none");
+			$("#low").css("display","none");
+		}else if(nowWindTips=='height'){
+			$("#middle").css("display","none");
+			$("#height").css("display","block");
+			$("#low").css("display","none");
+		}
+		/* 当前手动或自动 */
+		var nowControlTips = nowControl();
+		if(nowControlTips=='auto'){
+			$("#auto").css("display","block");
+			$("#manual").css("display","none");
+		}else if(nowControlTips=='manual'){
+			$("#auto").css("display","none");
+			$("#manual").css("display","block");
+		}
+
+
+		/* 当前自动手动 */
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			backButton();
@@ -54,19 +105,6 @@ $(document).ready(function(){
 			}
 		});
 		/*  制热按钮 */
-		/*
-		$("#hotUp").bind(touchEvents.touchstart,function(){
-			hotButton();
-			buttonFunction('press','hot');
-			buttonFunction('press','wet');
-			buttonFunction('press','wind');
-			buttonFunction('press','cool');
-		});
-		$("#hotPress").bind(touchEvents.touchstart,function(){
-			hotButton();
-			buttonFunction('press','hot');
-		});
-		*/
 		$("#hotUp").mousedown(function(){
 			hotButton();
 			buttonFunction('up','hot');
@@ -84,19 +122,6 @@ $(document).ready(function(){
 			buttonFunction('up','hot');
 		});
 		/*  抽湿按钮 */
-		/*
-		$("#wetUp").bind(touchEvents.touchstart,function(){
-			wetButton();
-			buttonFunction('press','wet');
-			buttonFunction('press','hot');
-			buttonFunction('press','wind');
-			buttonFunction('press','cool');
-		});
-		$("#wetPress").bind(touchEvents.touchstart,function(){
-			wetButton();
-			buttonFunction('press','wet');
-		});
-		*/
 		$("#wetUp").mousedown(function(){
 			wetButton();
 			buttonFunction('up','wet');
@@ -114,19 +139,6 @@ $(document).ready(function(){
 			buttonFunction('up','wet');
 		});
 		/*  送风按钮 */
-		/*
-		$("#windUp").bind(touchEvents.touchstart,function(){
-			windButton();
-			buttonFunction('press','wind');
-			buttonFunction('press','hot');
-			buttonFunction('press','wet');
-			buttonFunction('press','cool');
-		});
-		$("#windPress").bind(touchEvents.touchstart,function(){
-			windButton();
-			buttonFunction('press','wind');
-		});
-		*/
 		$("#windUp").mousedown(function(){
 			windButton();
 			buttonFunction('up','wind');
@@ -144,20 +156,6 @@ $(document).ready(function(){
 			buttonFunction('up','wind');
 		});
 		/*  制冷按钮 */
-		/*
-		$("#coolUp").bind(touchEvents.touchstart,function(){
-			coolButton();
-			buttonFunction('press','cool');
-			buttonFunction('press','hot');
-			buttonFunction('press','wet');
-			buttonFunction('press','wind');
-		});
-		$("#coolPress").bind(touchEvents.touchstart,function(){
-			coolButton();
-			buttonFunction('press','cool');
-			return false;
-		});
-		*/
 		$("#coolUp").mousedown(function(){
 			coolButton();
 			buttonFunction('up','cool');
@@ -175,22 +173,20 @@ $(document).ready(function(){
 			buttonFunction('up','cool');
 		});
 		/* 风速按钮 */
+		/*
 		var level =0;
 		$("#windLevel").bind(touchEvents.touchstart,function(){
 			if(level%3==0){
-				/* 小风变中风 */
 				middleButton();
 				$("#low").css("display","none");
 				$("#height").css("display","none");
 				$("#middle").css("display","block");
 			}else if(level%3==1){
-				/* 中风变高风 */
 				heightButton();
 				$("#low").css("display","none");
 				$("#middle").css("display","none");
 				$("#height").css("display","block");
 			}else if(level%3==2){
-				/* 高风变低风 */
 				lowButton();
 				$("#middle").css("display","none");
 				$("#height").css("display","none");
@@ -199,27 +195,45 @@ $(document).ready(function(){
 			level++;
 			return false;
 		});
+		*/
+		/*
 		$("#windLevel").mousedown(function(){
 			if(level%3==0){
-				/* 小风变中风 */
 				middleButton();
 				$("#low").css("display","none");
 				$("#height").css("display","none");
 				$("#middle").css("display","block");
 			}else if(level%3==1){
-				/* 中风变高风 */
 				heightButton();
 				$("#low").css("display","none");
 				$("#middle").css("display","none");
 				$("#height").css("display","block");
 			}else if(level%3==2){
-				/* 高风变低风 */
 				lowButton();
 				$("#middle").css("display","none");
 				$("#height").css("display","none");
 				$("#low").css("display","block");
 			}
 			level++;
+		});
+		*/
+		$("#low").mousedown(function(){
+			middleButton();
+			$("#low").css("display","none");
+			$("#height").css("display","none");
+			$("#middle").css("display","block");
+		});
+		$("#middle").mousedown(function(){
+			heightButton();
+			$("#low").css("display","none");
+			$("#middle").css("display","none");
+			$("#height").css("display","block");
+		});
+		$("#height").mousedown(function(){
+			lowButton();
+			$("#middle").css("display","none");
+			$("#height").css("display","none");
+			$("#low").css("display","block");
 		});
 		/* 自动手动 */
 		var autoControl=0;
@@ -255,7 +269,7 @@ $(document).ready(function(){
 		/* 温度加减 */
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
-			var tempNumber = $(".on").attr("value");
+			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
 			}
@@ -269,7 +283,7 @@ $(document).ready(function(){
 			return false;
 		});
 		$(".plus").mousedown(function(){
-			var tempNumber = $(".on").attr("value");
+			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
 			}
@@ -283,7 +297,7 @@ $(document).ready(function(){
 		});
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
-			var tempNumber = $(".on").attr("value");
+			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
 			}
@@ -297,7 +311,7 @@ $(document).ready(function(){
 			return false;
 		});
 		$(".minus").mousedown(function(){
-			var tempNumber = $(".on").attr("value");
+			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
 			}
