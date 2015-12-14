@@ -22,6 +22,18 @@
 	-moz-user-select:none;
 	-ms-user-select:none;
 }
+a:hover {
+	color:#ffffff;
+	text-decoration:none;
+}
+a:visited {
+	color:#ffffff;
+	text-decoration:none;
+}
+a:link {
+	color:#ffffff;
+	text-decoration:none;
+}
 body {
 	padding:0px;
 	margin:0px;
@@ -74,6 +86,7 @@ body {
 	width:94%;
 	margin-left:3%;
 	margin-right:3%;
+	margin-top:8%;
 	padding-top:3%;
 	padding-bottom:3%;
 	background-color:#00b4e6;
