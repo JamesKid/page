@@ -1,0 +1,74 @@
+/* ========================================================================= */
+/* html5 智能插座安装css布局*/
+/* add by Jameskid 2015.11.28  email:406358964@qq.com */
+/* 注意事项:　 
+ *			   1. 本代码基于html5,请使用支持html5内核的浏览器
+ *			   2. 禁止修改本css代码，否则由此引发的布局错误，不提供维护,
+ *				  如必须修改，请联系本代码开发员
+ *				  
+ * 禁止修改本文件
+ * 
+ * 禁止修改本文件
+ *
+ * ========================================================================= */
+* {
+	-webkit-touch-callout:none;
+	-khtml-touch-callout:none;
+	-moz-touch-callout:none;
+	-ms-touch-callout:none;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+}
+body {
+	padding:0px;
+	margin:0px;
+	background-color:#ffffff;
+	-webkit-tap-highlight-color: transparent; /* 禁止某个标签出现蓝色焦点(区块) */
+	-webkit-touch-callout:none;  /* 禁止长按 */
+}
+.head {
+	background-color:#00b4e6;
+	float:left;
+	width:100%;
+}
+.top {
+	background-color:#00b4e6;
+	float:left;
+	width:96%;
+	padding-left:2%;
+	padding-right:2%;
+	padding-top:0.5%;
+	padding-bottom:1%;
+}
+.content {
+	padding:3%;
+	width:94%;
+	float:left;
+}
+.title {
+	float:left;
+	width:90%;
+	padding:5%;
+	text-align:center;
+	color:#ffffff;
+	font-size:1.25em;
+}
+.point {
+	color:#3f3f3f;
+	padding:4%;
+}
+.tipsImg {
+	float:left;
+	width:80%;
+	padding-left:10%;
+	padding-right:10%;
+	padding-top:7%;
+	padding-bottom:7%;
+}
+
+
+
+
