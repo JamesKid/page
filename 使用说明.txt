@@ -58,6 +58,22 @@
 		请保留文件原始备份
 		请勿修改除jidingheclick.js,dianshiclick.js,yindaoclick.js,kongtiaoclick.js文件以外的文件，以免引起错误.
 
+5.  安装智能插座使用说明
+		代码路径:
+				intall_chazuo.html       # 页面路径
+				js/intall.js      # js逻辑代码路径
+				css/install.css    # css布局代码
 
+		'我已经准备好'链接添加方法:
+				在 'install_chazuo.html' 文件51行添加链接
+
+6.  安装智能设备使用说明
+		代码路径:
+				intall_shebei.html       # 页面路径
+				js/intall.js      # js逻辑代码路径
+				css/install.css    # css布局代码
+
+		'我已经准备好'链接添加方法:
+				在 'install_shebei.html' 文件51行添加链接
 
 

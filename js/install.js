@@ -35,4 +35,7 @@ $(document).ready(function(){
 		$("img").bind(touchEvents.touchstart,function(){
 			return false; /* 禁止长按 */
 		});
+		$("img").bind(touchEvents.touchend,function(){
+			return false; /* 禁止长按 */
+		});
 });
