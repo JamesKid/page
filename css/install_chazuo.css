@@ -40,8 +40,6 @@ body {
 	width:96%;
 	padding-left:2%;
 	padding-right:2%;
-	padding-top:0.5%;
-	padding-bottom:1%;
 }
 .content {
 	padding:3%;
@@ -50,8 +48,8 @@ body {
 }
 .title {
 	float:left;
-	width:90%;
-	padding:5%;
+	width:94%;
+	padding:3%;
 	text-align:center;
 	color:#ffffff;
 	font-size:1.25em;
@@ -65,14 +63,15 @@ body {
 	width:80%;
 	padding-left:10%;
 	padding-right:10%;
-	padding-top:7%;
-	padding-bottom:7%;
+	padding-top:6%;
+	padding-bottom:6%;
 }
 
 .foot {
 	float:left;
 	width:94%;
-	margin:3%;
+	margin-left:3%;
+	margin-right:3%;
 	padding-top:3%;
 	padding-bottom:3%;
 	background-color:#00b4e6;
