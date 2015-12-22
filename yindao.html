@@ -38,7 +38,7 @@ window.oncopy=function()   {return   false;}
 	</div>
 	<!-- 状态列表 -->
 	<div class="list">
-		<div class="listCell">
+		<div class="listCell" id="kongtiao">
 			<a href="kongtiao.html">
 			<div class="leftImg">
 				<img width="100%" src="images/yindao/kongtiao.jpg"/>
@@ -55,12 +55,16 @@ window.oncopy=function()   {return   false;}
 				</div>
 			</div>
 			</a>
+			<!--
+			  $( "#jidinghe" ).load( "page/jidinghe.html", function( response, status, xhr ) {
+				  $('#jidinghe').html(response);
+			-->
 			<div class="onOff" >
 				<img value="kongTiao" id="kongTiaoOn" width="100%" style="display:none" src="images/yindao/on.jpg"/>
 				<img value="kongTiao" id="kongTiaoOff" width="100%" style="display:none" src="images/yindao/off.jpg"/>
 			</div>
 		</div>
-		<div class="listCell">
+		<div class="listCell" id="dianshi">
 			<a href="dianshi.html">
 			<div class="leftImg">
 				<img width="100%" src="images/yindao/dianshi.jpg"/>
@@ -81,7 +85,7 @@ window.oncopy=function()   {return   false;}
 				<img id="dianShiOff" width="100%" style="display:none" src="images/yindao/off.jpg"/>
 			</div>
 		</div>
-		<div class="listCell">
+		<div class="listCell" id="jidinghe">
 			<a href="jidinghe.html">
 			<div class="leftImg">
 				<img width="100%" src="images/yindao/jidinghe.jpg"/>

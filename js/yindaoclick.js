@@ -54,6 +54,25 @@
 		function jiDingHeOffButton(){
 			//alert('joff');
 		}
+		function jiDingHeOffButton(){
+			//alert('joff');
+		}
+/* 按钮加载组 */
+		function checkButton(){
+		  /* 此处添加按钮是否存在定义查询 */
+		  var kongtiao = 1 /* 1 为存在，0为不存在 */
+		  var dianshi = 1 /* 1 为存在，0为不存在 */
+		  var jidinghe = 1 /* 1 为存在，0为不存在 */
+		  if(kongtiao==0){
+			  $('#jidinghe').css('display','none');
+		  }
+		  if(dianshi==0){
+			  $('#dianshi').css('display','none');
+		  }
+		  if(jidinghe==0){
+			  $('#jidinghe').css('display','none');
+		  }
+		}
 
 
 

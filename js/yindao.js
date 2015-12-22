@@ -31,6 +31,8 @@ $(document).ready(function(){
 	statusRender('dianShi',dianShiOnOff);
 	jiDingHeOnOff = jiDingHeOnOff();
 	statusRender('jiDingHe',jiDingHeOnOff);
+	/* 检查设备是否存在 */
+	checkButton();
 
 	/* 空调事件 */
 	$("#kongTiaoOn").mousedown(function(){
