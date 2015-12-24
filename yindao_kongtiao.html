@@ -41,11 +41,14 @@ window.oncopy=function()   {return   false;}
 			<a href="kongtiao.html">
 			<div class="wenzi">
 				<div class="deviceName">
-					空调
+					<!-- 空调 -->
+					<span local_key="LeadAir"></span>
 				</div>
 				<div class="nowStatus">
-					<span id="kongTiaoStatus">开启</span>　
-					温度 <span id="nowTemp"></span>℃
+					<span id="kongTiaoStatus" local_key="LeadAirStatus"></span>
+					<span local_key="LeadAirTempFont"></span>
+				    <span id="nowTemp"></span>
+					<span local_key="LeadAirTemp"></span>
 				</div>
 			</div>
 			</a>

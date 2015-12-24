@@ -25,7 +25,7 @@ document.oncontextmenu=stop;
 window.onselectstart=function()   {return   false;}       
 window.oncopy=function()   {return   false;}       
 </script> 
-<title>智慧家</title>
+<title><span local_key="Title"></span></title>
 </head>
 <body onload="load();">
 <!-- add by Jameskid 2015.11.28  email:406358964@qq.com -->
@@ -36,7 +36,10 @@ window.oncopy=function()   {return   false;}
 	</div>
 	<!-- 状态栏 -->
 	<div class="condition">
+		<!--
 		客厅 ( 6/6 )
+		-->
+		<span local_key="LeadCondition"></span>( 6/6 )
 	</div>
 	<!-- 状态列表 -->
 	<div class="list">
@@ -49,11 +52,17 @@ window.oncopy=function()   {return   false;}
 			<a href="kongtiao.html">
 			<div class="wenzi">
 				<div class="deviceName">
-					空调
+					<!-- 空调 -->
+					<span local_key="LeadAir"></span>
 				</div>
 				<div class="nowStatus">
+					<!--
 					<span id="kongTiaoStatus">开启</span>　
-					温度 <span id="nowTemp"></span>℃
+					温度 <span id="nowTemp"></span>℃  -->
+					<span id="kongTiaoStatus" local_key="LeadAirStatus"></span>
+					<span local_key="LeadAirTempFont"></span>
+				    <span id="nowTemp"></span>
+					<span local_key="LeadAirTemp"></span>
 				</div>
 			</div>
 			</a>
@@ -75,10 +84,10 @@ window.oncopy=function()   {return   false;}
 			<a href="dianshi.html">
 			<div class="wenzi">
 				<div class="deviceName">
-					电视
+					<span local_key="LeadTV"></span>
 				</div>
 				<div class="nowStatus">
-					<span id="dianShiStatus">关闭</span>　
+					<span id="dianShiStatus" local_key="LeadTVStatus"></span>　
 				</div>
 			</div>
 			</a>
@@ -96,10 +105,10 @@ window.oncopy=function()   {return   false;}
 			<a href="jidinghe.html">
 			<div class="wenzi">
 				<div class="deviceName">
-					机顶盒
+					<span local_key="LeadBox"></span>
 				</div>
 				<div class="nowStatus">
-					<span id="jiDingHeStatus">开启</span>　
+					<span id="jiDingHeStatus" local_key="LeadBoxStatus"></span>　
 				</div>
 			</div>
 			</a>
