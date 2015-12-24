@@ -10,6 +10,9 @@
 <script src="js/jquery.js"></script>
 <script src="js/dianshi.js"></script>
 <script src="js/dianshiclick.js"></script>
+<script src="js/control.js"></script>
+<script src="js/status.js"></script>
+<script src="js/hw_plugin_public.js"></script>
 <link rel="stylesheet" href="css/control.css" type="text/css" media="all"/>
 <script>
 function stop(){
@@ -18,40 +21,39 @@ function stop(){
 document.oncontextmenu=stop;
 </script>
 </head>
-<body oncontextmenu=self.event.returnValue=false>
 <script   language=javascript>
 window.onselectstart=function()   {return   false;}       
 window.oncopy=function()   {return   false;}       
 </script> 
-<title>智慧家</title>
+<title><span local_key="Title"></span></title>
 </head>
-<body>
+<body onload="load();">
 <!-- add by Jameskid 2015.11.28  email:406358964@qq.com -->
-<!-- 头部 -->
 <div class="head">
-	<!-- 头部标题 -->
 	<div class="top">
 		<div id="back" class="back">
 			<img width="100%" src="images/back.jpg"/>
 		</div>
 		<div class="title">
+			<!--
 			电视机
+			-->
+			<span local_key="TVTitle"></span>
 		</div>
 		<div id="down" class="down">
 			<img width="100%" src="images/down.jpg"/>
 		</div>
 	</div>
-	<!-- 当前状态 -->
 	<div class="status">
+		<!--
 		当前状态 : <span id="nowStatus" >开启</span>
+		-->
+		<span local_key="TVStatusFont"></span><span id="nowStatus" local_key="TVStatus"></span>
 	</div>
 </div>
-<!-- 主要内容 -->
 <div class="content">
-	<!-- 空白 -->
 	<div class="white">
 	</div>
-	<!-- 菜单按钮 -->
 	<div class="leftWhite">
 	</div>
 	<div class="menu">

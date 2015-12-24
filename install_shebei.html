@@ -12,52 +12,73 @@ document.oncontextmenu=stop;
 </script>
 <script src="js/install.js"></script>
 </head>
-<body oncontextmenu=self.event.returnValue=false>
 <script   language=javascript>
 window.onselectstart=function()   {return   false;}       
 window.oncopy=function()   {return   false;}       
 </script> 
-<title>智慧家</title>
+<script src="js/control.js"></script>
+<script src="js/status.js"></script>
+<script src="js/hw_plugin_public.js"></script>
+<!-- <title>智慧家</title> -->
+<title><span local_key="InstallSheBeiTopTitle"></span></title>
 </head>
-<body>
+<body onload="load();">
 <!-- add by Jameskid 2015.11.28  email:406358964@qq.com -->
-<!-- 头部 -->
 <div class="head">
-	<!-- 头部标题 -->
 	<div class="top">
 		<div class="title">
-			安装智能插座
+			<!--
+			安装智能设备
+			-->
+			<span local_key="InstallSheBeiTitle"></span>
 		</div>
 	</div>
 </div>
-<!-- 主要内容 -->
 <div class="content">
 	<div class="point">
+		<!--
 		1 . 请确认USB-dongle已经插入智能路由器的usb口。
+		-->
+		<span local_key="InstallSheBeiTipsOne"></span>
 	</div>
 	<div class="point">
+		<!--
 		2 . 请确定需要添加的智能设备处于通电状态,且处于智能路由器的zig-bee网格的有效通信距离内。
+		-->
+		<span local_key="InstallSheBeiTipsTwo"></span>
 	</div>
 	<div class="point">
+		<!--
 		3 . 请确定分机进入匹配状态( 分机灯亮30秒 )
+		-->
+		<span local_key="InstallSheBeiTipsThree"></span>
 	</div>
 	<div class="tipsImg">
 		<img width="100%" src="images/install/install_shebei1.jpg"/>
 	</div>
 	<div class="point">
+		<!--
 		4 . 进入搜索后,遥控器对智能分机按[ set ] 进行配置 。
+		-->
+		<span local_key="InstallSheBeiTipsFour"></span>
 	</div>
 	<div class="tipsImg">
 		<img width="100%" src="images/install/install_shebei2.jpg"/>
 	</div>
 	<div class="point">
+		<!--
 		5 . 请确定您已经准备好了吗?
+		-->
+		<span local_key="InstallSheBeiTipsFive"></span>
 	</div>
 </div>
 <a href="#"><!-- 此处添加链接 -->
-<div class="foot">
+	<div class="foot">
+		<!--
 		我已经准备好了
-</div>
+		-->
+		<span local_key="Ready"></span>
+	</div>
 </a>
 </body>  
 </html>

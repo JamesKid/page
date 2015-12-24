@@ -17,15 +17,17 @@ function stop(){
 }
 document.oncontextmenu=stop;
 </script>
+<script src="js/control.js"></script>
+<script src="js/status.js"></script>
+<script src="js/hw_plugin_public.js"></script>
 </head>
-<body oncontextmenu=self.event.returnValue=false>
 <script   language=javascript>
 window.onselectstart=function()   {return   false;}       
 window.oncopy=function()   {return   false;}       
 </script> 
 <title>智慧家</title>
 </head>
-<body>
+<body onload="load();">
 <!-- add by Jameskid 2015.11.28  email:406358964@qq.com -->
 <!-- 头部 -->
 <div class="head">
