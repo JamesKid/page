@@ -94,6 +94,9 @@
 		function minusButton(temp){
 			//alert('minusButton'+temp);
 		}
+/*　updateStatus */
+	function updateStatus(){
+	}
 
 
 

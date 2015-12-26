@@ -72,11 +72,13 @@ function statusTurn(name,onOff){
 	if(onOff=='on'){
 		$("#"+name+"On").css("display","block");
 		$("#"+name+"Off").css("display","none");
-		$("#"+name+"Status").text('开启');
+		var open =  getResource().Open;
+		$("#"+name+"Status").text(open);
 	}else if(onOff=='off'){
 		$("#"+name+"On").css("display","none");
 		$("#"+name+"Off").css("display","block");
-		$("#"+name+"Status").text('关闭');
+		var close =  getResource().Close;
+		$("#"+name+"Status").text(close);
 	}
 }
 /* 当前状态 */

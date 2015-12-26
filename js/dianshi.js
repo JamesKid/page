@@ -62,25 +62,29 @@ $(document).ready(function(){
 		});
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
-			if(nowStatus == '开启'){
+			var open = getResource().Open;
+			var close = getResource().Close;
+			if(nowStatus == open){
 				closeButton();
-				$('#nowStatus').text('关闭');
+				$('#nowStatus').text(close);
 				/* 关闭事件请在此处添加代码 */
-			}else if(nowStatus== '关闭'){
+			}else if(nowStatus== close){
 				openButton();
-				$('#nowStatus').text('开启');
+				$('#nowStatus').text(open);
 				/* 开启事件请在此处添加代码 */
 			}
 			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
-			if(nowStatus == '开启'){
+			var open = getResource().Open;
+			var close = getResource().Close;
+			if(nowStatus == open){
 				closeButton();
-				$('#nowStatus').text('关闭');
-			}else if(nowStatus== '关闭'){
+				$('#nowStatus').text(close);
+			}else if(nowStatus==close){
 				openButton();
-				$('#nowStatus').text('开启');
+				$('#nowStatus').text(open);
 			}
 		});
 		/* 声音按钮 */
