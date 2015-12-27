@@ -15,13 +15,13 @@
 	}
 	/* 当前风速 */
 	function nowWind(){
-		mode = "middle";  // low低风  middle中风 height高风
-		return mode;
+		wind = "middle";  // low低风  middle中风 height高风
+		return wind;
 	}
 	/* 当前手动自动 */
 	function nowControl(){
-		mode = "manual";  // auto自动 manual手动
-		return mode;
+		control = "manual";  // auto自动 manual手动
+		return control;
 	}
 /* 获取当前状态组 */
 	/* 获取空调温度 */
@@ -31,18 +31,19 @@
 	}
 	/* 获取当前模式 制热hot  制冷cool 送风wind 抽湿wet */
 	function getMode(){
-		var mode = $('.modeon').attr('id');  // hot 制热  cool制冷 wind送风 wet抽湿
+		mode = $('.modeon').attr('id');  // mode: hot 制热  cool制冷 wind送风 wet抽湿
 		return mode;
 	}
 	/* 获取当前风速 */
 	function getWind(){
-		mode = "middle";  // low低风  middle中风 height高风
-		return mode;
+		wind = $('.windon').attr('id'); // mode: low低风  middle中风 height高风
+		alert(wind);
+		return wind;
 	}
 	/* 获取当前手动自动 */
 	function getControl(){
-		mode = "manual";  // auto自动 manual手动
-		return mode;
+		control = "manual";  // auto自动 manual手动
+		return control;
 	}
 
 
