@@ -105,10 +105,8 @@ $(document).ready(function(){
 		/* 开启关闭 */
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
-			//var open =  getResource().Open;
-			//var close =  getResource().Close;
-			var open="开启";
-			var close="关闭";
+			var open =  getResource().Open;
+			var close =  getResource().Close;
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
@@ -120,8 +118,10 @@ $(document).ready(function(){
 		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
-			var open =  getResource().Open;
-			var close =  getResource().Close;
+			//var open =  getResource().Open;
+			//var close =  getResource().Close;
+			var open="开启";
+			var close="关闭";
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
