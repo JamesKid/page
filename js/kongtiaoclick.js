@@ -5,7 +5,14 @@
 /* 当前状态组 */
 	/* 当前开启关闭 */
 	function nowOpenClose(){
-		nowOpenClose = '开启';
+		openClose = 'open'; /* open为打开 close为关闭 */
+		open =  getResource().Open;  
+		close =  getResource().Close;  
+		if(openClose=='open'){
+			nowOpenClose = open; 
+		}else if(openClose=='close'){
+			nowOpenClose = close; 
+		}
 		return nowOpenClose;
 	}
 	/* 空调当前温度 */
@@ -72,6 +79,8 @@
 	}
 	/* 获取当前开关状态 */
 	function getOpenClose(){
+		openClose = $('#nowStatus').text();  // auto自动 manual手动
+		return openClose;
 	}
 
 /* 制冷制热送风抽湿点击事件组*/	
@@ -124,10 +133,6 @@
 		function minusButton(temp){
 			//alert('minusButton'+temp);
 		}
-/*　updateStatus */
-	function updateStatus(){
-		//空调开关值
-	}
 
 
 

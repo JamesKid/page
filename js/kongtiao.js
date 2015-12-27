@@ -118,10 +118,10 @@ $(document).ready(function(){
 		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
-			//var open =  getResource().Open;
-			//var close =  getResource().Close;
-			var open="开启";
-			var close="关闭";
+			var open =  getResource().Open;
+			var close =  getResource().Close;
+			// var open="开启";
+			// var close="关闭";
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
