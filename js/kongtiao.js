@@ -22,8 +22,8 @@ $(document).ready(function(){
 			}
 		};
 		/* 当前开启关闭 */
-		var nowOpenClose = nowOpenClose();
-		$('#nowStatus').text(nowOpenClose);
+		var openClose = nowOpenClose();
+		$('#nowStatus').text(openClose);
 		/* 当前温度 */
 		var tempNumber = nowTemp();
 		$('#topTemp').text(tempNumber);
