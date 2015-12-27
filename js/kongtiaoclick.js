@@ -23,28 +23,6 @@
 		control = "manual";  // auto自动 manual手动
 		return control;
 	}
-/* 获取当前状态组 */
-	/* 获取空调温度 */
-	function getTemp(){
-		temp=$('#topTemp').text();
-		return temp;
-	}
-	/* 获取当前模式 */
-	function getMode(){
-		mode = $('.modeon').attr('id');  // mode: hot 制热  cool制冷 wind送风 wet抽湿
-		return mode;
-	}
-	/* 获取当前风速 */
-	function getWind(){
-		wind = $('.windon').attr('id'); // mode: low低风  middle中风 height高风
-		alert(wind);
-		return wind;
-	}
-	/* 获取当前手动自动 */
-	function getControl(){
-		control = $('.controlon').attr('id');  // auto自动 manual手动
-		return control;
-	}
 
 
 /* 开关点击返回事件组*/
@@ -64,6 +42,31 @@
 	/* 打开 */
 	function openButton(){
 		//alert('openButton');
+	}
+
+/* 获取当前状态及开关组 */
+	/* 获取空调温度 */
+	function getTemp(){
+		temp=$('#topTemp').text();
+		return temp;
+	}
+	/* 获取当前模式 */
+	function getMode(){
+		mode = $('.modeon').attr('id');  // mode: hot 制热  cool制冷 wind送风 wet抽湿
+		return mode;
+	}
+	/* 获取当前风速 */
+	function getWind(){
+		wind = $('.windon').attr('id'); // mode: low低风  middle中风 height高风
+		return wind;
+	}
+	/* 获取当前手动自动 */
+	function getControl(){
+		control = $('.controlon').attr('id');  // auto自动 manual手动
+		return control;
+	}
+	/* 获取当前开关状态 */
+	function getOpenClose(){
 	}
 
 /* 制冷制热送风抽湿点击事件组*/	
