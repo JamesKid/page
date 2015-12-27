@@ -32,21 +32,29 @@ $(document).ready(function(){
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
+			$('div').remove('modeon');
+			$('#hot').addClass('modeon');
 		}else if(nowModeTips=='cool'){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('up','cool');
+			$('div').remove('modeon');
+			$('#cool').addClass('modeon');
 		}else if(nowModeTips=='wind'){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('up','wind');
 			buttonFunction('press','cool');
+			$('div').remove('modeon');
+			$('#wind').addClass('modeon');
 		}else if(nowModeTips=='wet'){
 			buttonFunction('press','hot');
 			buttonFunction('up','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
+			$('div').remove('modeon');
+			$('#wet').addClass('modeon');
 		}
 		/* 当前风速 */
 		var nowWindTips = nowWind();
@@ -317,7 +325,6 @@ function buttonFunction(param,type){
 	if(param=='press'){
 		$("#"+type+"Up").css("display","block");
 		$("#"+type+"Press").css("display","none");
-		$('#'+type).addClass('modeon');
 	}
 	if(param=='up'){
 		$("#"+type+"Up").css("display","none");
