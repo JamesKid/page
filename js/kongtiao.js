@@ -317,11 +317,10 @@ function buttonFunction(param,type){
 	if(param=='press'){
 		$("#"+type+"Up").css("display","block");
 		$("#"+type+"Press").css("display","none");
-		$('#hot').addClass('modeon');
+		$('#'+type).addClass('modeon');
 	}
 	if(param=='up'){
 		$("#"+type+"Up").css("display","none");
 		$("#"+type+"Press").css("display","block");
-		$('#hot').removeClass('modeon');
 	}
 }
