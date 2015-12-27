@@ -32,7 +32,6 @@
 	/* 获取当前模式 制热hot  制冷cool 送风wind 抽湿wet */
 	function getMode(){
 		var mode = $('.modeon').attr('id');  // hot 制热  cool制冷 wind送风 wet抽湿
-		alert(mode);
 		return mode;
 	}
 	/* 获取当前风速 */

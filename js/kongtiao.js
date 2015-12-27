@@ -62,14 +62,20 @@ $(document).ready(function(){
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
 			$("#low").css("display","block");
+			$('img').removeClass('windon');
+			$('#low').addClass('windon');
 		}else if(nowWindTips=='middle'){
 			$("#middle").css("display","block");
 			$("#height").css("display","none");
 			$("#low").css("display","none");
+			$('img').removeClass('windon');
+			$('#middle').addClass('windon');
 		}else if(nowWindTips=='height'){
 			$("#middle").css("display","none");
 			$("#height").css("display","block");
 			$("#low").css("display","none");
+			$('img').removeClass('windon');
+			$('#height').addClass('windon');
 		}
 		/* 当前手动或自动 */
 		var nowControlTips = nowControl();
@@ -80,22 +86,16 @@ $(document).ready(function(){
 			$("#auto").css("display","none");
 			$("#manual").css("display","block");
 		}
-		getMode();
-
-
 		/* 当前自动手动 */
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			backButton();
-			updateStatus();
 			return false; /* 禁止长按 */
 		});
 		$("#back").mousedown(function(){
 			backButton();
-			updateStatus();
 		});
 		$("#down").bind(touchEvents.touchstart,function(){
-			updateStatus();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -109,7 +109,6 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
-			updateStatus();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -123,7 +122,6 @@ $(document).ready(function(){
 		});
 		/*  制热按钮 */
 		$("#hotUp").mousedown(function(){
-			updateStatus();
 			hotButton();
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
@@ -134,18 +132,15 @@ $(document).ready(function(){
 			return false;
 		});
 		$("#hotPress").mousedown(function(){
-			updateStatus();
 			hotButton();
 			buttonFunction('up','hot');
 			return false;
 		});
 		$("#hotPress").mouseup(function(){
-			updateStatus();
 			buttonFunction('up','hot');
 		});
 		/*  抽湿按钮 */
 		$("#wetUp").mousedown(function(){
-			updateStatus();
 			wetButton();
 			buttonFunction('up','wet');
 			buttonFunction('press','hot');
@@ -156,18 +151,15 @@ $(document).ready(function(){
 			return false;
 		});
 		$("#wetPress").mousedown(function(){
-			updateStatus();
 			wetButton();
 			buttonFunction('up','wet');
 			return false;
 		});
 		$("#wetPress").mouseup(function(){
-			updateStatus();
 			buttonFunction('up','wet');
 		});
 		/*  送风按钮 */
 		$("#windUp").mousedown(function(){
-			updateStatus();
 			windButton();
 			buttonFunction('up','wind');
 			buttonFunction('press','hot');
@@ -178,18 +170,15 @@ $(document).ready(function(){
 			return false;
 		});
 		$("#windPress").mousedown(function(){
-			updateStatus();
 			windButton();
 			buttonFunction('up','wind');
 			return false;
 		});
 		$("#windPress").mouseup(function(){
-			updateStatus();
 			buttonFunction('up','wind');
 		});
 		/*  制冷按钮 */
 		$("#coolUp").mousedown(function(){
-			updateStatus();
 			coolButton();
 			buttonFunction('up','cool');
 			buttonFunction('press','hot');
@@ -200,41 +189,41 @@ $(document).ready(function(){
 			return false;
 		});
 		$("#coolPress").mousedown(function(){
-			updateStatus();
 			coolButton();
 			buttonFunction('up','cool');
 			return false;
 		});
 		$("#coolPress").mouseup(function(){
-			updateStatus();
 			buttonFunction('up','cool');
 		});
 		/* 风速按钮 */
 		$("#low").mousedown(function(){
-			updateStatus();
 			middleButton();
 			$("#low").css("display","none");
 			$("#height").css("display","none");
 			$("#middle").css("display","block");
+			$('img').removeClass('windon');
+			$('#middle').addClass('windon');
 		});
 		$("#middle").mousedown(function(){
-			updateStatus();
 			heightButton();
 			$("#low").css("display","none");
 			$("#middle").css("display","none");
 			$("#height").css("display","block");
+			$('img').removeClass('windon');
+			$('#height').addClass('windon');
 		});
 		$("#height").mousedown(function(){
-			updateStatus();
 			lowButton();
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
 			$("#low").css("display","block");
+			$('img').removeClass('windon');
+			$('#low').addClass('windon');
 		});
 		/* 自动手动 */
 		var autoControl=0;
 		$("#autoControl").bind(touchEvents.touchstart,function(){
-			updateStatus();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -250,7 +239,6 @@ $(document).ready(function(){
 			return false;
 		});
 		$("#autoControl").mousedown(function(){
-			updateStatus();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -267,7 +255,6 @@ $(document).ready(function(){
 		/* 温度加减 */
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -282,7 +269,6 @@ $(document).ready(function(){
 			return false;
 		});
 		$(".plus").mousedown(function(){
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -297,7 +283,6 @@ $(document).ready(function(){
 		});
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
@@ -312,7 +297,6 @@ $(document).ready(function(){
 			return false;
 		});
 		$(".minus").mousedown(function(){
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
