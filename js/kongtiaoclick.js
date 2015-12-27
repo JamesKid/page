@@ -8,7 +8,7 @@
 		temp = 22;  // 此处可以查询自定义页面温度
 		return temp;
 	}
-	/* 当前模式 制热hot  制冷cool 送风wind 抽湿wet */
+	/* 当前模式 */
 	function nowMode(){
 		mode = "cool";  // hot 制热  cool制冷 wind送风 wet抽湿
 		return mode;
@@ -29,7 +29,7 @@
 		temp=$('#topTemp').text();
 		return temp;
 	}
-	/* 获取当前模式 制热hot  制冷cool 送风wind 抽湿wet */
+	/* 获取当前模式 */
 	function getMode(){
 		mode = $('.modeon').attr('id');  // mode: hot 制热  cool制冷 wind送风 wet抽湿
 		return mode;
@@ -42,7 +42,8 @@
 	}
 	/* 获取当前手动自动 */
 	function getControl(){
-		control = "manual";  // auto自动 manual手动
+		control = $('.controlon').attr('id');  // auto自动 manual手动
+		alert(control);
 		return control;
 	}
 

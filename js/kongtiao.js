@@ -82,9 +82,13 @@ $(document).ready(function(){
 		if(nowControlTips=='auto'){
 			$("#auto").css("display","block");
 			$("#manual").css("display","none");
+			$('img').removeClass('controlon');
+			$('#auto').addClass('controlon');
 		}else if(nowControlTips=='manual'){
 			$("#auto").css("display","none");
 			$("#manual").css("display","block");
+			$('img').removeClass('controlon');
+			$('#manual').addClass('controlon');
 		}
 		/* 当前自动手动 */
 		/* 头部按钮 */
@@ -221,7 +225,6 @@ $(document).ready(function(){
 			$('img').removeClass('windon');
 			$('#low').addClass('windon');
 		});
-		getWind();
 		/* 自动手动 */
 		var autoControl=0;
 		$("#autoControl").bind(touchEvents.touchstart,function(){
@@ -230,15 +233,20 @@ $(document).ready(function(){
 				manualButton();
 				$("#auto").css("display","none");
 				$("#manual").css("display","block");
+				$('img').removeClass('controlon');
+				$('#manual').addClass('controlon');
 			}else if(autoControl%2==1){
 				/* 手动变自动 */
 				autoButton();
 				$("#auto").css("display","block");
 				$("#manual").css("display","none");
+				$('img').removeClass('controlon');
+				$('#auto').addClass('controlon');
 			}
 			autoControl++;
 			return false;
 		});
+		getControl();
 		$("#autoControl").mousedown(function(){
 			if(autoControl%2==0){
 				/* 自动变手动 */
