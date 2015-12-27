@@ -43,7 +43,6 @@
 	/* 获取当前手动自动 */
 	function getControl(){
 		control = $('.controlon').attr('id');  // auto自动 manual手动
-		alert(control);
 		return control;
 	}
 
