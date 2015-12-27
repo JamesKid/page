@@ -252,11 +252,15 @@ $(document).ready(function(){
 				manualButton();
 				$("#auto").css("display","none");
 				$("#manual").css("display","block");
+				$('img').removeClass('controlon');
+				$('#manual').addClass('controlon');
 			}else if(autoControl%2==1){
 				/* 手动变自动 */
 				autoButton();
 				$("#auto").css("display","block");
 				$("#manual").css("display","none");
+				$('img').removeClass('controlon');
+				$('#auto').addClass('controlon');
 			}
 			autoControl++;
 		});
