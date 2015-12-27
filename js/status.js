@@ -17,7 +17,6 @@ function initPage()
 
 function load()
 {
-	alert('status');
 	window.AppJsBridge.service.localeService.getResource({
 		"success":function(data){
 						resource = data;

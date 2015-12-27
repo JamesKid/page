@@ -23,6 +23,27 @@
 		mode = "manual";  // auto自动 manual手动
 		return mode;
 	}
+/* 获取当前状态组 */
+	/* 获取空调温度 */
+	function getTemp(){
+		temp=$('#topTemp').text();
+		return temp;
+	}
+	/* 获取当前模式 制热hot  制冷cool 送风wind 抽湿wet */
+	function getMode(){
+		mode = "cool";  // hot 制热  cool制冷 wind送风 wet抽湿
+		return mode;
+	}
+	/* 获取当前风速 */
+	function getWind(){
+		mode = "middle";  // low低风  middle中风 height高风
+		return mode;
+	}
+	/* 获取当前手动自动 */
+	function getControl(){
+		mode = "manual";  // auto自动 manual手动
+		return mode;
+	}
 
 
 /* 开关点击返回事件组*/
@@ -96,6 +117,7 @@
 		}
 /*　updateStatus */
 	function updateStatus(){
+		//空调开关值
 	}
 
 
