@@ -23,6 +23,7 @@ $(document).ready(function(){
 		};
 		/* 当前温度 */
 		var tempNumber = nowTemp();
+		getMode();
 		$('#topTemp').text(tempNumber);
 		$('#temp'+tempNumber).css('display','block');
 		/* 当前模式 */
