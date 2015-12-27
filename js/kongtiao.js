@@ -128,6 +128,8 @@ $(document).ready(function(){
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
+			$('div').remove('modeon');
+			$('#hot').addClass('modeon');
 			return false;
 		});
 		$("#hotPress").mousedown(function(){
@@ -148,6 +150,8 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wind');
 			buttonFunction('press','cool');
+			$('div').remove('modeon');
+			$('#wet').addClass('modeon');
 			return false;
 		});
 		$("#wetPress").mousedown(function(){
@@ -168,6 +172,8 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','cool');
+			$('div').remove('modeon');
+			$('#wind').addClass('modeon');
 			return false;
 		});
 		$("#windPress").mousedown(function(){
@@ -188,6 +194,8 @@ $(document).ready(function(){
 			buttonFunction('press','hot');
 			buttonFunction('press','wet');
 			buttonFunction('press','wind');
+			$('div').remove('modeon');
+			$('#cool').addClass('modeon');
 			return false;
 		});
 		$("#coolPress").mousedown(function(){
