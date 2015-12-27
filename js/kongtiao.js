@@ -221,6 +221,7 @@ $(document).ready(function(){
 			$('img').removeClass('windon');
 			$('#low').addClass('windon');
 		});
+		getWind();
 		/* 自动手动 */
 		var autoControl=0;
 		$("#autoControl").bind(touchEvents.touchstart,function(){
