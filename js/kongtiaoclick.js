@@ -3,6 +3,11 @@
 /*********** 使用说明 : 在function内添加代码 ****************/
 
 /* 当前状态组 */
+	/* 当前开启关闭 */
+	function nowOpenClose(){
+		nowOpenClose = '开启';
+		return nowOpenClose;
+	}
 	/* 空调当前温度 */
 	function nowTemp(){
 		temp = 22;  // 此处可以查询自定义页面温度

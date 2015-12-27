@@ -25,6 +25,9 @@ $(document).ready(function(){
 		var tempNumber = nowTemp();
 		$('#topTemp').text(tempNumber);
 		$('#temp'+tempNumber).css('display','block');
+		/* 当前开启关闭 */
+		var nowOpenClose = nowOpenClose();
+		$('#nowStatus').text(nowOpenClose);
 		/* 当前模式 */
 		var nowModeTips = nowMode();
 		if(nowModeTips=='hot'){
