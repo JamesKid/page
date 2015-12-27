@@ -21,6 +21,9 @@ $(document).ready(function(){
 				}
 			}
 		};
+		/* 当前开启关闭 */
+		var nowOpenClose = nowOpenClose();
+		$('#nowStatus').text(nowOpenClose);
 		/* 当前温度 */
 		var tempNumber = nowTemp();
 		$('#topTemp').text(tempNumber);
@@ -99,6 +102,7 @@ $(document).ready(function(){
 		$("#back").mousedown(function(){
 			backButton();
 		});
+		/* 开启关闭 */
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
