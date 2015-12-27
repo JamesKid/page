@@ -22,8 +22,8 @@ $(document).ready(function(){
 			}
 		};
 		/* 当前开启关闭 */
-		//var nowOpenClose = nowOpenClose();
-		//$('#nowStatus').text(nowOpenClose);
+		var nowOpenClose = nowOpenClose();
+		$('#nowStatus').text(nowOpenClose);
 		/* 当前温度 */
 		var tempNumber = nowTemp();
 		$('#topTemp').text(tempNumber);
@@ -105,8 +105,10 @@ $(document).ready(function(){
 		/* 开启关闭 */
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
-			var open =  getResource().Open;
-			var close =  getResource().Close;
+			//var open =  getResource().Open;
+			//var close =  getResource().Close;
+			var open="开启";
+			var close="关闭";
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
