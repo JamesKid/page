@@ -4,8 +4,7 @@
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
-//function init(onoff,temp,mode,wind,controllerType){
-$(document).ready(function(){
+function init(onoff,temp,mode,wind,controllerType){
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -23,14 +22,14 @@ $(document).ready(function(){
 			}
 		};
 		/* 当前开启关闭 */
-		var openClose = nowOpenClose();
+		var openClose = onoff;
 		$('#nowStatus').text(openClose);
 		/* 当前温度 */
-		var tempNumber = nowTemp();
+		var tempNumber = temp;
 		$('#topTemp').text(tempNumber);
 		$('#temp'+tempNumber).css('display','block');
 		/* 当前模式 */
-		var nowModeTips = nowMode();
+		var nowModeTips = mode;
 		if(nowModeTips=='hot'){
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
@@ -61,8 +60,7 @@ $(document).ready(function(){
 			$('#wet').addClass('modeon');
 		}
 		/* 当前风速 */
-		//var nowWindTips = wind;
-		var nowWindTips = nowWind();
+		var nowWindTips = wind;
 		if(nowWindTips=='low'){
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
@@ -83,8 +81,7 @@ $(document).ready(function(){
 			$('#height').addClass('windon');
 		}
 		/* 当前手动或自动 */
-		//var nowControlTips = controllerType;
-		var nowControlTips = nowControl();
+		var nowControlTips = controllerType;
 		if(nowControlTips=='auto'){
 			$("#auto").css("display","block");
 			$("#manual").css("display","none");
@@ -301,7 +298,7 @@ $(document).ready(function(){
 		});
 		/* 温度加减 */
 		/* 增大温度 */
-		$(".puls").bind(touchEvents.touchstart,function(){
+		$(".plus").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
 			updateStatus();
 			var tempNumber = $('#topTemp').text();
@@ -315,6 +312,7 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
+			alert("action finish bind");
 			return false;
 		});
 		$(".plus").mousedown(function(){
@@ -331,6 +329,7 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
+			alert("action finish mousedown");
 		});
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
@@ -348,6 +347,7 @@ $(document).ready(function(){
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
 			return false;
+			alert(" minus action finish bind");
 		});
 		$(".minus").mousedown(function(){
 			deviceOnOut();
@@ -363,11 +363,12 @@ $(document).ready(function(){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
+			alert(" minus action finish mousedown");
 		});
 		$(".line").bind(touchEvents.touchstart,function(){
 			return false; /* 禁止图片长按 */
 		});
-});
+}
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
 	if(param=='press'){
