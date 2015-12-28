@@ -133,7 +133,14 @@
 		function minusButton(temp){
 			//alert('minusButton'+temp);
 		}
-
+/* 判断设备是否在线 */
+		function deviceOnOut(){
+			deviceOnOut = 'out'; /*  on 设备在线  out 设备离线 */
+			if(deviceOnOut=='out'){
+				alert('设备离线');
+				return false;
+			}
+		}
 
 
 

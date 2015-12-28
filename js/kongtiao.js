@@ -96,14 +96,17 @@ $(document).ready(function(){
 		/* 当前自动手动 */
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
+			deviceOnOut();
 			backButton();
 			return false; /* 禁止长按 */
 		});
 		$("#back").mousedown(function(){
+			deviceOnOut();
 			backButton();
 		});
 		/* 开启关闭 */
 		$("#down").bind(touchEvents.touchstart,function(){
+			deviceOnOut();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -117,6 +120,7 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
+			deviceOnOut();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -132,6 +136,7 @@ $(document).ready(function(){
 		});
 		/*  制热按钮 */
 		$("#hotUp").mousedown(function(){
+			deviceOnOut();
 			hotButton();
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
@@ -151,6 +156,7 @@ $(document).ready(function(){
 		});
 		/*  抽湿按钮 */
 		$("#wetUp").mousedown(function(){
+			deviceOnOut();
 			wetButton();
 			buttonFunction('up','wet');
 			buttonFunction('press','hot');
@@ -170,6 +176,7 @@ $(document).ready(function(){
 		});
 		/*  送风按钮 */
 		$("#windUp").mousedown(function(){
+			deviceOnOut();
 			windButton();
 			buttonFunction('up','wind');
 			buttonFunction('press','hot');
@@ -189,6 +196,7 @@ $(document).ready(function(){
 		});
 		/*  制冷按钮 */
 		$("#coolUp").mousedown(function(){
+			deviceOnOut();
 			coolButton();
 			buttonFunction('up','cool');
 			buttonFunction('press','hot');
@@ -208,6 +216,7 @@ $(document).ready(function(){
 		});
 		/* 风速按钮 */
 		$("#low").mousedown(function(){
+			deviceOnOut();
 			middleButton();
 			$("#low").css("display","none");
 			$("#height").css("display","none");
@@ -216,6 +225,7 @@ $(document).ready(function(){
 			$('#middle').addClass('windon');
 		});
 		$("#middle").mousedown(function(){
+			deviceOnOut();
 			heightButton();
 			$("#low").css("display","none");
 			$("#middle").css("display","none");
@@ -224,6 +234,7 @@ $(document).ready(function(){
 			$('#height').addClass('windon');
 		});
 		$("#height").mousedown(function(){
+			deviceOnOut();
 			lowButton();
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
@@ -234,6 +245,7 @@ $(document).ready(function(){
 		/* 自动手动 */
 		var autoControl=0;
 		$("#autoControl").bind(touchEvents.touchstart,function(){
+			deviceOnOut();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -253,6 +265,7 @@ $(document).ready(function(){
 			return false;
 		});
 		$("#autoControl").mousedown(function(){
+			deviceOnOut();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -273,6 +286,7 @@ $(document).ready(function(){
 		/* 温度加减 */
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
+			deviceOnOut();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -287,6 +301,7 @@ $(document).ready(function(){
 			return false;
 		});
 		$(".plus").mousedown(function(){
+			deviceOnOut();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -301,6 +316,7 @@ $(document).ready(function(){
 		});
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
+			deviceOnOut();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
@@ -315,6 +331,7 @@ $(document).ready(function(){
 			return false;
 		});
 		$(".minus").mousedown(function(){
+			deviceOnOut();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
