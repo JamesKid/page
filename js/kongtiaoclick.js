@@ -136,6 +136,7 @@
 		if(deviceStatus=='off'){
 			$('#topTemp').text('--');
 			$('#nowStatus').text('--');
+			$('#code').text('--');
 			alert('设备离线');
 			return false;
 		}

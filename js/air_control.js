@@ -97,19 +97,18 @@ function init(onoff,temp,mode,wind,controllerType){
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
-			updateStatus();
 			backButton();
+			updateStatus();
 			return false; /* 禁止长按 */
 		});
 		$("#back").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			backButton();
+			updateStatus();
 		});
 		/* 开启关闭 */
 		$("#down").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
-			updateStatus();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -120,11 +119,11 @@ function init(onoff,temp,mode,wind,controllerType){
 				openButton();
 				$('#nowStatus').text(open);
 			}
+			updateStatus();
 			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -133,15 +132,16 @@ function init(onoff,temp,mode,wind,controllerType){
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
+				updateStatus();
 			}else if(nowStatus== close){
 				openButton();
 				$('#nowStatus').text(open);
+				updateStatus();
 			}
 		});
 		/*  制热按钮 */
 		$("#hotUp").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			hotButton();
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
@@ -149,6 +149,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			buttonFunction('press','cool');
 			$('div').removeClass('modeon');
 			$('#hot').addClass('modeon');
+			updateStatus();
 			return false;
 		});
 		$("#hotPress").mousedown(function(){
@@ -162,7 +163,6 @@ function init(onoff,temp,mode,wind,controllerType){
 		/*  抽湿按钮 */
 		$("#wetUp").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			wetButton();
 			buttonFunction('up','wet');
 			buttonFunction('press','hot');
@@ -170,6 +170,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			buttonFunction('press','cool');
 			$('div').removeClass('modeon');
 			$('#wet').addClass('modeon');
+			updateStatus();
 			return false;
 		});
 		$("#wetPress").mousedown(function(){
@@ -183,7 +184,6 @@ function init(onoff,temp,mode,wind,controllerType){
 		/*  送风按钮 */
 		$("#windUp").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			windButton();
 			buttonFunction('up','wind');
 			buttonFunction('press','hot');
@@ -191,6 +191,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			buttonFunction('press','cool');
 			$('div').removeClass('modeon');
 			$('#wind').addClass('modeon');
+			updateStatus();
 			return false;
 		});
 		$("#windPress").mousedown(function(){
@@ -204,7 +205,6 @@ function init(onoff,temp,mode,wind,controllerType){
 		/*  制冷按钮 */
 		$("#coolUp").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			coolButton();
 			buttonFunction('up','cool');
 			buttonFunction('press','hot');
@@ -212,6 +212,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			buttonFunction('press','wind');
 			$('div').removeClass('modeon');
 			$('#cool').addClass('modeon');
+			updateStatus();
 			return false;
 		});
 		$("#coolPress").mousedown(function(){
@@ -225,39 +226,38 @@ function init(onoff,temp,mode,wind,controllerType){
 		/* 风速按钮 */
 		$("#low").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			middleButton();
 			$("#low").css("display","none");
 			$("#height").css("display","none");
 			$("#middle").css("display","block");
 			$('img').removeClass('windon');
 			$('#middle').addClass('windon');
+			updateStatus();
 		});
 		$("#middle").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			heightButton();
 			$("#low").css("display","none");
 			$("#middle").css("display","none");
 			$("#height").css("display","block");
 			$('img').removeClass('windon');
 			$('#height').addClass('windon');
+			updateStatus();
 		});
 		$("#height").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			lowButton();
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
 			$("#low").css("display","block");
 			$('img').removeClass('windon');
 			$('#low').addClass('windon');
+			updateStatus();
 		});
 		/* 自动手动 */
 		var autoControl=0;
 		$("#autoControl").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
-			updateStatus();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -274,11 +274,11 @@ function init(onoff,temp,mode,wind,controllerType){
 				$('#auto').addClass('controlon');
 			}
 			autoControl++;
+			updateStatus();
 			return false;
 		});
 		$("#autoControl").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -295,12 +295,12 @@ function init(onoff,temp,mode,wind,controllerType){
 				$('#auto').addClass('controlon');
 			}
 			autoControl++;
+			updateStatus();
 		});
 		/* 温度加减 */
 		/* 增大温度 */
 		$(".plus").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -312,12 +312,11 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
-			alert("action finish bind");
+			updateStatus();
 			return false;
 		});
 		$(".plus").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -329,12 +328,11 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
-			alert("action finish mousedown");
+			updateStatus();
 		});
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
@@ -346,12 +344,11 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
+			updateStatus();
 			return false;
-			alert(" minus action finish bind");
 		});
 		$(".minus").mousedown(function(){
 			deviceOnOut();
-			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
@@ -363,7 +360,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#temp"+tempNumberup).addClass("on");
 			$("#temp"+tempNumber).css("display","none");
 			$("#temp"+tempNumberup).css("display","block");
-			alert(" minus action finish mousedown");
+			updateStatus();
 		});
 		$(".line").bind(touchEvents.touchstart,function(){
 			return false; /* 禁止图片长按 */
