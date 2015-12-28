@@ -152,8 +152,8 @@
 		}
 /* 判断设备是否在线 */
 		function deviceOnOut(){
-			deviceOnOut = 'out'; /*  on 设备在线  out 设备离线 */
-			if(deviceOnOut=='out'){
+			onOut = 'out'; /*  on 设备在线  out 设备离线 */
+			if(onOut=='out'){
 				alert('设备离线');
 				return false;
 			}
