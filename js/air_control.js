@@ -4,7 +4,7 @@
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
-$(document).ready(function(){
+function init(onoff,temp,mode,wind,controllerType){
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -22,14 +22,14 @@ $(document).ready(function(){
 			}
 		};
 		/* 当前开启关闭 */
-		var openClose = nowOpenClose();
+		var openClose = onoff;
 		$('#nowStatus').text(openClose);
 		/* 当前温度 */
-		var tempNumber = nowTemp();
+		var tempNumber = temp;
 		$('#topTemp').text(tempNumber);
 		$('#temp'+tempNumber).css('display','block');
 		/* 当前模式 */
-		var nowModeTips = nowMode();
+		var nowModeTips = mode;
 		if(nowModeTips=='hot'){
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
@@ -60,7 +60,7 @@ $(document).ready(function(){
 			$('#wet').addClass('modeon');
 		}
 		/* 当前风速 */
-		var nowWindTips = nowWind();
+		var nowWindTips = wind;
 		if(nowWindTips=='low'){
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
@@ -81,7 +81,7 @@ $(document).ready(function(){
 			$('#height').addClass('windon');
 		}
 		/* 当前手动或自动 */
-		var nowControlTips = nowControl();
+		var nowControlTips = controllerType;
 		if(nowControlTips=='auto'){
 			$("#auto").css("display","block");
 			$("#manual").css("display","none");
@@ -97,16 +97,19 @@ $(document).ready(function(){
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
+			updateStatus();
 			backButton();
 			return false; /* 禁止长按 */
 		});
 		$("#back").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			backButton();
 		});
 		/* 开启关闭 */
 		$("#down").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
+			updateStatus();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -121,6 +124,7 @@ $(document).ready(function(){
 		});
 		$("#down").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			var nowStatus = $("#nowStatus").text();
 			var open =  getResource().Open;
 			var close =  getResource().Close;
@@ -137,6 +141,7 @@ $(document).ready(function(){
 		/*  制热按钮 */
 		$("#hotUp").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			hotButton();
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
@@ -157,6 +162,7 @@ $(document).ready(function(){
 		/*  抽湿按钮 */
 		$("#wetUp").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			wetButton();
 			buttonFunction('up','wet');
 			buttonFunction('press','hot');
@@ -177,6 +183,7 @@ $(document).ready(function(){
 		/*  送风按钮 */
 		$("#windUp").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			windButton();
 			buttonFunction('up','wind');
 			buttonFunction('press','hot');
@@ -197,6 +204,7 @@ $(document).ready(function(){
 		/*  制冷按钮 */
 		$("#coolUp").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			coolButton();
 			buttonFunction('up','cool');
 			buttonFunction('press','hot');
@@ -217,6 +225,7 @@ $(document).ready(function(){
 		/* 风速按钮 */
 		$("#low").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			middleButton();
 			$("#low").css("display","none");
 			$("#height").css("display","none");
@@ -226,6 +235,7 @@ $(document).ready(function(){
 		});
 		$("#middle").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			heightButton();
 			$("#low").css("display","none");
 			$("#middle").css("display","none");
@@ -235,6 +245,7 @@ $(document).ready(function(){
 		});
 		$("#height").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			lowButton();
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
@@ -246,6 +257,7 @@ $(document).ready(function(){
 		var autoControl=0;
 		$("#autoControl").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
+			updateStatus();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -266,6 +278,7 @@ $(document).ready(function(){
 		});
 		$("#autoControl").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			if(autoControl%2==0){
 				/* 自动变手动 */
 				manualButton();
@@ -287,6 +300,7 @@ $(document).ready(function(){
 		/* 增大温度 */
 		$(".puls").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
+			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -302,6 +316,7 @@ $(document).ready(function(){
 		});
 		$(".plus").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==30){
 				return false;
@@ -317,6 +332,7 @@ $(document).ready(function(){
 		/* 减小温度 */
 		$(".minus").bind(touchEvents.touchstart,function(){
 			deviceOnOut();
+			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
@@ -332,6 +348,7 @@ $(document).ready(function(){
 		});
 		$(".minus").mousedown(function(){
 			deviceOnOut();
+			updateStatus();
 			var tempNumber = $('#topTemp').text();
 			if(tempNumber ==16){
 				return false;
@@ -347,7 +364,7 @@ $(document).ready(function(){
 		$(".line").bind(touchEvents.touchstart,function(){
 			return false; /* 禁止图片长按 */
 		});
-});
+}
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
 	if(param=='press'){
