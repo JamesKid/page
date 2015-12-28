@@ -78,7 +78,7 @@
 	}
 	/* 获取当前开关状态 */
 	function getOpenClose(){
-		openClose = $('#nowStatus').text();  // auto自动 manual手动
+		openClose = $('#nowStatus').text();  // 返回propreties里定义的open close
 		return openClose;
 	}
 /* 更新状态 */
