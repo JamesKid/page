@@ -6,8 +6,8 @@
 	/* 当前开启关闭 */
 	function nowOpenClose(){
 		openClose = 'open'; /* open为打开 close为关闭 */
-		open =  getResource().Open;  
-		close =  getResource().Close;  
+		//open =  getResource().Open;  
+		//close =  getResource().Close;  
 		if(openClose=='open'){
 			nowOpenClose = open; 
 		}else if(openClose=='close'){
