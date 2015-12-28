@@ -155,7 +155,6 @@
 			onOut = 'out'; /*  on 设备在线  out 设备离线 */
 			if(onOut=='out'){
 				alert('设备离线');
-				return false;
 			}
 		}
 
