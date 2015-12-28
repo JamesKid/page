@@ -4,7 +4,8 @@
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
-function init(onoff,temp,mode,wind,controllerType){
+//function init(onoff,temp,mode,wind,controllerType){
+$(document).ready(function(){
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -22,14 +23,14 @@ function init(onoff,temp,mode,wind,controllerType){
 			}
 		};
 		/* 当前开启关闭 */
-		var openClose = onoff;
+		var openClose = nowOpenClose();
 		$('#nowStatus').text(openClose);
 		/* 当前温度 */
-		var tempNumber = temp;
+		var tempNumber = nowTemp();
 		$('#topTemp').text(tempNumber);
 		$('#temp'+tempNumber).css('display','block');
 		/* 当前模式 */
-		var nowModeTips = mode;
+		var nowModeTips = nowMode();
 		if(nowModeTips=='hot'){
 			buttonFunction('up','hot');
 			buttonFunction('press','wet');
@@ -60,7 +61,8 @@ function init(onoff,temp,mode,wind,controllerType){
 			$('#wet').addClass('modeon');
 		}
 		/* 当前风速 */
-		var nowWindTips = wind;
+		//var nowWindTips = wind;
+		var nowWindTips = nowWind();
 		if(nowWindTips=='low'){
 			$("#middle").css("display","none");
 			$("#height").css("display","none");
@@ -81,7 +83,8 @@ function init(onoff,temp,mode,wind,controllerType){
 			$('#height').addClass('windon');
 		}
 		/* 当前手动或自动 */
-		var nowControlTips = controllerType;
+		//var nowControlTips = controllerType;
+		var nowControlTips = nowControl();
 		if(nowControlTips=='auto'){
 			$("#auto").css("display","block");
 			$("#manual").css("display","none");
@@ -364,7 +367,7 @@ function init(onoff,temp,mode,wind,controllerType){
 		$(".line").bind(touchEvents.touchstart,function(){
 			return false; /* 禁止图片长按 */
 		});
-}
+});
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
 	if(param=='press'){

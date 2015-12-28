@@ -159,13 +159,11 @@
 			}
 		}
 
+/*
 	var controlDeviceCallback = function(data) {
 		var jsonObj = data;
 	}
-	/**
-	 * 每次点击按钮都要调用该方法，记录当前所以状态的值
-	 * 
-	 */
+	//每次点击按钮都要调用该方法，记录当前所以状态的值
     function updateStatus(){
     	//空调开关机值
     	var status=getOpenClose();
@@ -235,5 +233,6 @@
     		}
     	}
     }
+*/
 
 

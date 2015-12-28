@@ -8,8 +8,8 @@
 		openClose = 'open'; /* open为打开 close为关闭 */
 		//open =  getResource().Open;  
 		//close =  getResource().Close;  
-		open='open';
-		close='close';
+		open='开启';
+		close='关闭';
 		if(openClose=='open'){
 			nowOpenClose = open; 
 		}else if(openClose=='close'){
@@ -137,7 +137,7 @@
 		}
 		
 		function doAction(temp){
-//			alert(temp);
+		//			alert(temp);
 			 window.AppJsBridge.service.deviceService.doAction({
 			      "sn":getCurrentDeviceSn(),
 			      "deviceClass":"SmartAc",
@@ -148,7 +148,7 @@
 			      "success":controlDeviceCallback,
 			      "error":function(data)
 			      {
-//			       alert("error data ." + data);
+		//	    alert("error data ." + data);
 			      }
 		     });
 		}
@@ -157,6 +157,7 @@
 			onOut = 'out'; /*  on 设备在线  out 设备离线 */
 			if(onOut=='out'){
 				alert('设备离线');
+				exit;
 			}
 		}
 
@@ -178,10 +179,11 @@
     	var wind=getWind();
     	//手动，自动
     	var controlType=getControl();
-    	var keyIndex=getKeyIndex(status,temp,mode,wind,controlType);
+    //	var keyIndex=getKeyIndex(status,temp,mode,wind,controlType);
 //    	alert(keyIndex);
-    	doAction(keyIndex);
+    	//doAction(keyIndex);
     }
+	/*
     
     function getKeyIndexInt(tem,mode,speed,directions){
 		mode = mode * 120;
@@ -236,5 +238,6 @@
     		}
     	}
     }
+	*/
 
 
