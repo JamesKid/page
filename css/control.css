@@ -75,8 +75,10 @@ body {
 	padding:5%;
 }	
 .leftWhite {
-	width:78%;
+	width:13%;
 	float:left;
+	padding-left:10%;
+	padding-bottom:4%;
 }
 .rightWhite {
 	width:8%;
