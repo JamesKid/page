@@ -25,7 +25,9 @@ document.oncontextmenu=stop;
 window.onselectstart=function()   {return   false;}       
 window.oncopy=function()   {return   false;}       
 </script> 
+<!--
 <title><span local_key="Title"></span></title>
+-->
 </head>
 <body onload="load();">
 <div id="mask"></div> 
@@ -93,6 +95,12 @@ window.oncopy=function()   {return   false;}
 		</div>
 	</div>
 </div>
+<a href="#"><!-- 此处添加链接 -->
+	<div class="foot" id="btn">
+		下一步
+		<span local_key="Ready"></span>
+	</div>
+</a>
 <script type="text/javascript">
 	var oMask = document.getElementById('mask');
 	var oImg = document.getElementById('img');
@@ -110,11 +118,5 @@ window.oncopy=function()   {return   false;}
 		oMask.style.display = 'none';
 	}
 </script>
-<a href="#"><!-- 此处添加链接 -->
-	<div class="foot" id="btn">
-		下一步
-		<span local_key="Ready"></span>
-	</div>
-</a>
 </body>  
 </html>
