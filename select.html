@@ -28,6 +28,11 @@ window.oncopy=function()   {return   false;}
 <title><span local_key="Title"></span></title>
 </head>
 <body onload="load();">
+<div id="mask"></div> 
+<div id="img">
+	<div class="sucess">完成</div>
+	<img src="images/sucess.jpg">
+</div>
 <!-- add by Jameskid 2015.11.28  email:406358964@qq.com -->
 <div class="head">
 	<!-- 头部 -->
@@ -88,8 +93,25 @@ window.oncopy=function()   {return   false;}
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	var oMask = document.getElementById('mask');
+	var oImg = document.getElementById('img');
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function (){
+		oMask.style.display = 'block';
+		oImg.style.display = 'block';
+		oMask.style.width = document.documentElement.clientWidth + 'px';
+		oMask.style.height = document.documentElement.clientHeight + 'px';
+		oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
+		oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
+	}
+	oMask.onclick = function (){
+		oImg.style.display = 'none';
+		oMask.style.display = 'none';
+	}
+</script>
 <a href="#"><!-- 此处添加链接 -->
-	<div class="foot">
+	<div class="foot" id="btn">
 		下一步
 		<span local_key="Ready"></span>
 	</div>
