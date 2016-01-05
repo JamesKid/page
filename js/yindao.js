@@ -4,7 +4,23 @@
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
-$(document).ready(function(){
+
+/**
+ *  页面加载方法
+ *  isShowTV boolean类型  true显示电视项 false 不显示
+ *  isShowBox boolean类型  true显示机顶盒项 false 不显示
+ *  isShowAir boolean类型  true显示空调项 false 不显示
+ *  keyIndexTV int类型 根据这个值可以算出电视的状态
+ *  keyIndexBox int类型 根据这个值可以算出机顶盒的状态
+ *  keyIndexAir int类型 根据这个值可以算出空调的状态
+ */
+
+/**
+ * 学长，麻烦你修改一下这个方法
+ * 根据isShowTV,isShowBox,isShowAir这几个参数决定显不显示设备项
+ * keyIndexTV,keyIndexBox,keyIndexAir这三个参数你先不用管，到时我要用到的
+ */
+function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
 	var touchEvents = {
 		touchstart: "touchstart",
 		touchmove: "touchmove",
@@ -67,18 +83,17 @@ $(document).ready(function(){
 		jiDingHeOnButton();
 		return false;
 	});
-});
+}
+
 function statusTurn(name,onOff){
 	if(onOff=='on'){
 		$("#"+name+"On").css("display","block");
 		$("#"+name+"Off").css("display","none");
-		var open =  getResource().Open;
-		$("#"+name+"Status").text(open);
+		$("#"+name+"Status").text('开启');
 	}else if(onOff=='off'){
 		$("#"+name+"On").css("display","none");
 		$("#"+name+"Off").css("display","block");
-		var close =  getResource().Close;
-		$("#"+name+"Status").text(close);
+		$("#"+name+"Status").text('关闭');
 	}
 }
 /* 当前状态 */
