@@ -50,6 +50,6 @@ $(document).ready(function(){
 			setTimeout(function(){
 				onAction(type);
 			},
-			2000); //等待2秒自动跳转
+			1000); //等待2秒自动跳转
 		});
 });
