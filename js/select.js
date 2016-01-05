@@ -33,12 +33,23 @@ $(document).ready(function(){
 		};
 		$(".listCell").mousedown(function(){
 			var deviceNoYes = $(this).attr('value');
+			//$(".on").removeClass('on');
+			//$(this).addClass('on');
 			if(deviceNoYes == "noDevice"){
+				$(".on").removeClass('on');
 				$(this).addClass('on');
+				$(".listCell").attr('value','noDevice');
 				$(this).attr('value','yesDevice');
 			}else if(deviceNoYes == "yesDevice"){
-				$(this).removeClass('on');
+				$(".on").removeClass('on');
 				$(this).attr('value','noDevice');
 			}
+		});
+		$(".foot").mousedown(function(){
+			var type = $(".on").attr('type');
+			setTimeout(function(){
+				onAction(type);
+			},
+			2000); //等待2秒自动跳转
 		});
 });

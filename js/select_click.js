@@ -1,5 +1,5 @@
 //下一步按钮事件
-function onAction(){
+function onAction(type){
 
 	// 1、判断是否已经选择 ，提示选择类型
 
@@ -11,7 +11,6 @@ function onAction(){
 		 window.location.href="yindao.html";
 	}else{
 		//弹出提示框匹配失败，不跳转
-		
 	}
 }
 
@@ -19,7 +18,8 @@ function onAction(){
  * 匹配码库操作 返回true 成功  false 失败
  *  该方法我实现
  *  type 设备类型，包括：空调、电视、机顶盒
+ *  type   air :空调　tv:电视 box:机顶盒
  */
 function toAdd(type){
-	
+	return true; 
 }
