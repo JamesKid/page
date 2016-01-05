@@ -1,4 +1,3 @@
-
 //下一步按钮事件
 function onAction(){
 
