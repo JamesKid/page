@@ -12,6 +12,10 @@ function onAction(type){
 		 $('img').css('display','none');
 		 $('#img').css('left','0px');
 		 $('#img').css('margin','12%');
+		 $('#img').css('padding-left','8%');
+		 $('#img').css('padding-right','8%');
+		 $('#img').css('padding-bottom','3%');
+		 $('#img').css('padding-top','3%');
 		 setTimeout(function(){
 			 window.location.href="yindao.html";
 		 },
