@@ -37,6 +37,22 @@ function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
 			}
 		}
 	};
+	/* 显示隐藏设备 */
+	if(isShowAir==true){
+		$("#kongtiao").css("display","block");
+	}else if(isShowTV==false){
+		$("#kongtiao").css("display","none");
+	}
+	if(isShowTV==true){
+		$("#dianshi").css("display","block");
+	}else if(isShowTV==false){
+		$("#dianshi").css("display","none");
+	}
+	if(isShowBox==true){
+		$("#jidinghe").css("display","block");
+	}else if(isShowTV==false){
+		$("#jidinghe").css("display","none");
+	}
 	/* 当前温度 */
 	nowTemp = nowTemp();
 	$("#nowTemp").text(nowTemp);
