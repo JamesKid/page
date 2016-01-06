@@ -8,10 +8,10 @@ function onAction(type){
 	//	3、调用 toAdd() 弹出提示框 ：蓝灯亮起后，请对准分机按遥控器的开关键
 	if(toAdd(type)){
 		//弹出提示框匹配成功，跳转到主页
-		 $('.sucess').text('提示:<br>蓝灯常亮后，请对分机按遥控器的开关键');
+		 $('.sucess').text('提示:蓝灯常亮后，请对分机按遥控器的开关键');
 		 $('img').css('display','none');
-		 $('#img').css('padding-left','5%');
-		 $('#img').css('padding-right','5%');
+		 $('#img').css('left','0px');
+		 $('#img').css('margin','12%');
 		 setTimeout(function(){
 			 window.location.href="yindao.html";
 		 },
