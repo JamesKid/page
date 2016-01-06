@@ -19,9 +19,8 @@ function onAction(type){
 		 $('#fail').css('display','none');
 		 setTimeout(function(){
 			 $('.sucess').text('成功');
-			 $('img').css('display','block');
 			 $('#fail').css('display','none');
-			 $('#sucess').css('display','none');
+			 $('#sucess').css('display','block');
 			 $('#img').css('padding-left','15%');
 			 $('#img').css('padding-right','15%');
 			 $('#img').css('padding-bottom','7%');
