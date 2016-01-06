@@ -9,8 +9,9 @@ function onAction(type){
 	if(toAdd(type)){
 		//弹出提示框匹配成功，跳转到主页
 		 $('.sucess').text('提示:<br>蓝灯常亮后，请对分机按遥控器的开关键');
-		 $('.sucess').css('width','10%');
 		 $('img').css('display','none');
+		 $('#img').css('padding-left','5%');
+		 $('#img').css('padding-right','5%');
 		 setTimeout(function(){
 			 window.location.href="yindao.html";
 		 },
