@@ -43,7 +43,7 @@ function onAction(type){
 			$('#mask').css('display','none');
 			$('#img').css('display','none');
 		},
-		100000); 
+		1000); 
 	}
 }
 
