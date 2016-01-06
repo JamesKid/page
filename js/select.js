@@ -31,6 +31,21 @@ $(document).ready(function(){
 				}
 			}
 		};
+		var oMask = document.getElementById('mask');
+		var oImg = document.getElementById('img');
+		var oBtn = document.getElementById('btn');
+		oBtn.onclick = function (){
+			var type = $(".on").attr('type');
+			onAction(type);
+			//setTimeout(function(){
+			oMask.style.display = 'block';
+			oImg.style.display = 'block';
+			oMask.style.width = document.documentElement.clientWidth + 'px';
+			oMask.style.height = document.documentElement.clientHeight + 'px';
+			//oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
+			oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
+			//2000); 
+		}
 		$(".listCell").mousedown(function(){
 			var deviceNoYes = $(this).attr('value');
 			//$(".on").removeClass('on');
@@ -46,10 +61,5 @@ $(document).ready(function(){
 			}
 		});
 		$(".foot").mousedown(function(){
-			var type = $(".on").attr('type');
-			setTimeout(function(){
-				onAction(type);
-			},
-			1000); //等待2秒自动跳转
 		});
 });

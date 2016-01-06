@@ -9,19 +9,41 @@ function onAction(type){
 	if(toAdd(type)){
 		//弹出提示框匹配成功，跳转到主页
 		 $('.sucess').text('提示:蓝灯常亮后，请对分机按遥控器的开关键');
-		 $('img').css('display','none');
-		 $('#img').css('left','0px');
-		 $('#img').css('margin','12%');
+		 $('#sucess').css('display','none');
+		 $('#fail').css('display','none');
+		 $('#img').css('margin','10%');
 		 $('#img').css('padding-left','8%');
 		 $('#img').css('padding-right','8%');
 		 $('#img').css('padding-bottom','3%');
 		 $('#img').css('padding-top','3%');
+		 $('#img').css('left','0px');
 		 setTimeout(function(){
-			 window.location.href="yindao.html";
+			 $('.sucess').text('成功');
+			 $('img').css('display','block');
+			 $('#fail').css('display','none');
+			 $('#img').css('padding-left','15%');
+			 $('#img').css('padding-right','15%');
+			 $('#img').css('padding-bottom','7%');
+			 $('#img').css('padding-top','7%');
+			 $('#img').css('margin-left','28%');
+			 $('#img').css('margin-right','28%');
+		 },
+		 2000); //等待2秒自动跳转
+		 setTimeout(function(){
+			window.location.href="yindao.html";
 		 },
 		 3000); //等待2秒自动跳转
 	}else{
-		//弹出提示框匹配失败，不跳转
+	    $('.sucess').text('失败');
+		$('#sucess').css('display','none');
+		$('#fail').css('display','block');
+		$('#img').css('margin-right','27%');
+		$('#img').css('margin-left','27%');
+		setTimeout(function(){
+			$('#mask').css('display','none');
+			$('#img').css('display','none');
+		},
+		100000); 
 	}
 }
 
@@ -32,5 +54,9 @@ function onAction(type){
  *  type   air :空调　tv:电视 box:机顶盒
  */
 function toAdd(type){
-	return true; 
+	if(typeof(type) == "undefined"){
+		return false; 
+	}else {
+		return true; 
+	}
 }
