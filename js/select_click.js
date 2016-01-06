@@ -9,14 +9,14 @@ function onAction(type){
 	if(toAdd(type)){
 		//弹出提示框匹配成功，跳转到主页
 		 $('.sucess').text('提示:蓝灯常亮后，请对分机按遥控器的开关键');
-		 $('#sucess').css('display','none');
-		 $('#fail').css('display','none');
 		 $('#img').css('margin','10%');
 		 $('#img').css('padding-left','8%');
 		 $('#img').css('padding-right','8%');
 		 $('#img').css('padding-bottom','3%');
 		 $('#img').css('padding-top','3%');
 		 $('#img').css('left','0px');
+		 $('#sucess').css('display','none');
+		 $('#fail').css('display','none');
 		 setTimeout(function(){
 			 $('.sucess').text('成功');
 			 $('img').css('display','block');
