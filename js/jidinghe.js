@@ -55,6 +55,36 @@ $(document).ready(function(){
 			}
 			return false; /* 禁止长按 */
 		});
+		/* 声音按钮 */
+		$("#soundMinus").mousedown(function(){
+			soundMinus();
+			return false; /* 禁止长按 */
+		});
+		$("#soundPlus").mousedown(function(){
+			soundPlus();
+			return false; /* 禁止长按 */
+		});
+		/* 更新码库 */
+		$("#refresh").mousedown(function(){
+			/* 弹出提示 */
+			var oMask = document.getElementById('mask');
+			var oImg = document.getElementById('img');
+			oMask.style.display = 'block';
+			oImg.style.display = 'block';
+			//$('#img').css('display','block');
+			//$('#mask').css('display','block');
+			oMask.style.width = document.documentElement.clientWidth + 'px';
+			oMask.style.height = document.documentElement.clientHeight + 'px';
+			oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
+			oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
+			setTimeout(function(){
+				oMask.style.display = 'none';
+				oImg.style.display = 'none';
+			},
+			700); //等待2取消
+			refresh();
+			return false; /* 禁止长按 */
+		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
 			var open = getResource().Open;

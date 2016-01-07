@@ -78,6 +78,7 @@ body {
 	width:94%;
 	padding:1%;
 }	
+/*.leftWhite plus{*/
 .leftWhite {
 	width:13%;
 	float:left;
@@ -125,6 +126,34 @@ img {
 .img3 {
 	top:5px;
 }
+/* 弹出遮罩样式　*/
+#mask { 
+	position: absolute; 
+	left:0; 
+	top:0; 
+	background:#000; 
+	opacity:0.3;
+	filter:Alpha(opacity:30); 
+	display: none; 
+}
+#img {
+	position: absolute; 
+	display:none;
+	padding-left:15%;
+	padding-right:15%;
+	padding-bottom:8%;
+	padding-top:5%;
+	border-radius:18px;
+	background-color:#ffffff;
+}
+#img img { width:70px; height:50px; border:none;}
+.sucess {
+	text-align:center;
+	padding-top:5%;
+	//padding-bottom:10%;
+	font-size:1.2em;
+}
+
 /* 响应式布局 */
 	@media (max-width: 350px) {
 		.controller {
@@ -143,9 +172,11 @@ img {
 			padding:20%;
 			width:70%;
 		}
+		/*
 		.menu {
 			width:13%;
 		}
+		*/
 	}
 	@media (min-width: 500px) {
 		.controller {
@@ -158,9 +189,11 @@ img {
 			padding:26%;
 			width:70%;
 		}
+		/*
 		.menu {
 			width:11%;
 		}
+		*/
 	}
 	@media (min-width: 600px) {
 		.controller {
@@ -173,9 +206,11 @@ img {
 			padding:32%;
 			width:36%;
 		}
+		/*
 		.menu {
 			width:9%;
 		}
+		*/
 	}
 	@media (min-width: 700px) {
 		.controller {
@@ -183,18 +218,22 @@ img {
 			width:30%;
 			margin-top:-20%;
 		}
+		/*
 		.menu {
 			width:7%;
 		}
+		*/
 		.back {
 			width:3%;
 		}
 		.down {
 			width:4.5%;
 		}
+		/*
 		.menu {
 			width:5%;
 		}
+		*/
 		.title {
 			width:80%;
 		}

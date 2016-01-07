@@ -30,6 +30,15 @@
 	function closeMenuButton(){
 		//alert('closeMenuButton');
 	}
+	/* 增加声音 */
+	function soundPlus(){
+	}
+	/* 减小声音 */
+	function soundMinus(){
+	}
+	/* 重新匹配码组 */
+	function refresh(){
+	}
 	
 /* 中间遥控盘点击事件组*/	
 
