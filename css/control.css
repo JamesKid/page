@@ -74,6 +74,10 @@ body {
 	width:90%;
 	padding:5%;
 }	
+.whiteTwo {
+	width:94%;
+	padding:1%;
+}	
 .leftWhite {
 	width:13%;
 	float:left;
@@ -113,6 +117,10 @@ img {
 	float:left;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; 
+}
+.buttonGroup {
+	width:100%;
+	float:left;
 }
 .img3 {
 	top:5px;
