@@ -34,6 +34,10 @@
 		//alert('openButton');
 	}
 
+/* 重新匹配码组 */
+function refresh(){
+}
+
 /* 声音事件组*/
 	/* 打开声音 */
 	function openSoundButton(){

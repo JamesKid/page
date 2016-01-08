@@ -140,7 +140,7 @@ img {
 	color:#b8cbd0;
 	margin-top:25%;
 	margin-left:8%;
-	z-index:999;
+	z-index:2;
 	position:relative;
 }
 .plus {
@@ -156,7 +156,7 @@ img {
 	color:#00b4e6;
 	margin-top:24%;
 	margin-left:57%;
-	z-index:999;
+	z-index:2;
 	position:relative;
 }
 .tempNumber {
@@ -182,6 +182,41 @@ img {
 	margin-top:-32.5%;
 	float:left;
 	z-index:1;
+}
+.leftWhite {
+	width:22%;
+	float:left;
+	padding-left:6%;
+	padding-bottom:4%;
+	margin-top:-5%;
+}
+#mask { 
+	position: absolute; 
+	left:0; 
+	top:0; 
+	background:#000; 
+	opacity:0.3;
+	filter:Alpha(opacity:30); 
+	display: none; 
+	z-index:999;
+}
+#img {
+	position: absolute; 
+	display:none;
+	padding-left:15%;
+	padding-right:15%;
+	padding-bottom:8%;
+	padding-top:5%;
+	border-radius:18px;
+	background-color:#ffffff;
+	z-index:999;
+}
+#img img { width:70px; height:50px; border:none;}
+.sucess {
+	text-align:center;
+	padding-top:5%;
+	//padding-bottom:10%;
+	font-size:1.2em;
 }
 /* 响应式布局 */
 @media (max-width: 300px) {

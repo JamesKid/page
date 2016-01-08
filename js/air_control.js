@@ -5,6 +5,14 @@
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
 function init(onoff,temp,mode,wind,controllerType){
+//$(document).ready(function(){
+		/*
+		var onoff="on";
+		var temp="27";
+		var mode="hot";
+		var wind="height";
+		var controllerType="test";
+		*/
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -28,6 +36,27 @@ function init(onoff,temp,mode,wind,controllerType){
 		var tempNumber = temp;
 		$('#topTemp').text(tempNumber);
 		$('#temp'+tempNumber).css('display','block');
+		/* 更新码库 */
+		$("#refresh").mousedown(function(){
+			/* 弹出提示 */
+			var oMask = document.getElementById('mask');
+			var oImg = document.getElementById('img');
+			oMask.style.display = 'block';
+			oImg.style.display = 'block';
+			//$('#img').css('display','block');
+			//$('#mask').css('display','block');
+			oMask.style.width = document.documentElement.clientWidth + 'px';
+			oMask.style.height = document.documentElement.clientHeight + 'px';
+			oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
+			oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
+			setTimeout(function(){
+				oMask.style.display = 'none';
+				oImg.style.display = 'none';
+			},
+			700); //等待2取消
+			refresh();
+			return false; /* 禁止长按 */
+		});
 		/* 当前模式 */
 		var nowModeTips = mode;
 		if(nowModeTips=='hot'){
@@ -366,6 +395,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			return false; /* 禁止图片长按 */
 		});
 }
+//});
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
 	if(param=='press'){
