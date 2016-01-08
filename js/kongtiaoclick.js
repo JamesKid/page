@@ -35,6 +35,9 @@
 	function openButton(){
 		//alert('openButton');
 	}
+/* 重新匹配码组 */
+function refresh(){
+}
 
 /* 获取当前状态及开关组 */
 	/* 获取空调温度 */
