@@ -56,13 +56,23 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 		/* 声音按钮 */
-		$("#soundMinus").mousedown(function(){
+		$(".menuMinus").mousedown(function(){
+			$("#soundMinus").css("display","none");
+			$("#soundMinusClick").css("display","block");
 			soundMinus();
-			return false; /* 禁止长按 */
 		});
-		$("#soundPlus").mousedown(function(){
-			soundPlus();
-			return false; /* 禁止长按 */
+		$(".menuMinus").mouseup(function(){
+			$("#soundMinus").css("display","block");
+			$("#soundMinusClick").css("display","none");
+		});
+		$(".menuPlus").mousedown(function(){
+			$("#soundPlus").css("display","none");
+			$("#soundPlusClick").css("display","block");
+			soundMinus();
+		});
+		$(".menuPlus").mouseup(function(){
+			$("#soundPlus").css("display","block");
+			$("#soundPlusClick").css("display","none");
 		});
 		/* 更新码库 */
 		$("#refresh").mousedown(function(){

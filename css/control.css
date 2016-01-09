@@ -95,6 +95,18 @@ body {
 	padding-right:10%;
 	padding-bottom:4%;
 }
+.menuMinus {
+	width:15%;
+	float:right;
+	padding-right:10%;
+	padding-bottom:4%;
+}
+.menuPlus {
+	width:15%;
+	float:right;
+	padding-right:10%;
+	padding-bottom:4%;
+}
 .controller {
 	width:76%;
 	float:center;
