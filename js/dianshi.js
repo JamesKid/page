@@ -86,9 +86,27 @@ $(document).ready(function(){
 			return false; 
 		});
 		*/
+		$("#down").bind(touchEvents.touchstart,function(){
+			var nowStatus = $("#nowStatus").text();
+			//var open = getResource().Open;
+			//var close = getResource().Close;
+			$("#downUp").css("display","none");
+			$("#downClick").css("display","block");
+			if(nowStatus == open){
+				closeButton();
+				$('#nowStatus').text(close);
+			}else if(nowStatus==close){
+				openButton();
+				$('#nowStatus').text(open);
+			}
+		});
+		$("#down").bind(touchEvents.touchend,function(){
+			$("#downUp").css("display","block");
+			$("#downClick").css("display","none");
+		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
-		//	var open = getResource().Open;
+			//var open = getResource().Open;
 			//var close = getResource().Close;
 			$("#downUp").css("display","none");
 			$("#downClick").css("display","block");
@@ -105,6 +123,15 @@ $(document).ready(function(){
 			$("#downClick").css("display","none");
 		});
 		/* 声音按钮 */
+		$("#menu").bind(touchEvents.touchstart,function(){
+			soundClickButton();
+			$("#sound_off").css("display","none");
+			$("#sound_press").css("display","block");
+		});
+		$("#menu").bind(touchEvents.touchend,function(){
+			$("#sound_off").css("display","block");
+			$("#sound_press").css("display","none");
+		});
 		$(".menu").mousedown(function(){
 			soundClickButton();
 			$("#sound_off").css("display","none");
