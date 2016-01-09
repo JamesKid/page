@@ -37,7 +37,9 @@ window.oncopy=function()   {return   false;}
 <div class="head">
 	<div class="top">
 		<div id="back" class="back">
+			<!--
 			<img width="100%" src="images/back.jpg"/>
+			-->
 		</div>
 		<div class="title">
 			<!--
@@ -46,14 +48,9 @@ window.oncopy=function()   {return   false;}
 			<span local_key="TVTitle"></span>
 		</div>
 		<div id="down" class="down">
-			<img width="100%" src="images/down.jpg"/>
+			<img id="downUp" width="100%" src="images/down.jpg"/>
+			<img id="downClick" width="100%" style="display:none" src="images/down_click.png"/>
 		</div>
-	</div>
-	<div class="status">
-		<!--
-		当前状态 : <span id="nowStatus" >开启</span>
-		-->
-		<span local_key="TVStatusFont"></span><span id="nowStatus" local_key="Open"></span>
 	</div>
 </div>
 <div class="content">
@@ -63,8 +60,8 @@ window.oncopy=function()   {return   false;}
 		<img id="refresh"  width="100%" src="images/refreshnew.jpg"/>
 	</div>
 	<div class="menu">
-		<img id="sound_on"  width="100%" src="images/dianshi/ds_sound_on.jpg"/>
-		<img id="sound_off" style="display:none" width="100%" src="images/dianshi/ds_sound_off.jpg"/>
+		<img id="sound_off" width="100%" src="images/dianshi/ds_sound_off.jpg"/>
+		<img id="sound_press"  style="display:none" width="100%" src="images/dianshi/ds_sound_off_press.png"/>
 	</div>
 	<div class="controller">
 		<div class="size">

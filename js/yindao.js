@@ -21,6 +21,7 @@
  * keyIndexTV,keyIndexBox,keyIndexAir这三个参数你先不用管，到时我要用到的
  */
 function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
+//$(document).ready(function(){
 	var touchEvents = {
 		touchstart: "touchstart",
 		touchmove: "touchmove",
@@ -38,6 +39,7 @@ function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
 		}
 	};
 	/* 显示隐藏设备 */
+	/*
 	if(isShowAir==true){
 		$("#kongtiao").css("display","block");
 	}else if(isShowTV==false){
@@ -53,16 +55,13 @@ function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
 	}else if(isShowTV==false){
 		$("#jidinghe").css("display","none");
 	}
+	*/
 	/* 当前温度 */
 	nowTemp = nowTemp();
 	$("#nowTemp").text(nowTemp);
 	/* 空调当前开关 */
 	kongTiaoOnOff = kongTiaoOnOff();
 	statusRender('kongTiao',kongTiaoOnOff);
-	dianShiOnOff = dianShiOnOff();
-	statusRender('dianShi',dianShiOnOff);
-	jiDingHeOnOff = jiDingHeOnOff();
-	statusRender('jiDingHe',jiDingHeOnOff);
 	/* 检查设备是否存在 */
 	checkButton();
 
@@ -78,28 +77,27 @@ function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
 		return false;
 	});
 	/* 电视事件 */
-	$("#dianShiOn").mousedown(function(){
-		statusTurn('dianShi','off');
-		dianShiOffButton();
-		return false;
+	$("#dianShiOnOff").mousedown(function(){
+		$("#dianShiOn").css("display","none");
+		$("#dianShiOff").css("display","block");
+		dianShiClick();
 	});
-	$("#dianShiOff").mousedown(function(){
-		statusTurn('dianShi','on');
-		dianShiOnButton();
-		return false;
+	$("#dianShiOnOff").mouseup(function(){
+		$("#dianShiOn").css("display","block");
+		$("#dianShiOff").css("display","none");
 	});
-	/* 机顶盒事件 */
-	$("#jiDingHeOn").mousedown(function(){
-		statusTurn('jiDingHe','off');
-		jiDingHeOffButton();
-		return false;
+	/* 机顶开关事件 */
+	$("#jiDingHeOnOff").mousedown(function(){
+		$("#jiDingHeOn").css("display","none");
+		$("#jiDingHeOff").css("display","block");
+		jiDingHeClick();
 	});
-	$("#jiDingHeOff").mousedown(function(){
-		statusTurn('jiDingHe','on');
-		jiDingHeOnButton();
-		return false;
+	$("#jiDingHeOnOff").mouseup(function(){
+		$("#jiDingHeOn").css("display","block");
+		$("#jiDingHeOff").css("display","none");
 	});
 }
+//});
 
 function statusTurn(name,onOff){
 	if(onOff=='on'){

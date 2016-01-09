@@ -39,7 +39,6 @@ body {
 	padding-left:2%;
 	padding-right:2%;
 	padding-top:0.5%;
-	padding-bottom:1%;
 }
 .back {
 	float:left;
@@ -50,7 +49,7 @@ body {
 }
 .title {
 	float:left;
-	width:76%;
+	width:73%;
 	color:#feffff;
 	font-size:1.2em;
 	text-align:center;
@@ -58,10 +57,11 @@ body {
 }
 .down {
 	float:right;
-	width:7%;
+	width:10%;
 	padding-left:3%;
 	padding-right:3%;
-	padding-top:3%;
+	padding-top:5%;
+	padding-bottom:5%;
 }
 .status {
 	width:98%;

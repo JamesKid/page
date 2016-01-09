@@ -51,12 +51,9 @@ window.oncopy=function()   {return   false;}
 	<!-- 状态列表 -->
 	<div class="list">
 		<div class="listCell" id="kongtiao">
-			<a href="kongtiao.html">
 			<div class="leftImg">
 				<img width="100%" src="images/yindao/kongtiao.jpg"/>
 			</div>
-			</a>
-			<a href="kongtiao.html">
 			<div class="wenzi">
 				<div class="deviceName">
 					<!-- 空调 -->
@@ -72,56 +69,37 @@ window.oncopy=function()   {return   false;}
 					<span local_key="LeadAirTemp"></span>
 				</div>
 			</div>
-			</a>
-			<!--
-			  $( "#jidinghe" ).load( "page/jidinghe.html", function( response, status, xhr ) {
-				  $('#jidinghe').html(response);
-			-->
 			<div class="onOff" >
-				<img value="kongTiao" id="kongTiaoOn" width="100%" style="display:none" src="images/yindao/on.jpg"/>
-				<img value="kongTiao" id="kongTiaoOff" width="100%" style="display:none" src="images/yindao/off.jpg"/>
+				<img value="kongTiao" id="kongTiaoOn" width="100%" src="images/yindao/on.jpg"/>
+				<img value="kongTiao" id="kongTiaoOff" width="100%"  style="display:none" src="images/yindao/off.jpg"/>
 			</div>
 		</div>
 		<div class="listCell" id="dianshi">
-			<a href="dianshi.html">
 			<div class="leftImg">
 				<img width="100%" src="images/yindao/dianshi.jpg"/>
 			</div>
-			</a>
-			<a href="dianshi.html">
 			<div class="wenzi">
 				<div class="deviceName">
 					<span local_key="LeadTV"></span>
 				</div>
-				<div class="nowStatus">
-					<span id="dianShiStatus" local_key="Close"></span>　
-				</div>
 			</div>
-			</a>
-			<div class="onOff" >
-				<img id="dianShiOn" width="100%" style="display:none" src="images/yindao/on.jpg"/>
-				<img id="dianShiOff" width="100%" style="display:none" src="images/yindao/off.jpg"/>
+			<div class="onOffStat" id="dianShiOnOff" >
+				<img id="dianShiOn" width="100%" src="images/onOff.png"/>
+				<img id="dianShiOff" width="100%" style="display:none" src="images/onOff_click.png"/>
 			</div>
 		</div>
 		<div class="listCell" id="jidinghe">
-			<a href="jidinghe.html">
 			<div class="leftImg">
 				<img width="100%" src="images/yindao/jidinghe.jpg"/>
 			</div>
-			</a>
-			<a href="jidinghe.html">
 			<div class="wenzi">
 				<div class="deviceName">
 					<span local_key="LeadBox"></span>
 				</div>
-				<div class="nowStatus">
-					<span id="jiDingHeStatus" local_key="Close"></span>　
-				</div>
 			</div>
-			</a>
-			<div class="onOff" >
-				<img id="jiDingHeOn" width="100%" style="display:none" src="images/yindao/on.jpg"/>
-				<img id="jiDingHeOff" width="100%" style="display:none" src="images/yindao/off.jpg"/>
+			<div class="onOffStat" id="jiDingHeOnOff">
+				<img id="jiDingHeOn" width="100%" src="images/onOff.png"/>
+				<img id="jiDingHeOff" width="100%" style="display:none" src="images/onOff_click.png"/>
 			</div>
 		</div>
 	</div>

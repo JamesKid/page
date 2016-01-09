@@ -62,16 +62,6 @@ $(document).ready(function(){
 			return false; /* 禁止长按 */
 		});
 
-		/* 当前声音 */
-		var soundStatusTips = soundStatus();
-		if(soundStatusTips=='on'){
-			$("#sound_off").css("display","none");
-			$("#sond_on").css("display","block");
-		}else if(soundStatusTips=='off'){
-			$("#sound_off").css("display","block");
-			$("#sound_on").css("display","none");
-		}
-
 		/* 头部按钮 */
 		$("#back").bind(touchEvents.touchstart,function(){
 			backButton();
@@ -81,6 +71,7 @@ $(document).ready(function(){
 			backButton();
 			return false; /* 禁止长按 */
 		});
+		/*
 		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
 			var open = getResource().Open;
@@ -88,18 +79,19 @@ $(document).ready(function(){
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
-				/* 关闭事件请在此处添加代码 */
 			}else if(nowStatus== close){
 				openButton();
 				$('#nowStatus').text(open);
-				/* 开启事件请在此处添加代码 */
 			}
-			return false; /* 禁止长按 */
+			return false; 
 		});
+		*/
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
 			var open = getResource().Open;
 			var close = getResource().Close;
+			$("#downUp").css("display","block");
+			$("#downClick").css("display","none");
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
@@ -108,26 +100,19 @@ $(document).ready(function(){
 				$('#nowStatus').text(open);
 			}
 		});
+		$("#down").mouseup(function(){
+			$("#downUp").css("display","none");
+			$("#downClick").css("display","block");
+		});
 		/* 声音按钮 */
-		$("#sond_on").bind(touchEvents.touchstart,function(){
-			openSoundButton();
-			$("#sound_on").css("display","block");
+		$(".menu").mousedown(function(){
+			soundClickButton();
 			$("#sound_off").css("display","none");
+			$("#sound_press").css("display","block");
 		});
-		$("#sond_off").bind(touchEvents.touchstart,function(){
-			closeSoundButton();
-			$("#sound_on").css("display","none");
+		$(".menu").mouseup(function(){
 			$("#sound_off").css("display","block");
-		});
-		$("#sound_on").mousedown(function(){
-			closeSoundButton();
-			$("#sound_on").css("display","none");
-			$("#sound_off").css("display","block");
-		});
-		$("#sound_off").mousedown(function(){
-			openSoundButton();
-			$("#sound_on").css("display","block");
-			$("#sound_off").css("display","none");
+			$("#sound_press").css("display","none");
 		});
 
 		/* 左方按钮　*/

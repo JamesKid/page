@@ -9,10 +9,12 @@
 		return playStop;
 	}
 	/* 静音,有声 */
+	/*
 	function soundStatus(){
 		sound = 'off'; // on有声,off静音
 		return sound;
 	}
+	*/
 
 
 /* 开关点击返回事件组*/
@@ -39,13 +41,9 @@ function refresh(){
 }
 
 /* 声音事件组*/
-	/* 打开声音 */
-	function openSoundButton(){
+	/* 有声无声点击事件 */
+	function soundClickButton(){
 		//alert('openSoundButton');
-	}
-	/* 关闭声音（静音) */
-	function closeSoundButton(){
-		//alert('closeSoundButton');
 	}
 	
 /* 中间遥控盘点击事件组*/	

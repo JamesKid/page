@@ -37,25 +37,12 @@
 		}
 
 	/* 电视开关 */
-		/*　打开 */
-		function dianShiOnButton(){
-			//alert('don');
-		}
-		/*　关闭 */
-		function dianShiOffButton(){
-			//alert('doff');
+		/*　点击开关 */
+		function dianShiClick(){
 		}
 	/* 机顶盒开关 */
-		/*　打开 */
-		function jiDingHeOnButton(){
-			//alert('jon');
-		}
-		/*　关闭 */
-		function jiDingHeOffButton(){
-			//alert('joff');
-		}
-		function jiDingHeOffButton(){
-			//alert('joff');
+		/*　点击开关 */
+		function jiDingHeClick(){
 		}
 /* 按钮加载组 */
 		function checkButton(){
