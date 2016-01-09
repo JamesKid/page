@@ -123,12 +123,12 @@ $(document).ready(function(){
 			$("#downClick").css("display","none");
 		});
 		/* 声音按钮 */
-		$("#menu").bind(touchEvents.touchstart,function(){
+		$(".menu").bind(touchEvents.touchstart,function(){
 			soundClickButton();
 			$("#sound_off").css("display","none");
 			$("#sound_press").css("display","block");
 		});
-		$("#menu").bind(touchEvents.touchend,function(){
+		$(".menu").bind(touchEvents.touchend,function(){
 			$("#sound_off").css("display","block");
 			$("#sound_press").css("display","none");
 		});
