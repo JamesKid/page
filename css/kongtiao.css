@@ -49,14 +49,14 @@ body {
 }
 .back {
 	float:left;
-	width:5%;
+	width:14%;
 	padding-left:3%;
 	padding-right:3%;
-	padding-top:3%;
+	padding-top:23px;
 }
 .title {
 	float:left;
-	width:60%;
+	width:30%;
 	color:#feffff;
 	font-size:3.5em;
 	text-align:center;

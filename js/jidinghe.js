@@ -40,20 +40,23 @@ $(document).ready(function(){
 			backButton();
 			return false; /* 禁止长按 */
 		});
-		$("#down").bind(touchEvents.touchstart,function(){
+		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
 			var open = getResource().Open;
 			var close = getResource().Close;
+			$("#downUp").css("display","none");
+			$("#downClick").css("display","block");
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
-				/* 关闭事件请在此处添加代码 */
 			}else if(nowStatus==close){
 				openButton();
 				$('#nowStatus').text(open);
-				/* 开启事件请在此处添加代码 */
 			}
-			return false; /* 禁止长按 */
+		});
+		$("#down").mouseup(function(){
+			$("#downUp").css("display","block");
+			$("#downClick").css("display","none");
 		});
 		/* 声音按钮 */
 		$(".menuMinus").mousedown(function(){

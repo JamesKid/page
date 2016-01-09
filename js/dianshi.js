@@ -90,8 +90,8 @@ $(document).ready(function(){
 			var nowStatus = $("#nowStatus").text();
 			var open = getResource().Open;
 			var close = getResource().Close;
-			$("#downUp").css("display","block");
-			$("#downClick").css("display","none");
+			$("#downUp").css("display","none");
+			$("#downClick").css("display","block");
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
@@ -101,8 +101,8 @@ $(document).ready(function(){
 			}
 		});
 		$("#down").mouseup(function(){
-			$("#downUp").css("display","none");
-			$("#downClick").css("display","block");
+			$("#downUp").css("display","block");
+			$("#downClick").css("display","none");
 		});
 		/* 声音按钮 */
 		$(".menu").mousedown(function(){

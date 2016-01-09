@@ -4,15 +4,13 @@
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
-function init(onoff,temp,mode,wind,controllerType){
-//$(document).ready(function(){
-		/*
+//function init(onoff,temp,mode,wind,controllerType){
+$(document).ready(function(){
 		var onoff="on";
 		var temp="27";
 		var mode="hot";
 		var wind="height";
 		var controllerType="test";
-		*/
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -136,37 +134,23 @@ function init(onoff,temp,mode,wind,controllerType){
 			updateStatus();
 		});
 		/* 开启关闭 */
-		$("#down").bind(touchEvents.touchstart,function(){
-			deviceOnOut();
-			var nowStatus = $("#nowStatus").text();
-			var open =  getResource().Open;
-			var close =  getResource().Close;
-			if(nowStatus == open){
-				closeButton();
-				$('#nowStatus').text(close);
-			}else if(nowStatus== close){
-				openButton();
-				$('#nowStatus').text(open);
-			}
-			updateStatus();
-			return false; /* 禁止长按 */
-		});
 		$("#down").mousedown(function(){
-			deviceOnOut();
 			var nowStatus = $("#nowStatus").text();
-			var open =  getResource().Open;
-			var close =  getResource().Close;
-			// var open="开启";
-			// var close="关闭";
+			//var open = getResource().Open;
+			//var close = getResource().Close;
+			$("#downUp").css("display","none");
+			$("#downClick").css("display","block");
 			if(nowStatus == open){
 				closeButton();
 				$('#nowStatus').text(close);
-				updateStatus();
-			}else if(nowStatus== close){
+			}else if(nowStatus==close){
 				openButton();
 				$('#nowStatus').text(open);
-				updateStatus();
 			}
+		});
+		$("#down").mouseup(function(){
+			$("#downUp").css("display","block");
+			$("#downClick").css("display","none");
 		});
 		/*  制热按钮 */
 		$("#hotUp").mousedown(function(){
@@ -394,8 +378,8 @@ function init(onoff,temp,mode,wind,controllerType){
 		$(".line").bind(touchEvents.touchstart,function(){
 			return false; /* 禁止图片长按 */
 		});
-}
-//});
+//}
+});
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
 	if(param=='press'){
