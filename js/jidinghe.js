@@ -42,8 +42,8 @@ $(document).ready(function(){
 		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
-			var open = getResource().Open;
-			var close = getResource().Close;
+			//var open = getResource().Open;
+			//var close = getResource().Close;
 			$("#downUp").css("display","none");
 			$("#downClick").css("display","block");
 			if(nowStatus == open){

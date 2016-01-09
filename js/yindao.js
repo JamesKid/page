@@ -20,8 +20,8 @@
  * 根据isShowTV,isShowBox,isShowAir这几个参数决定显不显示设备项
  * keyIndexTV,keyIndexBox,keyIndexAir这三个参数你先不用管，到时我要用到的
  */
-function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
-//$(document).ready(function(){
+//function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
+$(document).ready(function(){
 	var touchEvents = {
 		touchstart: "touchstart",
 		touchmove: "touchmove",
@@ -96,8 +96,8 @@ function init(isShowTV,isShowBox,isShowAir,keyIndexTV,keyIndexBox,keyIndexAir){
 		$("#jiDingHeOn").css("display","block");
 		$("#jiDingHeOff").css("display","none");
 	});
-}
-//});
+//}
+});
 
 function statusTurn(name,onOff){
 	if(onOff=='on'){
