@@ -4,13 +4,15 @@
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
-//function init(onoff,temp,mode,wind,controllerType){
-$(document).ready(function(){
+function init(onoff,temp,mode,wind,controllerType){
+//$(document).ready(function(){
+	/*
 		var onoff="on";
 		var temp="27";
 		var mode="hot";
 		var wind="height";
 		var controllerType="test";
+		*/
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -41,18 +43,62 @@ $(document).ready(function(){
 			var oImg = document.getElementById('img');
 			oMask.style.display = 'block';
 			oImg.style.display = 'block';
-			//$('#img').css('display','block');
-			//$('#mask').css('display','block');
+			$('.sucess').text('重新匹配码组');
+			$('#fail').css('display','none');
+			$('#sucess').css('display','none');
+			$('#img').css('padding-left','5%');
+			$('#img').css('padding-right','5%');
+		    $('#img').css('padding-top','5%');
 			oMask.style.width = document.documentElement.clientWidth + 'px';
 			oMask.style.height = document.documentElement.clientHeight + 'px';
 			oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
 			oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
-			setTimeout(function(){
-				oMask.style.display = 'none';
-				oImg.style.display = 'none';
-			},
-			700); //等待2取消
-			refresh();
+		 // 判断是否提交成功
+			var type="tv";
+			if(toAdd(type)){
+				 setTimeout(function(){
+					 $('.sucess').text('成功');
+					 $('#fail').css('display','none');
+					 $('#sucess').css('display','block');
+					 $('#img').css('padding-left','15%');
+					 $('#img').css('padding-right','15%');
+					 $('#img').css('padding-bottom','7%');
+					 $('#img').css('padding-top','7%');
+					 $('#img').css('margin-left','0%');
+					 $('#img').css('margin-right','28%');
+				 },
+				1500); //等待2秒自动跳转
+				setTimeout(function(){
+					$('#mask').css('display','none');
+					$('#img').css('display','none');
+				},
+				2500); //等待2秒自动跳转
+				/*
+				setTimeout(function(){
+					oMask.style.display = 'none';
+					oImg.style.display = 'none';
+				},
+				500); 
+				*/
+			}else{
+				 setTimeout(function(){
+					 $('.sucess').text('失败');
+					 $('#fail').css('display','block');
+					 $('#sucess').css('display','none');
+					 $('#img').css('padding-left','15%');
+					 $('#img').css('padding-right','15%');
+					 $('#img').css('padding-bottom','7%');
+					 $('#img').css('padding-top','7%');
+					 $('#img').css('margin-left','0%');
+					 $('#img').css('margin-right','28%');
+				 },
+				 1500); //等待2秒自动跳转
+				 setTimeout(function(){
+					$('#mask').css('display','none');
+					$('#img').css('display','none');
+				 },
+				 2500); //等待2秒自动跳转
+			}
 			return false; /* 禁止长按 */
 		});
 		/* 当前模式 */
@@ -121,23 +167,29 @@ $(document).ready(function(){
 			$('#manual').addClass('controlon');
 		}
 		/* 当前自动手动 */
-		/* 头部按钮 */
-		$("#back").bind(touchEvents.touchstart,function(){
-			deviceOnOut();
-			backButton();
-			updateStatus();
-			return false; /* 禁止长按 */
-		});
-		$("#back").mousedown(function(){
-			deviceOnOut();
-			backButton();
-			updateStatus();
-		});
 		/* 开启关闭 */
+		$("#down").bind(touchEvents.touchstart,function(){
+			var nowStatus = $("#nowStatus").text();
+			var open = getResource().Open;
+			var close = getResource().Close;
+			$("#downUp").css("display","none");
+			$("#downClick").css("display","block");
+			openCloseButton();
+			if(nowStatus == open){
+				$('#nowStatus').text(close);
+			}else if(nowStatus==close){
+				$('#nowStatus').text(open);
+			}
+		});
+		$("#down").bind(touchEvents.touchend,function(){
+			$("#downUp").css("display","block");
+			$("#downClick").css("display","none");
+			return false;
+		});
 		$("#down").mousedown(function(){
 			var nowStatus = $("#nowStatus").text();
-			//var open = getResource().Open;
-			//var close = getResource().Close;
+			var open = getResource().Open;
+			var close = getResource().Close;
 			$("#downUp").css("display","none");
 			$("#downClick").css("display","block");
 			if(nowStatus == open){
@@ -378,8 +430,8 @@ $(document).ready(function(){
 		$(".line").bind(touchEvents.touchstart,function(){
 			return false; /* 禁止图片长按 */
 		});
-//}
-});
+}
+//});
 /* 单一按钮点击函数 */
 function buttonFunction(param,type){
 	if(param=='press'){

@@ -10,15 +10,9 @@
 		//javascript:history.go(-1);
 	    window.location.href="yindao.html";
 	}
-
-	/* 关闭 */
-	function closeButton(){
+	/* 打开关闭 */
+	function openCloseButton(){
 		//alert('closeButton');
-	}
-
-	/* 打开 */
-	function openButton(){
-		//alert('openButton');
 	}
 
 /* 菜单事件组*/
@@ -86,5 +80,16 @@
 	    /* 提起 */
 		function centerUpButton(){
 			//alert('centerUpButton');
+		}
+
+/* 重新匹配码组 */
+		function toAdd(type){
+			/* 查询是否连接成功 */
+			check = false;
+			if(check==false){
+				return false; 
+			}else {
+				return true; 
+			}
 		}
 	

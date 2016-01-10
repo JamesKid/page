@@ -86,6 +86,15 @@ $(document).ready(function(){
 		$("#dianShiOn").css("display","block");
 		$("#dianShiOff").css("display","none");
 	});
+	$("#dianShiOnOff").bind(touchEvents.touchstart,function(){
+		$("#dianShiOn").css("display","none");
+		$("#dianShiOff").css("display","block");
+		dianShiClick();
+	});
+	$("#dianShiOnOff").bind(touchEvents.touchend,function(){
+		$("#dianShiOn").css("display","block");
+		$("#dianShiOff").css("display","none");
+	});
 	/* 机顶开关事件 */
 	$("#jiDingHeOnOff").mousedown(function(){
 		$("#jiDingHeOn").css("display","none");
@@ -93,6 +102,15 @@ $(document).ready(function(){
 		jiDingHeClick();
 	});
 	$("#jiDingHeOnOff").mouseup(function(){
+		$("#jiDingHeOn").css("display","block");
+		$("#jiDingHeOff").css("display","none");
+	});
+	$("#jiDingHeOnOff").bind(touchEvents.touchstart,function(){
+		$("#jiDingHeOn").css("display","none");
+		$("#jiDingHeOff").css("display","block");
+		jiDingHeClick();
+	});
+	$("#jiDingHeOnOff").bind(touchEvents.touchend,function(){
 		$("#jiDingHeOn").css("display","block");
 		$("#jiDingHeOff").css("display","none");
 	});

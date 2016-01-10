@@ -26,19 +26,11 @@
 	    window.location.href="yindao.html";
 	}
 
-	/* 关闭 */
-	function closeButton(){
-		//alert('closeButton');
+	/* 打开关闭 */
+	function openCloseButton(){
+		//alert('opencloseButton');
 	}
 
-	/* 打开 */
-	function openButton(){
-		//alert('openButton');
-	}
-
-/* 重新匹配码组 */
-function refresh(){
-}
 
 /* 声音事件组*/
 	/* 有声无声点击事件 */
@@ -92,5 +84,16 @@ function refresh(){
 	    /* 开始 */
 		function centerStartButton(){
 			//alert('centerStartButton');
+		}
+
+/* 重新匹配码组 */
+		function toAdd(type){
+			/* 查询是否连接成功 */
+			check = false;
+			if(check==false){
+				return false; 
+			}else {
+				return true; 
+			}
 		}
 	

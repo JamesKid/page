@@ -26,18 +26,20 @@
 	    //window.location.href = document.referrer;//返回上一页并刷新  
 	}
 
-	/* 关闭 */
-	function closeButton(){
-		//alert('closeButton');
-	}
-
-	/* 打开 */
-	function openButton(){
-		//alert('openButton');
+	/* 打开关闭 */
+	function openCloseButton(){
 	}
 /* 重新匹配码组 */
-function refresh(){
-}
+		function toAdd(type){
+			/* 查询是否连接成功 */
+			check = false;
+			if(check==false){
+				return false; 
+			}else {
+				return true; 
+			}
+		}
+	
 
 /* 获取当前状态及开关组 */
 	/* 获取空调温度 */

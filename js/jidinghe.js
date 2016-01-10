@@ -40,17 +40,34 @@ $(document).ready(function(){
 			backButton();
 			return false; /* 禁止长按 */
 		});
-		$("#down").mousedown(function(){
+		$("#down").bind(touchEvents.touchstart,function(){
 			var nowStatus = $("#nowStatus").text();
-			//var open = getResource().Open;
-			//var close = getResource().Close;
+			var open = getResource().Open;
+			var close = getResource().Close;
 			$("#downUp").css("display","none");
 			$("#downClick").css("display","block");
+			openCloseButton();
 			if(nowStatus == open){
-				closeButton();
 				$('#nowStatus').text(close);
 			}else if(nowStatus==close){
-				openButton();
+				$('#nowStatus').text(open);
+			}
+		});
+		$("#down").bind(touchEvents.touchend,function(){
+			$("#downUp").css("display","block");
+			$("#downClick").css("display","none");
+			return false;
+		});
+		$("#down").mousedown(function(){
+			var nowStatus = $("#nowStatus").text();
+			var open = getResource().Open;
+			var close = getResource().Close;
+			$("#downUp").css("display","none");
+			$("#downClick").css("display","block");
+			openCloseButton();
+			if(nowStatus == open){
+				$('#nowStatus').text(close);
+			}else if(nowStatus==close){
 				$('#nowStatus').text(open);
 			}
 		});
@@ -59,6 +76,17 @@ $(document).ready(function(){
 			$("#downClick").css("display","none");
 		});
 		/* 声音按钮 */
+		/* 声音增大*/
+		$(".menuMinus").bind(touchEvents.touchstart,function(){
+			$("#soundMinus").css("display","none");
+			$("#soundMinusClick").css("display","block");
+			soundMinus();
+		});
+		$(".menuMinus").bind(touchEvents.touchend,function(){
+			$("#soundMinus").css("display","block");
+			$("#soundMinusClick").css("display","none");
+			return false;
+		});
 		$(".menuMinus").mousedown(function(){
 			$("#soundMinus").css("display","none");
 			$("#soundMinusClick").css("display","block");
@@ -68,6 +96,18 @@ $(document).ready(function(){
 			$("#soundMinus").css("display","block");
 			$("#soundMinusClick").css("display","none");
 		});
+		/* 声音减小*/
+		$(".menuPlus").bind(touchEvents.touchstart,function(){
+			$("#soundPlus").css("display","none");
+			$("#soundPlusClick").css("display","block");
+			soundMinus();
+		});
+		$(".menuPlus").bind(touchEvents.touchend,function(){
+			$("#soundPlus").css("display","block");
+			$("#soundPlusClick").css("display","none");
+			return false;
+		});
+
 		$(".menuPlus").mousedown(function(){
 			$("#soundPlus").css("display","none");
 			$("#soundPlusClick").css("display","block");
@@ -84,18 +124,62 @@ $(document).ready(function(){
 			var oImg = document.getElementById('img');
 			oMask.style.display = 'block';
 			oImg.style.display = 'block';
-			//$('#img').css('display','block');
-			//$('#mask').css('display','block');
+			$('.sucess').text('重新匹配码组');
+			$('#fail').css('display','none');
+			$('#sucess').css('display','none');
+			$('#img').css('padding-left','5%');
+			$('#img').css('padding-right','5%');
+		    $('#img').css('padding-top','5%');
 			oMask.style.width = document.documentElement.clientWidth + 'px';
 			oMask.style.height = document.documentElement.clientHeight + 'px';
 			oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
 			oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
-			setTimeout(function(){
-				oMask.style.display = 'none';
-				oImg.style.display = 'none';
-			},
-			700); //等待2取消
-			refresh();
+		 // 判断是否提交成功
+			var type="tv";
+			if(toAdd(type)){
+				 setTimeout(function(){
+					 $('.sucess').text('成功');
+					 $('#fail').css('display','none');
+					 $('#sucess').css('display','block');
+					 $('#img').css('padding-left','15%');
+					 $('#img').css('padding-right','15%');
+					 $('#img').css('padding-bottom','7%');
+					 $('#img').css('padding-top','7%');
+					 $('#img').css('margin-left','0%');
+					 $('#img').css('margin-right','28%');
+				 },
+				1500); //等待2秒自动跳转
+				setTimeout(function(){
+					$('#mask').css('display','none');
+					$('#img').css('display','none');
+				},
+				2500); //等待2秒自动跳转
+				/*
+				setTimeout(function(){
+					oMask.style.display = 'none';
+					oImg.style.display = 'none';
+				},
+				500); 
+				*/
+			}else{
+				 setTimeout(function(){
+					 $('.sucess').text('失败');
+					 $('#fail').css('display','block');
+					 $('#sucess').css('display','none');
+					 $('#img').css('padding-left','15%');
+					 $('#img').css('padding-right','15%');
+					 $('#img').css('padding-bottom','7%');
+					 $('#img').css('padding-top','7%');
+					 $('#img').css('margin-left','0%');
+					 $('#img').css('margin-right','28%');
+				 },
+				 1500); //等待2秒自动跳转
+				 setTimeout(function(){
+					$('#mask').css('display','none');
+					$('#img').css('display','none');
+				 },
+				 2500); //等待2秒自动跳转
+			}
 			return false; /* 禁止长按 */
 		});
 		$("#down").mousedown(function(){
