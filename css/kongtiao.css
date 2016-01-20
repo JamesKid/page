@@ -28,6 +28,13 @@
 	-moz-user-select:none;
 	-ms-user-select:none;
 }
+.fontStyle {
+	color:#00b4e6;
+	float:left;
+	width:100%;
+	padding-top:10%;
+	text-align:center;
+}
 body {
 	padding:0px;
 	margin:0px;

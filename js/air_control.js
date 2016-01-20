@@ -1,18 +1,9 @@
 /* html5　空调遥控*/
-/* add by Jameskid 2015.11.29  email:406358964@qq.com */
 /* 使用说明:　
  *			   1. 按钮事件请在'点击事件在下面添加'关键字下添加 
  *			   2. 本代码基于html5,请使用支持html5内核的浏览器
  */
 function init(onoff,temp,mode,wind,controllerType){
-//$(document).ready(function(){
-	/*
-		var onoff="on";
-		var temp="27";
-		var mode="hot";
-		var wind="height";
-		var controllerType="test";
-		*/
 		var touchEvents = {
 			touchstart: "touchstart",
 			touchmove: "touchmove",
@@ -38,67 +29,24 @@ function init(onoff,temp,mode,wind,controllerType){
 		$('#temp'+tempNumber).css('display','block');
 		/* 更新码库 */
 		$("#refresh").mousedown(function(){
-			/* 弹出提示 */
 			var oMask = document.getElementById('mask');
 			var oImg = document.getElementById('img');
 			oMask.style.display = 'block';
 			oImg.style.display = 'block';
-			$('.sucess').text('重新匹配码组');
-			$('#fail').css('display','none');
-			$('#sucess').css('display','none');
-			$('#img').css('padding-left','5%');
-			$('#img').css('padding-right','5%');
-		    $('#img').css('padding-top','5%');
 			oMask.style.width = document.documentElement.clientWidth + 'px';
 			oMask.style.height = document.documentElement.clientHeight + 'px';
-			oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
 			oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
-		 // 判断是否提交成功
-			var type="tv";
-			if(toAdd(type)){
-				 setTimeout(function(){
-					 $('.sucess').text('成功');
-					 $('#fail').css('display','none');
-					 $('#sucess').css('display','block');
-					 $('#img').css('padding-left','15%');
-					 $('#img').css('padding-right','15%');
-					 $('#img').css('padding-bottom','7%');
-					 $('#img').css('padding-top','7%');
-					 $('#img').css('margin-left','0%');
-					 $('#img').css('margin-right','28%');
-				 },
-				1500); //等待2秒自动跳转
-				setTimeout(function(){
-					$('#mask').css('display','none');
-					$('#img').css('display','none');
-				},
-				2500); //等待2秒自动跳转
-				/*
-				setTimeout(function(){
-					oMask.style.display = 'none';
-					oImg.style.display = 'none';
-				},
-				500); 
-				*/
-			}else{
-				 setTimeout(function(){
-					 $('.sucess').text('失败');
-					 $('#fail').css('display','block');
-					 $('#sucess').css('display','none');
-					 $('#img').css('padding-left','15%');
-					 $('#img').css('padding-right','15%');
-					 $('#img').css('padding-bottom','7%');
-					 $('#img').css('padding-top','7%');
-					 $('#img').css('margin-left','0%');
-					 $('#img').css('margin-right','28%');
-				 },
-				 1500); //等待2秒自动跳转
-				 setTimeout(function(){
-					$('#mask').css('display','none');
-					$('#img').css('display','none');
-				 },
-				 2500); //等待2秒自动跳转
-			}
+			 $('.sucess').text(getResource().MATCHING_IRCODE);
+			 $('#img').css('margin','10%');
+			 $('#img').css('padding-left','8%');
+			 $('#img').css('padding-right','8%');
+			 $('#img').css('padding-bottom','3%');
+			 $('#img').css('padding-top','3%');
+			 $('#img').css('left','0px');
+			 $('#sucess').css('display','none');
+			 $('.sucess').css('padding-bottom','7%');
+			 $('#fail').css('display','none');
+			refresh();
 			return false; /* 禁止长按 */
 		});
 		/* 当前模式 */
@@ -180,6 +128,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			}else if(nowStatus==close){
 				$('#nowStatus').text(open);
 			}
+			updateStatus();
 		});
 		$("#down").bind(touchEvents.touchend,function(){
 			$("#downUp").css("display","block");
@@ -193,12 +142,11 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#downUp").css("display","none");
 			$("#downClick").css("display","block");
 			if(nowStatus == open){
-				closeButton();
 				$('#nowStatus').text(close);
 			}else if(nowStatus==close){
-				openButton();
 				$('#nowStatus').text(open);
 			}
+			updateStatus();
 		});
 		$("#down").mouseup(function(){
 			$("#downUp").css("display","block");
@@ -297,6 +245,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#middle").css("display","block");
 			$('img').removeClass('windon');
 			$('#middle').addClass('windon');
+			$('#windLevelFont').text(windLeveFontMiddle);
 			updateStatus();
 		});
 		$("#middle").mousedown(function(){
@@ -307,6 +256,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#height").css("display","block");
 			$('img').removeClass('windon');
 			$('#height').addClass('windon');
+			$('#windLevelFont').text(windLeveFontHeight);
 			updateStatus();
 		});
 		$("#height").mousedown(function(){
@@ -317,6 +267,7 @@ function init(onoff,temp,mode,wind,controllerType){
 			$("#low").css("display","block");
 			$('img').removeClass('windon');
 			$('#low').addClass('windon');
+			$('#windLevelFont').text(windLeveFontLow);
 			updateStatus();
 		});
 		/* 自动手动 */
@@ -330,6 +281,7 @@ function init(onoff,temp,mode,wind,controllerType){
 				$("#manual").css("display","block");
 				$('img').removeClass('controlon');
 				$('#manual').addClass('controlon');
+				$('#autoControlFont').text(autoControlManual);
 			}else if(autoControl%2==1){
 				/* 手动变自动 */
 				autoButton();
@@ -337,6 +289,7 @@ function init(onoff,temp,mode,wind,controllerType){
 				$("#manual").css("display","none");
 				$('img').removeClass('controlon');
 				$('#auto').addClass('controlon');
+				$('#autoControlFont').text(autoControlAuto);
 			}
 			autoControl++;
 			updateStatus();
@@ -351,6 +304,7 @@ function init(onoff,temp,mode,wind,controllerType){
 				$("#manual").css("display","block");
 				$('img').removeClass('controlon');
 				$('#manual').addClass('controlon');
+				$('#autoControlFont').text(autoControlManual);
 			}else if(autoControl%2==1){
 				/* 手动变自动 */
 				autoButton();
@@ -358,6 +312,7 @@ function init(onoff,temp,mode,wind,controllerType){
 				$("#manual").css("display","none");
 				$('img').removeClass('controlon');
 				$('#auto').addClass('controlon');
+				$('#autoControlFont').text(autoControlAuto);
 			}
 			autoControl++;
 			updateStatus();

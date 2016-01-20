@@ -16,12 +16,110 @@
 //		return nowOpenClose;
 //	}
 
+/* 重新匹配码组 */
+	function refresh(){
+		 toAdd(1);
+	}
+	
+	function toAdd(deviceType){
+		 window.AppJsBridge.service.deviceService.doAction({
+		      "sn":getCurrentDeviceSn(),
+		      "deviceClass":"SmartAc",
+		      "action":"addIR",
+		      parameters:{
+		          type :deviceType
+		      } ,
+		      "success" : sucCallback,
+		      "error" : failCallback
+	   });
+	}
+	
+	var sucCallback = function(data) {
+		var jsonObj = data;
+		if (jsonObj == null || jsonObj.result== null || jsonObj.result.flag == null ||jsonObj.result.flag ==false)
+	   {
+			 $('.sucess').text(getResource().FAIL);
+			 $('#fail').css('display','block');
+			 $('#sucess').css('display','none');
+			 $('#img').css('padding-left','15%');
+			 $('#img').css('padding-right','15%');
+			 $('#img').css('padding-bottom','7%');
+			 $('#img').css('padding-top','7%');
+			 $('#img').css('margin-left','28%');
+			 $('#img').css('margin-right','28%');
+			 setTimeout(function(){
+				$('#mask').css('display','none');
+				$('#img').css('display','none');
+			 },
+			 1500); //等待2秒自动跳转
+//			
+	   }else{
+		   $('.sucess').text(getResource().SUCCEED);
+			 $('#fail').css('display','none');
+			 $('#sucess').css('display','block');
+			 $('#img').css('padding-left','15%');
+			 $('#img').css('padding-right','15%');
+			 $('#img').css('padding-bottom','7%');
+			 $('#img').css('padding-top','7%');
+			 $('#img').css('margin-left','28%');
+			 $('#img').css('margin-right','28%');
+			 setTimeout(function(){
+				$('#mask').css('display','none');
+				$('#img').css('display','none');
+			 },
+			 1500); //等待2秒自动跳转
+	   }
+	}
+
+	var failCallback = function(data) {
+		 $('.sucess').text(getResource().MATCHING_IRCODE_TIMEOUT);
+		 $('#fail').css('display','block');
+		 $('#sucess').css('display','none');
+		 $('#img').css('padding-left','15%');
+		 $('#img').css('padding-right','15%');
+		 $('#img').css('padding-bottom','7%');
+		 $('#img').css('padding-top','7%');
+		 $('#img').css('margin-left','28%');
+		 $('#img').css('margin-right','28%');
+		 setTimeout(function(){
+			$('#mask').css('display','none');
+			$('#img').css('display','none');
+		 },
+		 1500); //等待2秒自动跳转
+	}
+/* 国际化事件组*/
+	/* 国际化风速 */
+		/* 低 */
+		function windLeveFontLow(){
+			var low="低";
+			return low;
+		}
+		/* 中 */
+		function windLeveFontMiddle(){
+			var middle="中";
+			return middle;
+		}
+		/* 高 */
+		function windLeveFontHeight(){
+			var height="高";
+			return height;
+		}
+		
+	/* 国际化自动手动 */
+		/* 手动 */
+		function autoControlManual(){
+			var manual="手动";
+			return manual;
+		}
+		/* 自动 */
+		function autoControlAuto(){
+			var auto="自动";
+			return auto;
+		}
 
 /* 开关点击返回事件组*/
 	/* 返回*/
 	function backButton(){
-		//alert('backbutton');
-		//javascript:history.go(-1);
 	    window.location.href="yindao.html";
 	    //window.location.href = document.referrer;//返回上一页并刷新  
 	}
@@ -29,17 +127,7 @@
 	/* 打开关闭 */
 	function openCloseButton(){
 	}
-/* 重新匹配码组 */
-		function toAdd(type){
-			/* 查询是否连接成功 */
-			check = false;
-			if(check==false){
-				return false; 
-			}else {
-				return true; 
-			}
-		}
-	
+
 
 /* 获取当前状态及开关组 */
 	/* 获取空调温度 */
@@ -121,13 +209,13 @@
 		}
 		
 		function doAction(keyIndex){
-//			alert(temp);
 			 window.AppJsBridge.service.deviceService.doAction({
 			      "sn":getCurrentDeviceSn(),
 			      "deviceClass":"SmartAc",
 			      "action":"turnOn",
 			      parameters:{
-			          keyIndex :keyIndex
+			          keyIndex :keyIndex,
+			          type:1
 			      } ,
 			      "success":controlDeviceCallback,
 			      "error":function(data)
@@ -136,13 +224,9 @@
 			      }
 		     });
 		}
-/* 判断设备是否在线 */
+	/* 判断设备是否在线 */
 	function deviceOnOut(){
 		if(deviceStatus=='off'){
-			$('#topTemp').text('--');
-			$('#nowStatus').text('--');
-			$('#code').text('--');
-			alert('设备离线');
 			return false;
 		}
 		return true;
@@ -206,10 +290,8 @@
     		controlType=getResource().AC_DIRECTION_MANUAL;
     	}
     	
-    	alert("updateStatus  "+ status
-    			+"  "+temp+"  "+mode+"  "+wind+"  "+controlType);
+    	
     	var keyIndex=getKeyIndex(status,temp,mode,wind,controlType);
-//    	alert(keyIndex);
     	doAction(keyIndex);
     }
     
@@ -228,8 +310,6 @@
     		var modeInt=getModeInt(mode);
     		var windInt=getWindInt(wind);
     		var controlTypeInt=getControlTypeInt(controlType);
-    		alert("getKeyIndex  "+ status
-        			+"  "+temp+"  "+modeInt+"  "+windInt+"  "+controlTypeInt);
     		return getKeyIndexInt(temp,modeInt,windInt,controlTypeInt);
     	}
     }

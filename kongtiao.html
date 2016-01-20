@@ -29,7 +29,7 @@ window.oncopy=function()   {return   false;}
 <body onload="load();">
 <div id="mask"></div> 
 <div id="img">
-	<div class="sucess">重新匹配码组</div>
+	<div class="sucess"></div>
 	<img id="sucess" style="display:none" src="images/sucess.jpg">
 	<img id="fail" style="display:none" src="images/fail.jpg">
 </div>
@@ -60,28 +60,46 @@ window.oncopy=function()   {return   false;}
 		<div class="button" id="hot">
 			<img  id="hotUp" style="display:none" width="100%" src="images/kongtiao/hot.jpg"/>
 			<img  id="hotPress" style="display:none" width="100%"  src="images/kongtiao/hot_press.jpg"/>
+			<div class="fontStyle">
+				制热
+			</div>
 		</div>
 		<div class="button" id="wet">
 			<img  id="wetUp" width="100%"  style="display:none" src="images/kongtiao/wet.jpg"/>
 			<img  id="wetPress" width="100%" style="display:none" src="images/kongtiao/wet_press.jpg"/>
+			<div class="fontStyle">
+				抽湿
+			</div>
 		</div>
 		<div class="button" id="wind">
 			<img  id="windUp" width="100%" style="display:none" src="images/kongtiao/wind.jpg"/>
 			<img  id="windPress" width="100%" style="display:none" src="images/kongtiao/wind_press.jpg"/>
+			<div class="fontStyle">
+				送风
+			</div>
 		</div>
 		<br />
 		<div class="button" id="cool">
 			<img  id="coolUp" width="100%" style="display:none" src="images/kongtiao/cool.jpg"/>
 			<img  id="coolPress" width="100%" style="display:none" src="images/kongtiao/cool_press.jpg"/>
+			<div class="fontStyle">
+				制冷
+			</div>
 		</div>
 		<div class="button" id="windLevel">
 			<img  id="low" width="100%" style="display:none" src="images/kongtiao/low.jpg"/>
 			<img  id="middle" width="100%" style="display:none" src="images/kongtiao/middle.jpg"/>
 			<img  id="height" width="100%" style="display:none" src="images/kongtiao/height.jpg"/>
+			<div id="windLevelFont" class="fontStyle">
+				低
+			</div>
 		</div>
 		<div class="button" id="autoControl">
 			<img  id="auto"  width="100%" style="display:none" src="images/kongtiao/auto.jpg"/>
 			<img  id="manual" width="100%" style="display:none" src="images/kongtiao/manual.jpg"/>
+			<div id="autoControlFont" class="fontStyle">
+				自动
+			</div>
 		</div>
 	</div>
 	<!-- 温度调节按钮 -->
@@ -115,4 +133,3 @@ window.oncopy=function()   {return   false;}
 </div>
 </body>  
 </html>
-
