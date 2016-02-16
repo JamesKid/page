@@ -4,7 +4,7 @@ body {
 	box-shadow:5px 5px 20px #aaa; //阴影
 	margin-top:20px;
 	float:left;
-	width:97%;
+	//width:97%;
 }
 a,a:hover{ text-decoration:none; color:#bbb}
 .topLeft {
