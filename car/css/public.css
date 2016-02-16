@@ -1,11 +1,12 @@
 body {
-	background-color:#f0f0f0;
+	background-color:#fdfdfd;
 	border:solid 1px #aaaaaa;
 	box-shadow:5px 5px 20px #aaa; //阴影
 	margin-top:20px;
 	float:left;
 	width:97%;
 }
+a,a:hover{ text-decoration:none; color:#bbb}
 .topLeft {
 	float:left;
 	width:60%;
@@ -102,14 +103,14 @@ body {
 }
 .categoryWhiteFoot li {
 	float:left;
-	padding-left:15px;
-	padding-right:15px;
+	padding-left:6%;
+	padding-right:6%;
 	padding-bottom:4px;
 	padding-top:4px;
 	list-style:none;
 	color:#717171;
-	margin-left:3%;
-	margin-right:3%;
+	//margin-left:3%;
+	//margin-right:3%;
 	border-right:1px solid #ffffff;
 	margin-bottom:8px;;
 	margin-top:8px;;
@@ -148,7 +149,7 @@ body {
 	float:left;
 	color:#333333;
 	height:300px;
-	background-color:#f0f0f0;
+	background-color:#fdfdfd;
 }
 input {
 	border:solid 1px #717171;
@@ -180,19 +181,21 @@ input {
 	background-color:#3f3939;
 	color:#bbbbbb;
 	font-size:0.8em;
-	padding:5%;
+	padding-left:7%;
+	padding-top:2%;
+	padding-bottom:2%;
 	float:left;
-	width:90%;
+	width:93%;
 }
 .footInfoLeft {
 	width:50%;
 	float:left;
-	line-height:20px;
+	line-height:25px;
 }
 .footInfoRight {
 	float:left;
 	width:50%;
-	line-height:20px;
+	line-height:25px;
 }
 
 
@@ -216,6 +219,31 @@ input {
 			margin-top:20px;
 			width:70%;
 		}
+		.topRight {
+			width:55%;
+			margin-left:45%;
+		}
+	}
+	@media (min-width: 1250px) {
+		.info {
+			width:66%;
+			padding-left:3%;
+			margin-top:27%;
+		}
+	}
+	@media (max-width: 950px) {
+		.topLeft {
+			width:100%;
+		}
+		.topRight {
+			width:65%;
+			margin-left:35%;
+		}
+		.info {
+			width:66%;
+			padding-left:3%;
+			margin-top:25%;
+		}
 	}
 /*分辨小于宽550px 时的布局*/
 	@media (max-width: 799px) {
@@ -223,7 +251,35 @@ input {
 			width:100%;
 		}
 		.topRight {
-			width:100%;
+			width:70%;
+			margin-left:30%;
+		}
+		.info {
+			width:66%;
+			padding-left:3%;
+			margin-top:25%;
+		}
+	}
+	@media (max-width: 450px) {
+		.info {
+			width:66%;
+			padding-left:3%;
+			margin-top:18%;
+		}
+		.topRight {
+			width:85%;
+			margin-left:15%;
+		}
+	}
+	@media (max-width: 400px) {
+		.info {
+			width:66%;
+			padding-left:3%;
+			margin-top:18%;
+		}
+		.topRight {
+			width:95%;
+			margin-left:5%;
 		}
 	}
 
