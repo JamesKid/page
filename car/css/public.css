@@ -16,7 +16,7 @@ select {
 	appearance:none;
 	-moz-appearance:none;
 	-webkit-appearance:none;
-	background-color:#aaaaaa;
+	background-color:#cccccc;
 	padding-right: 14px;
 	width:120px;
 	float:left;
@@ -50,6 +50,8 @@ select {
 	padding-right:2%;
 	padding-bottom:1%;
 	margin-left:3%;
+	font-weight:600;
+	font-size:1.1em;
 }
 .searchTitlet {
 	color:#717171;
@@ -57,9 +59,11 @@ select {
 	float:left;
 	padding-left:2%;
 	padding-right:2%;
-	padding-bottom:1%;
 	margin-left:3%;
-	margin-top:3%;
+	font-weight:600;
+	font-size:1.1em;
+	margin-top:12px;
+	margin-bottom:12px;
 }
 .title {
 	float:left;
@@ -103,7 +107,6 @@ select {
 	background-color:#e0e2e1;
 	float:left;
 	width:100%;
-	font-size:0.9em;
 }
 .categoryWhite li {
 	float:left;
@@ -164,12 +167,33 @@ select {
 }
 .content {
 	font-size:1.1em;
-	padding:3%;
-	width:94%;
+	width:98%;
 	float:left;
 	color:#333333;
-	height:300px;
 	background-color:#fdfdfd;
+	margin:1%;
+}
+.contentLeft {
+	width:59%;
+	float:left;
+	padding:1%;
+}
+.contentRight {
+	float:left;
+	width:37%;
+	padding:1%;
+}
+.contentRightBottom {
+	float:left;
+	margin-top:2%;
+}
+.contentRightBottomLeft {
+	float:left;
+	width:48%;
+}
+.contentRightBottomRight {
+	float:right;
+	width:48%;
 }
 input {
 	border:solid 1px #717171;
@@ -206,6 +230,7 @@ input {
 	padding-bottom:2%;
 	float:left;
 	width:93%;
+	//background-image:linear-gradient(-270deg,#000000,#000000,#aaaaaa);
 }
 .footInfoLeft {
 	width:50%;
