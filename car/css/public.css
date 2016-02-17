@@ -292,7 +292,7 @@ input {
 			margin-top:25%;
 		}
 	}
-/*分辨小于宽550px 时的布局*/
+/*分辨小于宽800px 时的布局*/
 	@media (max-width: 799px) {
 		.topLeft {
 			width:100%;
@@ -306,6 +306,13 @@ input {
 			padding-left:3%;
 			margin-top:25%;
 		}
+		.contentLeft {
+			width:98%;
+		}
+		.contentRight {
+			width:98%;
+		}
+
 	}
 	@media (max-width: 450px) {
 		.info {
