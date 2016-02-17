@@ -11,7 +11,7 @@ a,a:hover{ text-decoration:none; color:#bbb}
 	float:left;
 	width:60%;
 }
-.select {
+select {
 	border: solid 1px #000;
 	appearance:none;
 	-moz-appearance:none;
