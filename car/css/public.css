@@ -168,11 +168,11 @@ select {
 }
 .content {
 	font-size:1.1em;
-	width:98%;
+	width:100%;
 	float:left;
 	color:#333333;
 	background-color:#fdfdfd;
-	margin:1%;
+	//margin:1%;
 }
 .contentLeft {
 	width:59%;
@@ -181,20 +181,22 @@ select {
 }
 .contentRight {
 	float:left;
-	width:37%;
-	padding:1%;
+	width:38%;
+	padding-right:1%;
+	padding-top:1%;
+	padding-bottom:1%;
 }
 .contentRightBottom {
 	float:left;
-	margin-top:2%;
+	margin-top:1%;
 }
 .contentRightBottomLeft {
 	float:left;
-	width:48%;
+	width:48.5%;
 }
 .contentRightBottomRight {
 	float:right;
-	width:48%;
+	width:48.5%;
 }
 input {
 	border:solid 1px #717171;
@@ -311,7 +313,20 @@ input {
 		}
 		.contentRight {
 			width:98%;
+			padding-top:0%;
+			padding-left:1%;
+			margin-top:-1%;
 		}
+		.contentRightBottom {
+			margin-top:0%;
+		}
+		.contentRightBottomLeft {
+			width:49.5%;
+		}
+		.contentRightBottomRight {
+			width:49.5%;
+		}
+
 
 	}
 	@media (max-width: 450px) {
