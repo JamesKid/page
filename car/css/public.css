@@ -1,7 +1,8 @@
 body {
 	background-color:#fdfdfd;
 	border:solid 1px #aaaaaa;
-	box-shadow:5px 5px 20px #aaa; //阴影
+	-webkit-box-shadow:5px 5px 20px #aaa; //阴影
+	-moz-box-shadow:5px 5px 20px #aaa; //阴影
 	margin-top:20px;
 	float:left;
 	//width:97%;
