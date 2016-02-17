@@ -13,11 +13,11 @@ a,a:hover{ text-decoration:none; color:#bbb}
 	width:60%;
 }
 select {
-	border: solid 1px #000;
+	border: solid 1px #eee;
 	appearance:none;
 	-moz-appearance:none;
 	-webkit-appearance:none;
-	background-color:#cccccc;
+	background-color:#eeeeee;
 	padding-right: 14px;
 	width:120px;
 	float:left;
@@ -25,11 +25,13 @@ select {
 	padding:3px;
 	margin-left:2%;
 	border-radius:0px;
+	color:#717171;
 }
 .searchButton {
 	padding:5px;
 	margin-left:1%;
 	float:left;
+	color:#717171;
 }
 .topRight {
 	float:left;
@@ -108,6 +110,7 @@ select {
 	background-color:#e0e2e1;
 	float:left;
 	width:100%;
+	padding-top:10px;
 }
 .categoryWhite li {
 	float:left;
@@ -204,6 +207,10 @@ input {
 	
 }
 
+.nowOn {
+	background-color:#3f3939;
+	color:#cccccc;
+}
 
 .on {
 	background-color:#d82d24;
