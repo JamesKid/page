@@ -11,10 +11,28 @@ a,a:hover{ text-decoration:none; color:#bbb}
 	float:left;
 	width:60%;
 }
+.select {
+	border: solid 1px #000;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	background-color:#aaaaaa;
+	padding-right: 14px;
+	width:120px;
+	float:left;
+	margin-bottom:10px;
+	padding:3px;
+	margin-left:1%;
+}
+.searchButton {
+	padding:5px;
+	margin-left:1%;
+	float:left;
+}
 .topRight {
 	float:left;
 	width:40%;
-	margin-top:30px;
+	margin-left:-8%;
 
 }
 .bottom {
@@ -126,7 +144,7 @@ a,a:hover{ text-decoration:none; color:#bbb}
 }
 .searchLine {
 	background-color:#3f3939;
-	color:#717171;
+	color:#aaaaaa;
 	padding-left:4%;
 	padding-top:10px;
 	float:left;
@@ -153,7 +171,7 @@ a,a:hover{ text-decoration:none; color:#bbb}
 }
 input {
 	border:solid 1px #717171;
-	background-color:#
+	background-color:#e0e2e1;
 	
 }
 
@@ -220,8 +238,9 @@ input {
 			width:70%;
 		}
 		.topRight {
-			width:55%;
-			margin-left:45%;
+			width:40%;
+			margin-left:53%;
+			margin-right:7%;
 		}
 	}
 	@media (min-width: 1250px) {
