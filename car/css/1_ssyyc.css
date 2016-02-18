@@ -1,0 +1,36 @@
+.carListAll {
+	padding-top:20px;
+	padding-bottom:20px;
+	float:left;
+	background-color:#3f3939;
+	width:100%;
+	color:#aaaaaa;
+}
+.carList {
+	float:left;
+	border-right:solid 1px #aaa;
+	width:348px;
+}
+.leftList {
+	float:left;
+	width:88px;
+	padding-left:30px;
+}
+.leftList span {
+	float:left;
+	margin-bottom:10px;
+	width:88px;
+}
+.rightList {
+	float:left;
+	width:200px;
+	padding-left:30px;
+	font-size:0.85em;
+}
+.rightList span {
+	float:left;
+	margin-bottom:10px;
+	padding-bottom:6px;
+	width:200px;
+	font-size:0.85em;
+}

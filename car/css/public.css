@@ -350,7 +350,7 @@ input {
 			margin-left:15%;
 		}
 		.searchTitle {
-			margin-top:0px;
+			margin-top:-27px;
 		}
 	}
 	@media (max-width: 400px) {
@@ -362,6 +362,9 @@ input {
 		.topRight {
 			width:95%;
 			margin-left:5%;
+		}
+		.searchTitle {
+			margin-top:0px;
 		}
 	}
 
