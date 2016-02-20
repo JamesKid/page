@@ -1,0 +1,56 @@
+.blackSelect select {
+	background-color:#666;
+	color:#bbb;
+	border:solid 1px #666;
+}
+.searchTipsTwoOut {
+	float:left;
+	width:100%;
+	background-color:#3f3939;
+}
+.searchTipsTwo {
+	color:#aaa;
+	float:left;
+	padding-top:10px;
+	padding-left:20px;
+}
+.searchMore {
+	width:98%;
+	padding-right:2%;
+	background-color:#3f3939;
+	float:right;
+	color:#888;
+	text-align:right;
+	padding-bottom:15px;
+
+}
+.searchMore a {
+	color:#aaa;
+}
+.searchMore a:hover {
+	color:#777;
+}
+.categoryWhite  {
+	width:97%;
+	padding-left:3%;
+}
+.categoryWhite li {
+	margin-left:5px;
+	padding-top:4px;
+	padding-bottom:4px;
+
+}
+
+.nowOn {
+	font-size:0.8em;
+}
+.textContentOut{
+	float:left;
+	width:100%;
+}
+.textContent{
+	padding:50px;
+	line-height:30px;
+	color:#888;
+	background-color:#ddd;
+}

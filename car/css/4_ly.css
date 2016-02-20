@@ -1,0 +1,48 @@
+
+.formTable{
+	width:100%;
+	float:left;
+}
+	.formLeft {
+		width:54%;
+		float:left;
+		padding:3%;
+
+	}
+		.formTitle {
+			font-size:1.3em;
+			color:#717171;
+			margin-bottom:13px;
+		}
+		.formOneLeft {
+			float:left;
+			color:#717171;
+			padding-top:5px;
+			width:80px;
+		}
+		.formOneRight {
+			float:left;
+			color:#717171;
+			margin-left:2%;
+			font-size:0.85em;
+			margin-top:5px;
+			margin-bottom:10px;
+		}
+		.formcontent {
+
+		}
+		.formOne {
+			float:left;
+			width:100%;
+		}
+		.formBottom{
+			float:left;
+			width:100%;
+			color:#717171;
+			margin-top:20px;
+		}
+	.formRight{
+		width:36%;
+		float:right;
+		padding:2%;
+	}

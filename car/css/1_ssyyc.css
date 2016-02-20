@@ -6,10 +6,22 @@
 	width:100%;
 	color:#aaaaaa;
 }
+.carListAll a{
+	color:#aaa;
+}
+.carListAll a:hover{
+	color:#888;
+}
 .carList {
 	float:left;
-	border-right:solid 1px #aaa;
+	border-right:solid 1px #666;
 	width:348px;
+}
+.carListShort {
+	float:left;
+	border-right:solid 1px #666;
+	width:290px;
+	margin-bottom:12px;
 }
 .leftList {
 	float:left;
@@ -24,7 +36,20 @@
 .rightList {
 	float:left;
 	width:200px;
-	padding-left:30px;
+	padding-left:17px;
+	font-size:0.85em;
+}
+.rightListShort {
+	float:left;
+	width:150px;
+	padding-left:17px;
+	font-size:0.85em;
+}
+.rightListShort span {
+	float:left;
+	margin-bottom:10px;
+	padding-bottom:6px;
+	width:150px;
 	font-size:0.85em;
 }
 .rightList span {
@@ -33,4 +58,18 @@
 	padding-bottom:6px;
 	width:200px;
 	font-size:0.85em;
+}
+.last {
+	border-right:none;
+}
+/* 响应式布局 */
+@media (max-width: 1746px) {
+}
+@media (max-width: 600px) {
+	.carList {
+		border-right:none;
+	}
+	.carListShort {
+		border-right:none;
+	}
 }

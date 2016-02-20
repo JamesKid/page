@@ -154,6 +154,19 @@ select {
 	float:left;
 	background-image:linear-gradient(-330deg,#d82d24,#d82d24,#ffffff);
 }
+.lineOut {
+	width:96%;
+	padding-left:2%;
+	padding-right:2%;
+	float:left;
+	background-color:#3f3939;
+}
+.line {
+	width:100%;
+	float:left;
+	height:1px;
+	background-color:#888;
+}
 .searchLine {
 	background-color:#3f3939;
 	color:#aaaaaa;
@@ -244,6 +257,15 @@ input {
 	float:left;
 	width:93%;
 	//background-image:linear-gradient(-270deg,#000000,#000000,#aaaaaa);
+}
+.footInfo a{
+	color:#bbb;
+}
+.footInfo a{
+	color:#bbb;
+}
+.footInfo a:hover{
+	color:#888;
 }
 .footInfoLeft {
 	width:50%;

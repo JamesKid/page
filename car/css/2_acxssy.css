@@ -1,0 +1,115 @@
+.searchTitle {
+	margin-top:0px;
+	width:120px;
+}
+.back {
+	float:left;
+	margin-left:10px;
+	width:150px;
+	color:#888;
+	margin-top:2px;
+}
+.carContentLeftBox{
+	float:left;
+	width:100%;
+}
+.carContent {
+	width:100%;
+	float:left;
+	background-color:#f3f3f3;
+	font-size:0.9em;
+	color:#888;
+}
+.carContentLeft{
+	width:49%;
+	float:left;
+}
+.carContentRight{
+	width:51%;
+	float:left;
+}
+.carContentLeftOne{
+	width:96%;
+	margin-left:4%;
+	float:left;
+	border-right:solid 1px #ccc;
+	border-bottom:solid 1px #ccc;
+}
+.carContentRightOne{
+	width:92%;
+	margin-right:4%;
+	padding-left:4%;
+	float:left;
+	border-bottom:solid 1px #ccc;
+}
+.leftImg {
+	float:left;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.middleContent {
+	float:left;
+	//width:53%;
+	padding-top:20px;
+	padding-bottom:10px;
+	padding-left:18px;
+	line-height:22px;
+}
+.rightContent {
+	float:right;
+	line-height:23px;
+	padding-right:20px;
+	padding-top:40px;
+}
+a {
+	color:#555;
+}
+/* 响应式布局 */
+@media (max-width: 1350px) {
+	.carContentLeft {
+		width:100%;
+	}
+	.carContentRight {
+		width:100%;
+	}
+	.carContentLeftOne{
+		border-right:none;
+		width:94%;
+		margin-left:3%;
+		margin-right:3%;
+	}
+	.carContentRightOne{
+		width:94%;
+		margin-left:3%;
+		padding-left:0%;
+	}
+}
+@media (max-width: 500px) {
+	.carContentRightOne{
+		//width:450px;
+	}
+	.carContentLeftOne{
+		//width:450px;
+	}
+	.leftImg img {
+		width:60px;
+	}
+	.middleContent {
+		width:150px;
+		padding-top:10px;
+	}
+	.carContent {
+		font-size:0.75em;
+	}
+	.rightContent {
+		padding-top:30px;
+	}
+
+}
+.searchTips {
+	color:#777;
+	float:left;
+	padding:3px;
+	padding-left:2%;
+}
+	
