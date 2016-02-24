@@ -11,24 +11,17 @@ $(document).ready(function(){
 			}
 		}
 	};
-	/* hover红色效果 */
-	if(IsPC()){
-		$(".categoryWhite li").hover(function(){
-			$(this).css("background-color","#d82d24");
-			$(this).mouseleave(function(){
-				$(this).css("background-color","transparent");
-			});
-		});
-	}else {
-	}
-	/* 点击切换div */
-	$(".categoryWhiteNone li").click(function(){
-		cid=$(this).attr('id');
-		$('.listOne').css('display','none');
-		$('.'+cid).css('display','block');
-		$('.categoryWhiteNone li').removeClass('on');
-		$('#'+cid).addClass('on');
+	$(".searchMore").click(function(){
+		$(".allShow").css('display','block');
+		$(".searchMore").css('display','none');
+		$(".zipMore").css('display','block');
 	});
+	$(".zipMore").click(function(){
+		$(".allShow").css('display','none');
+		$(".searchMore").css('display','block');
+		$(".zipMore").css('display','none');
+	});
+
 });
 function IsPC() {
    var userAgentInfo = navigator.userAgent;

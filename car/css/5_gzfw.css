@@ -1,0 +1,68 @@
+.shopList {
+	background-color:#3f3939;
+	width:100%;
+	float:left;
+	line-height:20px;
+}
+.lineOut {
+	padding-left:0%;
+	padding-right:0%;
+	width:100%;
+}
+
+
+.shopListAll {
+	float:left;
+}
+.shopListOne {
+	float:left;
+	padding-left:20px;
+	padding-top:20px;
+	padding-bottom:20px;
+	width:290px;
+	color:#717171;
+	font-size:0.8em;
+	
+}
+.shopListOneLeft{
+	float:left;
+}
+.shopListOneRight{
+	float:left;
+	margin-left:20px;
+	width:190px;
+}
+.shopOn {
+	background-color:#666;
+	color:#bbb;
+}
+.fileContent {
+	color:#777;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top:2%;
+	padding-bottom:3%;
+	font-size:0.9em;
+	float:left;
+	width:90%;
+	background-color:#f2f2f2;
+}
+.leftTxt {
+	float:left;
+	width:45%;
+}
+.rightImg {
+	float:left;
+	width:51%;
+	padding-left:4%;
+}
+@media (max-width: 750px) {
+	.leftTxt {
+		width:100%;
+	}
+	.rightImg {
+		width:100%;
+		padding-left:0%;
+		padding-top:3%;
+	}
+}

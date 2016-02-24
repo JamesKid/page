@@ -5,7 +5,9 @@
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 <script src="js/search.js"></script>
+<script src="js/tiao_jian.js"></script>
 <link rel="stylesheet" href="css/public.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="css/1_ssyyc.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="css/2_acxssy.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="css/3_bzksstj.css" type="text/css" media="all"/>
 <script>
@@ -83,126 +85,215 @@ window.oncopy=function()   {return   false;}
 		改装件搜索
 	</div>
 
-	<div class="categoryWhite nowOn">
-		<a href="http://www.so.com">
-			<li class="on">全部品牌</li>
-		</a>
-		<a href="http://www.so.com">
-			<li> 御用厂</li>
+	<div class="categoryWhiteNone nowOn">
+			<li class="on" id="quanBuPinPai">全部品牌</li>
+			<li id="yuYongChang"> 御用厂</li>
 		</a>
 	</div>
 	<div class="colorLine">
 	</div>
-	<div class="categoryWhite nowOn blackSelect">
-		<select>
-			<option value='year' selected>轮毂</option>
-			<option value='2016'>进气</option>
-			<option value='2015'>排气</option>
-		</select>
-	</div>
-	<div class="categoryWhite nowOn">
-		<div class="searchTips">
-			选择您的车型，以过滤不匹配部件
+	<div class="listOne quanBuPinPai">
+		<div class="categoryWhite nowOn blackSelect">
+			<select>
+				<option value='year' selected>轮毂</option>
+				<option value='2016'>进气</option>
+				<option value='2015'>排气</option>
+			</select>
 		</div>
-		<select class="select">
-			<option value='year' selected>年份</option>
-			<option value='2016'>2016</option>
-			<option value='2015'>2015</option>
-			<option value='2014'>2014</option>
-			<option value='2013'>2013</option>
-			<option value='2012'>2012</option>
-			<option value='2011'>2011</option>
-			<option value='2010'>2010</option>
-		</select>
-		<select class="select">
-			<option value='logo' selected>品牌</option>
-			<option value='奥迪'>奥迪</option>
-			<option value='宝马'>宝马</option>
-			<option value='起亚'>起亚</option>
-			<option value='大众'>大众</option>
-		</select>
-		<select class="select">
-			<option value='type' selected>型号</option>
-			<option value='手动档'>手动档</option>
-			<option value='自动档'>自动档</option>
-		</select>
-		<!--
-		<input type="text" name="txt1" value="品牌"> 
-		<input type="text" name="txt1" value="型号"> 
-		-->
-		<div class="searchButton">
-			确定
-		</div>
-	</div>
-	
-	<div class="searchTipsTwoOut">
-		<div class="searchTipsTwo">
-			按品牌<br/>
-		</div>
-	</div>
-	<div class="categoryWhite nowOn">
-		<a href="http://www.so.com"><li>全部 </li></a>
-		<a href="http://www.so.com"><li> ACE</li> </a>
-		<a href="http://www.so.com"><li> WHEEL PRO</li></a>
-		<a href="http://www.so.com"><li class="on"> WELLANO</li></a>
-		<a href="http://www.so.com"><li> RAYS</li></a>
-		<a href="http://www.so.com"><li> HRE</li></a>
-		<a href="http://www.so.com"><li> WORK</li></a>
-		<a href="http://www.so.com"><li> ADVAN</li></a>
-		<a href="http://www.so.com"><li> BBS</li></a>
-		<a href="http://www.so.com"><li> AEZ</li></a>
-		<a href="http://www.so.com"><li> O.Z</li></a>
-		<a href="http://www.so.com"><li> CEC</li></a>
-	</div>
-	<div class="searchTipsTwoOut">
-		<div class="searchTipsTwo">
-			按尺寸<br/>
-		</div>
-	</div>
-	<div class="categoryWhite nowOn">
-		<a href="http://www.so.com"><li>全部 </li></a>
-		<a href="http://www.so.com"><li> 15英寸</li> </a>
-		<a href="http://www.so.com"><li>  16英寸</li></a>
-		<a href="http://www.so.com"><li class="on">  17英寸</li></a>
-		<a href="http://www.so.com"><li>  18英寸</li></a>
-		<a href="http://www.so.com"><li>  19英寸</li></a>
-		<a href="http://www.so.com"><li>  20英寸</li></a>
-		<a href="http://www.so.com"><li>  20英寸以上</li></a>
+		<div class="categoryWhite nowOn">
+			<div class="searchTips">
+				选择您的车型，以过滤不匹配部件
 			</div>
-	<div class="searchTipsTwoOut">
-		<div class="searchTipsTwo">
-			按颜色<br/>
-		</div>
-	</div>
-	<div class="categoryWhite nowOn">
-		<a href="http://www.so.com"><li>全部 </li></a>
-		<a href="http://www.so.com"><li> 黑色</li> </a>
-		<a href="http://www.so.com"><li> 白色</li></a>
-		<a href="http://www.so.com"><li class="on"> 银色</li></a>
-		<a href="http://www.so.com"><li> 红色</li></a>
-		<a href="http://www.so.com"><li> 棕色</li></a>
-		<a href="http://www.so.com"><li> 其他</li></a>
-		</div>
-	<div class="searchTipsTwoOut">
-		<div class="searchTipsTwo">
-			按制作方式<br/>
-		</div>
-	</div>
-	<div class="categoryWhite nowOn">
-		<a href="http://www.so.com"><li>全部 </li></a>
-		<a href="http://www.so.com"><li> 铸造</li> </a>
-		<a href="http://www.so.com"><li class="on"> 锻造</li></a>
+			<select class="select">
+				<option value='logo' selected>品牌</option>
+				<option value='奥迪'>奥迪</option>
+				<option value='宝马'>宝马</option>
+				<option value='起亚'>起亚</option>
+				<option value='大众'>大众</option>
+			</select>
+			<select class="select">
+				<option value='type' selected>车系</option>
+				<option value='手动档'>手动档</option>
+				<option value='自动档'>自动档</option>
+			</select>
+			<select class="select">
+				<option value='year' selected>年代</option>
+				<option value='2016'>2016</option>
+				<option value='2015'>2015</option>
+				<option value='2014'>2014</option>
+				<option value='2013'>2013</option>
+				<option value='2012'>2012</option>
+				<option value='2011'>2011</option>
+				<option value='2010'>2010</option>
+			</select>
+			<div class="searchButton">
+				确定
 			</div>
-	<div class="searchMore">
-		<a href="www.baidu.com">
-			收起搜索条件
-		</a>
+		</div>
+		
+		<div class="searchTipsTwoOut">
+			<div class="searchTipsTwo">
+				按品牌<br/>
+			</div>
+		</div>
+		<div class="categoryWhite nowOn">
+			<a href="http://www.so.com"><li>全部 </li></a>
+			<a href="http://www.so.com"><li> ACE</li> </a>
+			<a href="http://www.so.com"><li> WHEEL PRO</li></a>
+			<a href="http://www.so.com"><li class="on"> WELLANO</li></a>
+			<a href="http://www.so.com"><li> RAYS</li></a>
+			<a href="http://www.so.com"><li> HRE</li></a>
+			<a href="http://www.so.com"><li> WORK</li></a>
+			<a href="http://www.so.com"><li> ADVAN</li></a>
+			<a href="http://www.so.com"><li> BBS</li></a>
+			<a href="http://www.so.com"><li> AEZ</li></a>
+			<a href="http://www.so.com"><li> O.Z</li></a>
+			<a href="http://www.so.com"><li> CEC</li></a>
+		</div>
+		<div class="allShow">
+			<div class="searchTipsTwoOut">
+				<div class="searchTipsTwo">
+					按尺寸<br/>
+				</div>
+			</div>
+			<div class="categoryWhite nowOn">
+				<a href="http://www.so.com"><li>全部 </li></a>
+				<a href="http://www.so.com"><li> 15英寸</li> </a>
+				<a href="http://www.so.com"><li>  16英寸</li></a>
+				<a href="http://www.so.com"><li class="on">  17英寸</li></a>
+				<a href="http://www.so.com"><li>  18英寸</li></a>
+				<a href="http://www.so.com"><li>  19英寸</li></a>
+				<a href="http://www.so.com"><li>  20英寸</li></a>
+				<a href="http://www.so.com"><li>  20英寸以上</li></a>
+					</div>
+			<div class="searchTipsTwoOut">
+				<div class="searchTipsTwo">
+					按颜色<br/>
+				</div>
+			</div>
+			<div class="categoryWhite nowOn">
+				<a href="http://www.so.com"><li>全部 </li></a>
+				<a href="http://www.so.com"><li> 黑色</li> </a>
+				<a href="http://www.so.com"><li> 白色</li></a>
+				<a href="http://www.so.com"><li class="on"> 银色</li></a>
+				<a href="http://www.so.com"><li> 红色</li></a>
+				<a href="http://www.so.com"><li> 棕色</li></a>
+				<a href="http://www.so.com"><li> 其他</li></a>
+				</div>
+			<div class="searchTipsTwoOut">
+				<div class="searchTipsTwo">
+					按制作方式<br/>
+				</div>
+			</div>
+			<div class="categoryWhite nowOn">
+				<a href="http://www.so.com"><li>全部 </li></a>
+				<a href="http://www.so.com"><li> 铸造</li> </a>
+				<a href="http://www.so.com"><li class="on"> 锻造</li></a>
+			</div>
+		</div>
+		<div class="searchMore" style="display:none">
+			展开更多搜索条件
+		</div>
+		<div class="zipMore">
+			收起更多搜索条件
+		</div>
+	</div>
+	<div class="listOne yuYongChang" style="display:none">
+		<div class="carListAll">
+			<div class="carList">
+				<div class="leftList">
+					<span>奔驰</span>
+					<span>宝马</span>
+					<span>大众/奥迪</span>
+					<span>保时捷</span>
+				</div>
+				<div class="rightList">
+					<span>
+						<a href="www.so.com"> BRUBUS &nbsp&nbsp </a>
+						<a href="www.so.com"> AMG &nbsp&nbsp </a>
+						<a href="www.so.com"> CARLSSON </a>
+					</span>
+					<span>
+						<a href="www.so.com"> M-TECH &nbsp &nbsp </a>
+						<a href="www.so.com"> AC &nbsp&nbsp </a>
+						<a href="www.so.com"> SCHENIZER </a>
+					</span>
+					<span>
+						<a href="www.so.com"> ABT &nbsp </a>
+						<a href="www.so.com"> MTM &nbsp </a>
+						<a href="www.so.com"> NEUSPEED </a>
+					</span>
+						<a href="www.so.com"> TECHART &nbsp&nbsp  </a>
+						<a href="www.so.com"> RUF </a>
+					</span> 
+				</div>
+			</div>
+			<div class="carListShort">
+				<div class="leftList">
+					<span>日产</span>
+					<span>MINI</span>
+					<span>斯巴鲁</span>
+					<span>捷豹路虎</span>
+				</div>
+				<div class="rightListShort">
+					<span>
+						<a href="www.so.com"> NISMO </a>
+					</span>
+					<span>
+						<a href="www.so.com"> JCW </a>
+					</span>
+					<span>
+						<a href="www.so.com"> STI</a>
+					</span>
+					<span>
+						<a href="www.so.com"> STARTECH </a>
+					</span>
+				</div>
+			</div>
+			<div class="carListShort">
+				<div class="leftList">
+					<span>福特</span>
+					<span>丰田</span>
+					<span>本田</span>
+					<span>特斯拉</span>
+				</div>
+				<div class="rightListShort">
+					<span>
+						<a href="www.so.com"> ROUSH &nbsp&nbsp </a>
+						<a href="www.so.com"> SHELBY </a>
+					</span>
+					<span>
+						<a href="www.so.com"> TOM'S &nbsp&nbsp </a>
+						<a href="www.so.com"> TRD </a>
+					</span>
+					<span>
+						<a href="www.so.com"> MUGEN &nbsp&nbsp  </a>
+						<a href="www.so.com"> MODULE </a>
+					</span>
+					<span>
+						<a href="www.so.com"> T-SPORTSLINE </a>
+					</span>
+				</div>
+			</div>
+			<div class="carListShort last">
+				<div class="leftList">
+					<span>三菱</span>
+					<span>马自达</span>
+				</div>
+				<div class="rightListShort">
+					<span>
+						<a href="www.so.com"> RALLIART </a>
+					</span>
+					<span>
+						<a href="www.so.com"> MAZDASPEED </a>
+					</span>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="textContentOut">
 		<div class="textContent">
-			BBSS又指德国汽车</br>
-			BBSS又指德国汽车 BBSS又指德国汽车</br>
-			BBSS又指德国汽车 </br>
+			<img width="100%" src="images/carAds.png"/>
 		</div>
 	</div>
 	
@@ -237,8 +328,30 @@ window.oncopy=function()   {return   false;}
 					</div>
 					<div class="middleContent">
 						德国BRABUS</br>
-	          奔驰E260</br>
-            碳纤维前唇</br>
+						奔驰E260</br>
+						碳纤维前唇</br>
+					</div>
+					<div class="rightContent">
+						10推<br>
+						<a href="www.so.com">
+							点击查看评价
+						</a>
+					</div>
+				</div>
+				<div class="carContentLeftBox">
+				</div>
+				<div class="carContentLeftBox">
+				</div>
+			</div>
+				<div class="carContentLeftOne">
+				<div class="carContentLeftBox">
+					<div class="leftImg">
+						<img width="80px" src="images/tie.png"/>
+					</div>
+					<div class="middleContent">
+						德国BRABUS</br>
+						奔驰E260</br>
+						碳纤维前唇</br>
 					</div>
 					<div class="rightContent">
 						10推<br>
@@ -259,7 +372,7 @@ window.oncopy=function()   {return   false;}
 					</div>
 					<div class="middleContent">
 						德国BRABUS</br>
-						Monoblock A Six Spoke Design</br>
+            Monoblock A Six Spoke Design</br>
 				  	锻造轮毂</br>
 					</div>
 					<div class="rightContent">
@@ -276,6 +389,28 @@ window.oncopy=function()   {return   false;}
 			</div>
 		</div>
 		<div class="carContentRight">
+			<div class="carContentRightOne">
+				<div class="carContentRightBox">
+					<div class="leftImg">
+						<img width="80px" src="images/tie.png"/>
+					</div>
+					<div class="middleContent">
+						德国BRABUS</br>
+	          奔驰E260</br>
+            碳纤维尾翼</br>
+					</div>
+					<div class="rightContent">
+						10推<br>
+						<a href="www.so.com">
+							点击查看评价
+						</a>
+					</div>
+				</div>
+				<div class="carContentLeftBox">
+				</div>
+				<div class="carContentLeftBox">
+				</div>
+			</div>
 			<div class="carContentRightOne">
 				<div class="carContentRightBox">
 					<div class="leftImg">
@@ -305,8 +440,8 @@ window.oncopy=function()   {return   false;}
 					</div>
 					<div class="middleContent">
 						德国BRABUS</br>
-	          奔驰E260</br>
-            碳纤维前唇</br>
+						Monoblock A Six Spoke Design</br>
+				  	锻造轮毂</br>
 					</div>
 					<div class="rightContent">
 						10推<br>
@@ -327,8 +462,8 @@ window.oncopy=function()   {return   false;}
 					</div>
 					<div class="middleContent">
 						德国BRABUS</br>
-						Monoblock A Six Spoke Design</br>
-				  	锻造轮毂</br>
+						奔驰AMG A45</br>
+						尾段排气</br>
 					</div>
 					<div class="rightContent">
 						10推<br>

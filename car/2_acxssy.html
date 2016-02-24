@@ -7,6 +7,7 @@
 <script src="js/search.js"></script>
 <link rel="stylesheet" href="css/public.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="css/2_acxssy.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="css/1_ssyyc.css" type="text/css" media="all"/>
 <script>
 function stop(){
 	return false;
@@ -97,19 +98,6 @@ window.oncopy=function()   {return   false;}
 	<div class="colorLine">
 	</div>
 	<div class="categoryWhite">
-		<!--
-		<input type="text" name="txt1" value="年份"> 
-		-->
-		<select class="select">
-			<option value='year' selected>年份</option>
-			<option value='2016'>2016</option>
-			<option value='2015'>2015</option>
-			<option value='2014'>2014</option>
-			<option value='2013'>2013</option>
-			<option value='2012'>2012</option>
-			<option value='2011'>2011</option>
-			<option value='2010'>2010</option>
-		</select>
 		<select class="select">
 			<option value='logo' selected>品牌</option>
 			<option value='奥迪'>奥迪</option>
@@ -118,14 +106,20 @@ window.oncopy=function()   {return   false;}
 			<option value='大众'>大众</option>
 		</select>
 		<select class="select">
-			<option value='type' selected>型号</option>
+			<option value='type' selected>车系</option>
 			<option value='手动档'>手动档</option>
 			<option value='自动档'>自动档</option>
 		</select>
-		<!--
-		<input type="text" name="txt1" value="品牌"> 
-		<input type="text" name="txt1" value="型号"> 
-		-->
+		<select class="select">
+			<option value='year' selected>年代</option>
+			<option value='2016'>2016</option>
+			<option value='2015'>2015</option>
+			<option value='2014'>2014</option>
+			<option value='2013'>2013</option>
+			<option value='2012'>2012</option>
+			<option value='2011'>2011</option>
+			<option value='2010'>2010</option>
+		</select>
 		<div class="searchButton">
 			确定
 		</div>
@@ -133,37 +127,115 @@ window.oncopy=function()   {return   false;}
 	<div class="searchTitlet">
 		适合轩逸的改装件搜索
 	</div>
-	<div class="categoryWhite nowOn">
-		<a href="http://www.so.com">
-			<li class="on">全部品牌</li>
-		</a>
-		<a href="http://www.so.com">
-			<li> 御用厂</li>
-		</a>
+	<div class="categoryWhiteNone nowOn">
+		<li class="on" id="quanBuPinPai">全部品牌</li>
+		<li id="yuYongChang"> 御用厂</li>
 	</div>
 	<div class="colorLine">
 	</div>
 	<div class="categoryWhite nowOn">
-		<a href="http://www.so.com">
-			<li> 轮毂</li>
-		<a href="http://www.so.com">
-			<li> 进气</li>
-		</a>
-		<a href="http://www.so.com">
-			<li> 排气</li>
-		</a>
-		<a href="http://www.so.com">
-			<li> 悬架</li>
-		</a>
-		<a href="http://www.so.com">
-			<li> 刹车</li>
-		</a>
-		<a href="http://www.so.com">
-			<li> 外观</li>
-		</a>
-		<a href="http://www.so.com">
-			<li> 内饰</li>
-		</a>
+		<div class="listOne quanBuPinPai">
+			<a href="http://www.so.com"><li>轮毂</li></a>
+			<a href="http://www.so.com"><li>进气</li></a>
+			<a href="http://www.so.com"><li>排气</li></a>
+			<a href="http://www.so.com"><li>悬架</li></a>
+			<a href="http://www.so.com"><li>刹车</li></a>
+			<a href="http://www.so.com"><li>外观</li></a>
+			<a href="http://www.so.com"><li>内饰</li></a>
+		</div>
+		<div class="listOne yuYongChang" style="display:none">
+			<div class="carListAll">
+				<div class="carList">
+					<div class="leftList">
+						<span>奔驰</span>
+						<span>宝马</span>
+						<span>大众/奥迪</span>
+						<span>保时捷</span>
+					</div>
+					<div class="rightList">
+						<span>
+							<a href="www.so.com"> BRUBUS &nbsp&nbsp </a>
+							<a href="www.so.com"> AMG &nbsp&nbsp </a>
+							<a href="www.so.com"> CARLSSON </a>
+						</span>
+						<span>
+							<a href="www.so.com"> M-TECH &nbsp &nbsp </a>
+							<a href="www.so.com"> AC &nbsp&nbsp </a>
+							<a href="www.so.com"> SCHENIZER </a>
+						</span>
+						<span>
+							<a href="www.so.com"> ABT &nbsp </a>
+							<a href="www.so.com"> MTM &nbsp </a>
+							<a href="www.so.com"> NEUSPEED </a>
+						</span>
+							<a href="www.so.com"> TECHART &nbsp&nbsp  </a>
+							<a href="www.so.com"> RUF </a>
+						</span> 
+					</div>
+				</div>
+				<div class="carListShort">
+					<div class="leftList">
+						<span>日产</span>
+						<span>MINI</span>
+						<span>斯巴鲁</span>
+						<span>捷豹路虎</span>
+					</div>
+					<div class="rightListShort">
+						<span>
+							<a href="www.so.com"> NISMO </a>
+						</span>
+						<span>
+							<a href="www.so.com"> JCW </a>
+						</span>
+						<span>
+							<a href="www.so.com"> STI</a>
+						</span>
+						<span>
+							<a href="www.so.com"> STARTECH </a>
+						</span>
+					</div>
+				</div>
+				<div class="carListShort">
+					<div class="leftList">
+						<span>福特</span>
+						<span>丰田</span>
+						<span>本田</span>
+						<span>特斯拉</span>
+					</div>
+					<div class="rightListShort">
+						<span>
+							<a href="www.so.com"> ROUSH &nbsp&nbsp </a>
+							<a href="www.so.com"> SHELBY </a>
+						</span>
+						<span>
+							<a href="www.so.com"> TOM'S &nbsp&nbsp </a>
+							<a href="www.so.com"> TRD </a>
+						</span>
+						<span>
+							<a href="www.so.com"> MUGEN &nbsp&nbsp  </a>
+							<a href="www.so.com"> MODULE </a>
+						</span>
+						<span>
+							<a href="www.so.com"> T-SPORTSLINE </a>
+						</span>
+					</div>
+				</div>
+				<div class="carListShort last">
+					<div class="leftList">
+						<span>三菱</span>
+						<span>马自达</span>
+					</div>
+					<div class="rightListShort">
+						<span>
+							<a href="www.so.com"> RALLIART </a>
+						</span>
+						<span>
+							<a href="www.so.com"> MAZDASPEED </a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="searchTitlet">
 		轮毂改装件

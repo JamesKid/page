@@ -126,6 +126,23 @@ select {
 	margin-left:5%;
 	
 }
+.categoryWhiteNone {
+	background-color:#e0e2e1;
+	float:left;
+	width:100%;
+	padding-top:10px;
+}
+.categoryWhiteNone li {
+	float:left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:8px;
+	padding-top:8px;
+	list-style:none;
+	color:#717171;
+	margin-left:5%;
+	
+}
 .categoryWhiteFoot {
 	background-color:#e0e2e1;
 	float:left;
