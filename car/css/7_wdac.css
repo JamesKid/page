@@ -1,0 +1,83 @@
+.imgList {
+	background-color:#3f3939;
+	float:left;
+	width:100%;
+}
+.imgList img {
+	padding:0px;
+	margin:0px;
+	padding-left:2%;
+	padding-top:2%;
+	
+}
+.myCarOne {
+	float:left;
+	width:50%;
+	padding-bottom:15px;
+}
+.myCarOneTitle {
+	padding-bottom:8px;
+}
+.myCarLeft {
+	float:left;
+	padding-right:13px;
+}
+.myCarRight {
+	float:left;
+	font-size:0.8em;
+	line-height:20px;
+	color:#bbb;
+	width:210px;
+}
+.myCarRight a {
+	color:#bbb;
+}
+.myCarRight a:hover {
+	color:#888;
+}
+.bar {
+	width:50%;
+	float:left;
+	color:#999;
+	background-color:#eee;
+}
+.barTop {
+	width:100%;
+	float:left;
+}
+.barTitle {
+	float:left;
+	padding-top:15px;
+	padding-left:15px;
+	padding-bottom:15px;
+}
+.barSort {
+	float:right;
+	font-size:0.8em;
+	padding-top:15px;
+	padding-left:15px;
+	padding-bottom:15px;
+	margin-right:10px;
+}
+.barSort span{
+	background-color:#ddd;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-left:4px;
+	padding-right:4px;
+	margin-left:5px;
+}
+
+
+
+@media (max-width: 1000px) {
+	.imgList img{
+		width:46%;
+	}
+
+}
+@media (max-width: 450px) {
+	.myCarOne {
+		width:100%;
+	}
+}

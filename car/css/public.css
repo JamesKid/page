@@ -127,10 +127,11 @@ select {
 	
 }
 .categoryWhiteNone {
-	background-color:#e0e2e1;
+	//background-color:#e0e2e1;
+	background-color:#ccc;
 	float:left;
 	width:100%;
-	padding-top:10px;
+	//padding-top:10px;
 }
 .categoryWhiteNone li {
 	float:left;

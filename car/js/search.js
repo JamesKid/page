@@ -29,6 +29,24 @@ $(document).ready(function(){
 		$('.categoryWhiteNone li').removeClass('on');
 		$('#'+cid).addClass('on');
 	});
+	/*
+	var oMask = document.getElementById('mask');
+	var oImg = document.getElementById('img');
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function (){
+		oMask.style.display = 'block';
+		oImg.style.display = 'block';
+		oMask.style.width = document.documentElement.clientWidth + 'px';
+		oMask.style.height = document.documentElement.clientHeight + 'px';
+		oImg.style.left = (document.documentElement.clientWidth - oImg.offsetWidth)/2 + 'px';
+		oImg.style.top = (document.documentElement.clientHeight - oImg.offsetHeight)/2 + 'px';
+	}
+	/*
+	oMask.onclick = function (){
+		oImg.style.display = 'none';
+		oMask.style.display = 'none';
+	}
+	*/
 });
 function IsPC() {
    var userAgentInfo = navigator.userAgent;
