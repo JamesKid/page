@@ -1,0 +1,26 @@
+.person{
+	width:100%;
+	float:left;
+	font-size:0.8em;
+	color:#bbb;
+	padding-top:10px;
+	line-height:17px;
+}
+.addFriend {
+	padding-top:5px;
+}
+.addFriend span{
+	padding:3px;
+	background-color:#888;
+	margin-right:5px;
+	color:#333;
+}
+.friends img{
+	padding-right:5px;
+	padding-bottom:5px;
+}
+@media (max-width: 700px) {
+	.myCarOne{
+		width:100%;
+	}
+}

@@ -1,0 +1,24 @@
+.xianZhi {
+	background-color:#eee;
+	color:#999;
+	float:left;
+	margin-top:20px;
+	width:100%;
+}
+.barOut {
+	width:100%;
+}
+.barMiddleOne {
+	float:left;
+	width:280px;
+	height:280px;
+}
+.barMiddleContent{
+	padding-left:15px;
+	padding-right:15px;
+}
+.barMiddleContent span{
+	float:right;
+	padding-right:15px;
+	color:#999;
+}
